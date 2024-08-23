@@ -1,0 +1,3 @@
+class V1PersistentVolumeStatus:
+    @property
+    def phase(self) -> str: ...

@@ -1,0 +1,3 @@
+class V1JobCondition:
+    @property
+    def type(self) -> str: ...

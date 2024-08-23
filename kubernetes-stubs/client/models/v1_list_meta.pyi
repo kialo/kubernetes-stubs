@@ -1,0 +1,3 @@
+class V1ListMeta:
+    @property
+    def resource_version(self) -> str: ...

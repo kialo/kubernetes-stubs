@@ -1,0 +1,9 @@
+from . import V1JobSpec, V1JobStatus, V1ObjectMeta
+
+class V1Job:
+    @property
+    def metadata(self) -> V1ObjectMeta: ...
+    @property
+    def status(self) -> V1JobStatus: ...
+    @property
+    def spec(self) -> V1JobSpec: ...

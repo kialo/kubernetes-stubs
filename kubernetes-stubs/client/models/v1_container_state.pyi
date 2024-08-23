@@ -1,0 +1,9 @@
+from .. import V1ContainerStateRunning, V1ContainerStateTerminated, V1ContainerStateWaiting
+
+class V1ContainerState:
+    @property
+    def waiting(self) -> V1ContainerStateWaiting | None: ...
+    @property
+    def running(self) -> V1ContainerStateRunning | None: ...
+    @property
+    def terminated(self) -> V1ContainerStateTerminated | None: ...

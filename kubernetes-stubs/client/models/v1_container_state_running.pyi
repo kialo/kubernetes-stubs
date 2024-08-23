@@ -1,0 +1,3 @@
+class V1ContainerStateRunning:
+    @property
+    def started_at(self) -> str: ...

@@ -1,0 +1,3 @@
+class V1PersistentVolumeClaimVolumeSource:
+    @property
+    def claim_name(self) -> str: ...
