@@ -1,9 +1,22 @@
-from .. import V1ContainerStateRunning, V1ContainerStateTerminated, V1ContainerStateWaiting
+import datetime
+import typing
+
+import kubernetes.client
 
 class V1ContainerState:
-    @property
-    def waiting(self) -> V1ContainerStateWaiting | None: ...
-    @property
-    def running(self) -> V1ContainerStateRunning | None: ...
-    @property
-    def terminated(self) -> V1ContainerStateTerminated | None: ...
+    running: typing.Optional[kubernetes.client.V1ContainerStateRunning]
+    terminated: typing.Optional[kubernetes.client.V1ContainerStateTerminated]
+    waiting: typing.Optional[kubernetes.client.V1ContainerStateWaiting]
+    def __init__(
+        self,
+        *,
+        running: typing.Optional[kubernetes.client.V1ContainerStateRunning] = ...,
+        terminated: typing.Optional[kubernetes.client.V1ContainerStateTerminated] = ...,
+        waiting: typing.Optional[kubernetes.client.V1ContainerStateWaiting] = ...,
+    ) -> None: ...
+    def to_dict(self) -> V1ContainerStateDict: ...
+
+class V1ContainerStateDict(typing.TypedDict, total=False):
+    running: typing.Optional[kubernetes.client.V1ContainerStateRunningDict]
+    terminated: typing.Optional[kubernetes.client.V1ContainerStateTerminatedDict]
+    waiting: typing.Optional[kubernetes.client.V1ContainerStateWaitingDict]

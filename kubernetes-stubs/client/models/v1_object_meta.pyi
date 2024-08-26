@@ -1,43 +1,65 @@
-from datetime import datetime
-from typing import Any, Dict, List, Optional
+import datetime
+import typing
 
-from . import V1OwnerReference
+import kubernetes.client
 
 class V1ObjectMeta:
+    annotations: typing.Optional[dict[str, str]]
+    cluster_name: typing.Optional[str]
+    creation_timestamp: typing.Optional[datetime.datetime]
+    deletion_grace_period_seconds: typing.Optional[int]
+    deletion_timestamp: typing.Optional[datetime.datetime]
+    finalizers: typing.Optional[list[str]]
+    generate_name: typing.Optional[str]
+    generation: typing.Optional[int]
+    labels: typing.Optional[dict[str, str]]
+    managed_fields: typing.Optional[list[kubernetes.client.V1ManagedFieldsEntry]]
+    name: typing.Optional[str]
+    namespace: typing.Optional[str]
+    owner_references: typing.Optional[list[kubernetes.client.V1OwnerReference]]
+    resource_version: typing.Optional[str]
+    self_link: typing.Optional[str]
+    uid: typing.Optional[str]
     def __init__(
         self,
-        annotations: Optional[Any] = ...,
-        creation_timestamp: Optional[Any] = ...,
-        deletion_grace_period_seconds: Optional[Any] = ...,
-        deletion_timestamp: Optional[Any] = ...,
-        finalizers: Optional[Any] = ...,
-        generate_name: Optional[Any] = ...,
-        generation: Optional[Any] = ...,
-        labels: Optional[Any] = ...,
-        managed_fields: Optional[Any] = ...,
-        name: Optional[Any] = ...,
-        namespace: Optional[Any] = ...,
-        owner_references: Optional[Any] = ...,
-        resource_version: Optional[Any] = ...,
-        self_link: Optional[Any] = ...,
-        uid: Optional[Any] = ...,
-        local_vars_configuration: Optional[Any] = ...,
+        *,
+        annotations: typing.Optional[dict[str, str]] = ...,
+        cluster_name: typing.Optional[str] = ...,
+        creation_timestamp: typing.Optional[datetime.datetime] = ...,
+        deletion_grace_period_seconds: typing.Optional[int] = ...,
+        deletion_timestamp: typing.Optional[datetime.datetime] = ...,
+        finalizers: typing.Optional[list[str]] = ...,
+        generate_name: typing.Optional[str] = ...,
+        generation: typing.Optional[int] = ...,
+        labels: typing.Optional[dict[str, str]] = ...,
+        managed_fields: typing.Optional[
+            list[kubernetes.client.V1ManagedFieldsEntry]
+        ] = ...,
+        name: typing.Optional[str] = ...,
+        namespace: typing.Optional[str] = ...,
+        owner_references: typing.Optional[
+            list[kubernetes.client.V1OwnerReference]
+        ] = ...,
+        resource_version: typing.Optional[str] = ...,
+        self_link: typing.Optional[str] = ...,
+        uid: typing.Optional[str] = ...,
     ) -> None: ...
-    @property
-    def annotations(self) -> dict[str, str]: ...
-    @property
-    def name(self) -> str: ...
-    @property
-    def namespace(self) -> str: ...
-    @property
-    def creation_timestamp(self) -> datetime: ...
-    @property
-    def deletion_timestamp(self) -> datetime: ...
-    @property
-    def labels(self) -> Dict[str, str]: ...
-    @property
-    def uid(self) -> str: ...
-    @property
-    def owner_references(self) -> List[V1OwnerReference]: ...
-    @property
-    def resource_version(self) -> str: ...
+    def to_dict(self) -> V1ObjectMetaDict: ...
+
+class V1ObjectMetaDict(typing.TypedDict, total=False):
+    annotations: typing.Optional[dict[str, str]]
+    clusterName: typing.Optional[str]
+    creationTimestamp: typing.Optional[datetime.datetime]
+    deletionGracePeriodSeconds: typing.Optional[int]
+    deletionTimestamp: typing.Optional[datetime.datetime]
+    finalizers: typing.Optional[list[str]]
+    generateName: typing.Optional[str]
+    generation: typing.Optional[int]
+    labels: typing.Optional[dict[str, str]]
+    managedFields: typing.Optional[list[kubernetes.client.V1ManagedFieldsEntryDict]]
+    name: typing.Optional[str]
+    namespace: typing.Optional[str]
+    ownerReferences: typing.Optional[list[kubernetes.client.V1OwnerReferenceDict]]
+    resourceVersion: typing.Optional[str]
+    selfLink: typing.Optional[str]
+    uid: typing.Optional[str]

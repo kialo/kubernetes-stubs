@@ -1,9 +1,25 @@
-from typing import List
+import datetime
+import typing
 
-from . import V1ListMeta, V1Node
+import kubernetes.client
 
 class V1NodeList:
-    @property
-    def items(self) -> List[V1Node]: ...
-    @property
-    def metadata(self) -> V1ListMeta: ...
+    api_version: typing.Optional[str]
+    items: list[kubernetes.client.V1Node]
+    kind: typing.Optional[str]
+    metadata: typing.Optional[kubernetes.client.V1ListMeta]
+    def __init__(
+        self,
+        *,
+        api_version: typing.Optional[str] = ...,
+        items: list[kubernetes.client.V1Node],
+        kind: typing.Optional[str] = ...,
+        metadata: typing.Optional[kubernetes.client.V1ListMeta] = ...,
+    ) -> None: ...
+    def to_dict(self) -> V1NodeListDict: ...
+
+class V1NodeListDict(typing.TypedDict, total=False):
+    apiVersion: typing.Optional[str]
+    items: list[kubernetes.client.V1NodeDict]
+    kind: typing.Optional[str]
+    metadata: typing.Optional[kubernetes.client.V1ListMetaDict]

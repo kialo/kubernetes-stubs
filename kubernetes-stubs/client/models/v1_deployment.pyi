@@ -1,8 +1,28 @@
-from .v1_deployment_spec import V1DeploymentSpec
-from .v1_object_meta import V1ObjectMeta
+import datetime
+import typing
+
+import kubernetes.client
 
 class V1Deployment:
-    @property
-    def metadata(self) -> V1ObjectMeta: ...
-    @property
-    def spec(self) -> V1DeploymentSpec: ...
+    api_version: typing.Optional[str]
+    kind: typing.Optional[str]
+    metadata: typing.Optional[kubernetes.client.V1ObjectMeta]
+    spec: typing.Optional[kubernetes.client.V1DeploymentSpec]
+    status: typing.Optional[kubernetes.client.V1DeploymentStatus]
+    def __init__(
+        self,
+        *,
+        api_version: typing.Optional[str] = ...,
+        kind: typing.Optional[str] = ...,
+        metadata: typing.Optional[kubernetes.client.V1ObjectMeta] = ...,
+        spec: typing.Optional[kubernetes.client.V1DeploymentSpec] = ...,
+        status: typing.Optional[kubernetes.client.V1DeploymentStatus] = ...,
+    ) -> None: ...
+    def to_dict(self) -> V1DeploymentDict: ...
+
+class V1DeploymentDict(typing.TypedDict, total=False):
+    apiVersion: typing.Optional[str]
+    kind: typing.Optional[str]
+    metadata: typing.Optional[kubernetes.client.V1ObjectMetaDict]
+    spec: typing.Optional[kubernetes.client.V1DeploymentSpecDict]
+    status: typing.Optional[kubernetes.client.V1DeploymentStatusDict]

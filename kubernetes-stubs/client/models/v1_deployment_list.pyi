@@ -1,7 +1,25 @@
-from typing import List
+import datetime
+import typing
 
-from .v1_deployment import V1Deployment
+import kubernetes.client
 
 class V1DeploymentList:
-    @property
-    def items(self) -> List[V1Deployment]: ...
+    api_version: typing.Optional[str]
+    items: list[kubernetes.client.V1Deployment]
+    kind: typing.Optional[str]
+    metadata: typing.Optional[kubernetes.client.V1ListMeta]
+    def __init__(
+        self,
+        *,
+        api_version: typing.Optional[str] = ...,
+        items: list[kubernetes.client.V1Deployment],
+        kind: typing.Optional[str] = ...,
+        metadata: typing.Optional[kubernetes.client.V1ListMeta] = ...,
+    ) -> None: ...
+    def to_dict(self) -> V1DeploymentListDict: ...
+
+class V1DeploymentListDict(typing.TypedDict, total=False):
+    apiVersion: typing.Optional[str]
+    items: list[kubernetes.client.V1DeploymentDict]
+    kind: typing.Optional[str]
+    metadata: typing.Optional[kubernetes.client.V1ListMetaDict]

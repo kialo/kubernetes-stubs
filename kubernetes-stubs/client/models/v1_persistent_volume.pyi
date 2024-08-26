@@ -1,12 +1,28 @@
-from typing import Dict
+import datetime
+import typing
 
-from . import V1ObjectMeta, V1PersistentVolumeSpec, V1PersistentVolumeStatus
+import kubernetes.client
 
 class V1PersistentVolume:
-    def to_dict(self) -> Dict: ...
-    @property
-    def metadata(self) -> V1ObjectMeta: ...
-    @property
-    def spec(self) -> V1PersistentVolumeSpec: ...
-    @property
-    def status(self) -> V1PersistentVolumeStatus: ...
+    api_version: typing.Optional[str]
+    kind: typing.Optional[str]
+    metadata: typing.Optional[kubernetes.client.V1ObjectMeta]
+    spec: typing.Optional[kubernetes.client.V1PersistentVolumeSpec]
+    status: typing.Optional[kubernetes.client.V1PersistentVolumeStatus]
+    def __init__(
+        self,
+        *,
+        api_version: typing.Optional[str] = ...,
+        kind: typing.Optional[str] = ...,
+        metadata: typing.Optional[kubernetes.client.V1ObjectMeta] = ...,
+        spec: typing.Optional[kubernetes.client.V1PersistentVolumeSpec] = ...,
+        status: typing.Optional[kubernetes.client.V1PersistentVolumeStatus] = ...,
+    ) -> None: ...
+    def to_dict(self) -> V1PersistentVolumeDict: ...
+
+class V1PersistentVolumeDict(typing.TypedDict, total=False):
+    apiVersion: typing.Optional[str]
+    kind: typing.Optional[str]
+    metadata: typing.Optional[kubernetes.client.V1ObjectMetaDict]
+    spec: typing.Optional[kubernetes.client.V1PersistentVolumeSpecDict]
+    status: typing.Optional[kubernetes.client.V1PersistentVolumeStatusDict]

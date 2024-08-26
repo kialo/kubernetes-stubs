@@ -1,12 +1,37 @@
-from http import HTTPStatus
-from typing import Any, Dict, Optional
+from typing import Any, Optional
+
+from kubernetes.client.rest import RESTResponse
 
 class OpenApiException(Exception): ...
 
-class ApiException(OpenApiException):
-    status: HTTPStatus
-    body: Optional[str]
-    headers: Optional[Dict[str, str]]
+class ApiTypeError(OpenApiException, TypeError):
+    path_to_item: Optional[list[str]]
+    valid_classes: Optional[tuple[Any, ...]]
+    key_type: Optional[bool]
     def __init__(
-        self, status: Optional[Any] = ..., reason: Optional[Any] = ..., http_resp: Optional[Any] = ...
+        self,
+        msg: str,
+        path_to_item: Optional[list[str]] = ...,
+        valid_classes: Optional[tuple[Any, ...]] = ...,
+        key_type: Optional[bool] = ...,
+    ) -> None: ...
+
+class ApiValueError(OpenApiException, ValueError):
+    path_to_item: Optional[list[Any]]
+    def __init__(self, msg: str, path_to_item: Optional[list[Any]] = ...) -> None: ...
+
+class ApiKeyError(OpenApiException, KeyError):
+    path_to_item: Optional[list[Any]]
+    def __init__(self, msg: str, path_to_item: Optional[list[Any]] = ...) -> None: ...
+
+class ApiException(OpenApiException):
+    status: Optional[int]
+    reason: Optional[str]
+    body: Optional[str]
+    headers: dict[str, str]
+    def __init__(
+        self,
+        status: Optional[int] = ...,
+        reason: Optional[str] = ...,
+        http_resp: Optional[RESTResponse] = ...,
     ) -> None: ...

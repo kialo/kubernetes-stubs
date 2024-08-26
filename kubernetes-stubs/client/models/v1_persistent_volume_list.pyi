@@ -1,7 +1,25 @@
-from typing import List
+import datetime
+import typing
 
-from . import V1PersistentVolume
+import kubernetes.client
 
 class V1PersistentVolumeList:
-    @property
-    def items(self) -> List[V1PersistentVolume]: ...
+    api_version: typing.Optional[str]
+    items: list[kubernetes.client.V1PersistentVolume]
+    kind: typing.Optional[str]
+    metadata: typing.Optional[kubernetes.client.V1ListMeta]
+    def __init__(
+        self,
+        *,
+        api_version: typing.Optional[str] = ...,
+        items: list[kubernetes.client.V1PersistentVolume],
+        kind: typing.Optional[str] = ...,
+        metadata: typing.Optional[kubernetes.client.V1ListMeta] = ...,
+    ) -> None: ...
+    def to_dict(self) -> V1PersistentVolumeListDict: ...
+
+class V1PersistentVolumeListDict(typing.TypedDict, total=False):
+    apiVersion: typing.Optional[str]
+    items: list[kubernetes.client.V1PersistentVolumeDict]
+    kind: typing.Optional[str]
+    metadata: typing.Optional[kubernetes.client.V1ListMetaDict]

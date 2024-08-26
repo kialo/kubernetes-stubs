@@ -1,11 +1,25 @@
-from typing import Any, Optional
+import datetime
+import typing
+
+import kubernetes.client
 
 class V1Eviction:
+    api_version: typing.Optional[str]
+    delete_options: typing.Optional[kubernetes.client.V1DeleteOptions]
+    kind: typing.Optional[str]
+    metadata: typing.Optional[kubernetes.client.V1ObjectMeta]
     def __init__(
         self,
-        api_version: Optional[Any] = ...,
-        delete_options: Optional[Any] = ...,
-        kind: Optional[Any] = ...,
-        metadata: Optional[Any] = ...,
-        local_vars_configuration: Optional[Any] = ...,
+        *,
+        api_version: typing.Optional[str] = ...,
+        delete_options: typing.Optional[kubernetes.client.V1DeleteOptions] = ...,
+        kind: typing.Optional[str] = ...,
+        metadata: typing.Optional[kubernetes.client.V1ObjectMeta] = ...,
     ) -> None: ...
+    def to_dict(self) -> V1EvictionDict: ...
+
+class V1EvictionDict(typing.TypedDict, total=False):
+    apiVersion: typing.Optional[str]
+    deleteOptions: typing.Optional[kubernetes.client.V1DeleteOptionsDict]
+    kind: typing.Optional[str]
+    metadata: typing.Optional[kubernetes.client.V1ObjectMetaDict]
