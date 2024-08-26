@@ -1,7 +1,6 @@
 import datetime
-import typing
-
 import kubernetes.client
+import typing
 
 class V1ContainerStateTerminated:
     container_id: typing.Optional[str]
@@ -11,19 +10,11 @@ class V1ContainerStateTerminated:
     reason: typing.Optional[str]
     signal: typing.Optional[int]
     started_at: typing.Optional[datetime.datetime]
-    def __init__(
-        self,
-        *,
-        container_id: typing.Optional[str] = ...,
-        exit_code: int,
-        finished_at: typing.Optional[datetime.datetime] = ...,
-        message: typing.Optional[str] = ...,
-        reason: typing.Optional[str] = ...,
-        signal: typing.Optional[int] = ...,
-        started_at: typing.Optional[datetime.datetime] = ...,
-    ) -> None: ...
-    def to_dict(self) -> V1ContainerStateTerminatedDict: ...
-
+    
+    def __init__(self, *, container_id: typing.Optional[str] = ..., exit_code: int, finished_at: typing.Optional[datetime.datetime] = ..., message: typing.Optional[str] = ..., reason: typing.Optional[str] = ..., signal: typing.Optional[int] = ..., started_at: typing.Optional[datetime.datetime] = ...) -> None:
+        ...
+    def to_dict(self) -> V1ContainerStateTerminatedDict:
+        ...
 class V1ContainerStateTerminatedDict(typing.TypedDict, total=False):
     containerID: typing.Optional[str]
     exitCode: int

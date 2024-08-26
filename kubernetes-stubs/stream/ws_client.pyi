@@ -1,6 +1,0 @@
-import socket
-
-class WSClient: ...
-
-class PortForward:
-    def socket(self, port_number: int) -> socket.socket: ...
