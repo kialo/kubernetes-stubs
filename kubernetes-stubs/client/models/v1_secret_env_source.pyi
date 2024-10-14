@@ -10,5 +10,5 @@ class V1SecretEnvSource:
     def to_dict(self) -> V1SecretEnvSourceDict: ...
 
 class V1SecretEnvSourceDict(typing.TypedDict, total=False):
-    name: typing.Optional[str]
-    optional: typing.Optional[bool]
+    name: str
+    optional: bool

@@ -20,8 +20,8 @@ class V1CustomResourceDefinitionCondition:
     def to_dict(self) -> V1CustomResourceDefinitionConditionDict: ...
 
 class V1CustomResourceDefinitionConditionDict(typing.TypedDict, total=False):
-    lastTransitionTime: typing.Optional[datetime.datetime]
-    message: typing.Optional[str]
-    reason: typing.Optional[str]
+    lastTransitionTime: datetime.datetime
+    message: str
+    reason: str
     status: str
     type: str

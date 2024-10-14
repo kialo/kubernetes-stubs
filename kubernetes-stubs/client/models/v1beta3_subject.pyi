@@ -20,7 +20,7 @@ class V1beta3Subject:
     def to_dict(self) -> V1beta3SubjectDict: ...
 
 class V1beta3SubjectDict(typing.TypedDict, total=False):
-    group: typing.Optional[kubernetes.client.V1beta3GroupSubjectDict]
+    group: kubernetes.client.V1beta3GroupSubjectDict
     kind: str
-    serviceAccount: typing.Optional[kubernetes.client.V1beta3ServiceAccountSubjectDict]
-    user: typing.Optional[kubernetes.client.V1beta3UserSubjectDict]
+    serviceAccount: kubernetes.client.V1beta3ServiceAccountSubjectDict
+    user: kubernetes.client.V1beta3UserSubjectDict

@@ -2,22 +2,22 @@ import typing
 
 class V1alpha1ParentReference:
     group: typing.Optional[str]
-    name: str
+    name: typing.Optional[str]
     namespace: typing.Optional[str]
-    resource: str
+    resource: typing.Optional[str]
 
     def __init__(
         self,
         *,
         group: typing.Optional[str] = ...,
-        name: str,
+        name: typing.Optional[str] = ...,
         namespace: typing.Optional[str] = ...,
-        resource: str,
+        resource: typing.Optional[str] = ...,
     ) -> None: ...
     def to_dict(self) -> V1alpha1ParentReferenceDict: ...
 
 class V1alpha1ParentReferenceDict(typing.TypedDict, total=False):
-    group: typing.Optional[str]
+    group: str
     name: str
-    namespace: typing.Optional[str]
+    namespace: str
     resource: str

@@ -10,5 +10,5 @@ class V1ServiceBackendPort:
     def to_dict(self) -> V1ServiceBackendPortDict: ...
 
 class V1ServiceBackendPortDict(typing.TypedDict, total=False):
-    name: typing.Optional[str]
-    number: typing.Optional[int]
+    name: str
+    number: int

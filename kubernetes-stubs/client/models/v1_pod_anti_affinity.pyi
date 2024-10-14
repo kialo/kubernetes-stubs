@@ -22,9 +22,9 @@ class V1PodAntiAffinity:
     def to_dict(self) -> V1PodAntiAffinityDict: ...
 
 class V1PodAntiAffinityDict(typing.TypedDict, total=False):
-    preferredDuringSchedulingIgnoredDuringExecution: typing.Optional[
-        list[kubernetes.client.V1WeightedPodAffinityTermDict]
+    preferredDuringSchedulingIgnoredDuringExecution: list[
+        kubernetes.client.V1WeightedPodAffinityTermDict
     ]
-    requiredDuringSchedulingIgnoredDuringExecution: typing.Optional[
-        list[kubernetes.client.V1PodAffinityTermDict]
+    requiredDuringSchedulingIgnoredDuringExecution: list[
+        kubernetes.client.V1PodAffinityTermDict
     ]

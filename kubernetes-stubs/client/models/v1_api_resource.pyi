@@ -29,13 +29,13 @@ class V1APIResource:
     def to_dict(self) -> V1APIResourceDict: ...
 
 class V1APIResourceDict(typing.TypedDict, total=False):
-    categories: typing.Optional[list[str]]
-    group: typing.Optional[str]
+    categories: list[str]
+    group: str
     kind: str
     name: str
     namespaced: bool
-    shortNames: typing.Optional[list[str]]
+    shortNames: list[str]
     singularName: str
-    storageVersionHash: typing.Optional[str]
+    storageVersionHash: str
     verbs: list[str]
-    version: typing.Optional[str]
+    version: str

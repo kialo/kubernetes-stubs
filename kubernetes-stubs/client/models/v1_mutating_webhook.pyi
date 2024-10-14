@@ -38,13 +38,13 @@ class V1MutatingWebhook:
 class V1MutatingWebhookDict(typing.TypedDict, total=False):
     admissionReviewVersions: list[str]
     clientConfig: kubernetes.client.AdmissionregistrationV1WebhookClientConfigDict
-    failurePolicy: typing.Optional[str]
-    matchConditions: typing.Optional[list[kubernetes.client.V1MatchConditionDict]]
-    matchPolicy: typing.Optional[str]
+    failurePolicy: str
+    matchConditions: list[kubernetes.client.V1MatchConditionDict]
+    matchPolicy: str
     name: str
-    namespaceSelector: typing.Optional[kubernetes.client.V1LabelSelectorDict]
-    objectSelector: typing.Optional[kubernetes.client.V1LabelSelectorDict]
-    reinvocationPolicy: typing.Optional[str]
-    rules: typing.Optional[list[kubernetes.client.V1RuleWithOperationsDict]]
+    namespaceSelector: kubernetes.client.V1LabelSelectorDict
+    objectSelector: kubernetes.client.V1LabelSelectorDict
+    reinvocationPolicy: str
+    rules: list[kubernetes.client.V1RuleWithOperationsDict]
     sideEffects: str
-    timeoutSeconds: typing.Optional[int]
+    timeoutSeconds: int

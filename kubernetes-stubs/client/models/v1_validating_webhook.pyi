@@ -36,12 +36,12 @@ class V1ValidatingWebhook:
 class V1ValidatingWebhookDict(typing.TypedDict, total=False):
     admissionReviewVersions: list[str]
     clientConfig: kubernetes.client.AdmissionregistrationV1WebhookClientConfigDict
-    failurePolicy: typing.Optional[str]
-    matchConditions: typing.Optional[list[kubernetes.client.V1MatchConditionDict]]
-    matchPolicy: typing.Optional[str]
+    failurePolicy: str
+    matchConditions: list[kubernetes.client.V1MatchConditionDict]
+    matchPolicy: str
     name: str
-    namespaceSelector: typing.Optional[kubernetes.client.V1LabelSelectorDict]
-    objectSelector: typing.Optional[kubernetes.client.V1LabelSelectorDict]
-    rules: typing.Optional[list[kubernetes.client.V1RuleWithOperationsDict]]
+    namespaceSelector: kubernetes.client.V1LabelSelectorDict
+    objectSelector: kubernetes.client.V1LabelSelectorDict
+    rules: list[kubernetes.client.V1RuleWithOperationsDict]
     sideEffects: str
-    timeoutSeconds: typing.Optional[int]
+    timeoutSeconds: int

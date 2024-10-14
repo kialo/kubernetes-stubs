@@ -17,7 +17,7 @@ class V1AWSElasticBlockStoreVolumeSource:
     def to_dict(self) -> V1AWSElasticBlockStoreVolumeSourceDict: ...
 
 class V1AWSElasticBlockStoreVolumeSourceDict(typing.TypedDict, total=False):
-    fsType: typing.Optional[str]
-    partition: typing.Optional[int]
-    readOnly: typing.Optional[bool]
+    fsType: str
+    partition: int
+    readOnly: bool
     volumeID: str

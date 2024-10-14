@@ -26,11 +26,11 @@ class V1TopologySpreadConstraint:
     def to_dict(self) -> V1TopologySpreadConstraintDict: ...
 
 class V1TopologySpreadConstraintDict(typing.TypedDict, total=False):
-    labelSelector: typing.Optional[kubernetes.client.V1LabelSelectorDict]
-    matchLabelKeys: typing.Optional[list[str]]
+    labelSelector: kubernetes.client.V1LabelSelectorDict
+    matchLabelKeys: list[str]
     maxSkew: int
-    minDomains: typing.Optional[int]
-    nodeAffinityPolicy: typing.Optional[str]
-    nodeTaintsPolicy: typing.Optional[str]
+    minDomains: int
+    nodeAffinityPolicy: str
+    nodeTaintsPolicy: str
     topologyKey: str
     whenUnsatisfiable: str

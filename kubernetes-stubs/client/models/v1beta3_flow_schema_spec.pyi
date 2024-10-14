@@ -26,11 +26,9 @@ class V1beta3FlowSchemaSpec:
     def to_dict(self) -> V1beta3FlowSchemaSpecDict: ...
 
 class V1beta3FlowSchemaSpecDict(typing.TypedDict, total=False):
-    distinguisherMethod: typing.Optional[
-        kubernetes.client.V1beta3FlowDistinguisherMethodDict
-    ]
-    matchingPrecedence: typing.Optional[int]
+    distinguisherMethod: kubernetes.client.V1beta3FlowDistinguisherMethodDict
+    matchingPrecedence: int
     priorityLevelConfiguration: (
         kubernetes.client.V1beta3PriorityLevelConfigurationReferenceDict
     )
-    rules: typing.Optional[list[kubernetes.client.V1beta3PolicyRulesWithSubjectsDict]]
+    rules: list[kubernetes.client.V1beta3PolicyRulesWithSubjectsDict]

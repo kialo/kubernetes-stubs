@@ -22,8 +22,8 @@ class V1OwnerReference:
 
 class V1OwnerReferenceDict(typing.TypedDict, total=False):
     apiVersion: str
-    blockOwnerDeletion: typing.Optional[bool]
-    controller: typing.Optional[bool]
+    blockOwnerDeletion: bool
+    controller: bool
     kind: str
     name: str
     uid: str

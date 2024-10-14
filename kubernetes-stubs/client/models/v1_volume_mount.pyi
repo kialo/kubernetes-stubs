@@ -5,7 +5,6 @@ class V1VolumeMount:
     mount_propagation: typing.Optional[str]
     name: str
     read_only: typing.Optional[bool]
-    recursive_read_only: typing.Optional[str]
     sub_path: typing.Optional[str]
     sub_path_expr: typing.Optional[str]
 
@@ -16,7 +15,6 @@ class V1VolumeMount:
         mount_propagation: typing.Optional[str] = ...,
         name: str,
         read_only: typing.Optional[bool] = ...,
-        recursive_read_only: typing.Optional[str] = ...,
         sub_path: typing.Optional[str] = ...,
         sub_path_expr: typing.Optional[str] = ...,
     ) -> None: ...
@@ -24,9 +22,8 @@ class V1VolumeMount:
 
 class V1VolumeMountDict(typing.TypedDict, total=False):
     mountPath: str
-    mountPropagation: typing.Optional[str]
+    mountPropagation: str
     name: str
-    readOnly: typing.Optional[bool]
-    recursiveReadOnly: typing.Optional[str]
-    subPath: typing.Optional[str]
-    subPathExpr: typing.Optional[str]
+    readOnly: bool
+    subPath: str
+    subPathExpr: str

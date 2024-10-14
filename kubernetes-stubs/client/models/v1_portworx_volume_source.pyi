@@ -15,6 +15,6 @@ class V1PortworxVolumeSource:
     def to_dict(self) -> V1PortworxVolumeSourceDict: ...
 
 class V1PortworxVolumeSourceDict(typing.TypedDict, total=False):
-    fsType: typing.Optional[str]
-    readOnly: typing.Optional[bool]
+    fsType: str
+    readOnly: bool
     volumeID: str

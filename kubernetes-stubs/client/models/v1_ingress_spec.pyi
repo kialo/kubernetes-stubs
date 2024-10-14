@@ -18,7 +18,7 @@ class V1IngressSpec:
     def to_dict(self) -> V1IngressSpecDict: ...
 
 class V1IngressSpecDict(typing.TypedDict, total=False):
-    defaultBackend: typing.Optional[kubernetes.client.V1IngressBackendDict]
-    ingressClassName: typing.Optional[str]
-    rules: typing.Optional[list[kubernetes.client.V1IngressRuleDict]]
-    tls: typing.Optional[list[kubernetes.client.V1IngressTLSDict]]
+    defaultBackend: kubernetes.client.V1IngressBackendDict
+    ingressClassName: str
+    rules: list[kubernetes.client.V1IngressRuleDict]
+    tls: list[kubernetes.client.V1IngressTLSDict]

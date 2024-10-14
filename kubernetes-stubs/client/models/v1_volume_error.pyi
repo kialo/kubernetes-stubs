@@ -14,5 +14,5 @@ class V1VolumeError:
     def to_dict(self) -> V1VolumeErrorDict: ...
 
 class V1VolumeErrorDict(typing.TypedDict, total=False):
-    message: typing.Optional[str]
-    time: typing.Optional[datetime.datetime]
+    message: str
+    time: datetime.datetime

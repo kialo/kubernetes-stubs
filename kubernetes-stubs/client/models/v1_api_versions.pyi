@@ -2,8 +2,8 @@ import kubernetes.client
 import typing
 
 class V1APIVersions:
-    api_version: typing.Optional[str]
-    kind: typing.Optional[str]
+    api_version: str
+    kind: str
     server_address_by_client_cid_rs: list[kubernetes.client.V1ServerAddressByClientCIDR]
     versions: list[str]
 
@@ -20,7 +20,7 @@ class V1APIVersions:
     def to_dict(self) -> V1APIVersionsDict: ...
 
 class V1APIVersionsDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
-    kind: typing.Optional[str]
+    apiVersion: str
+    kind: str
     serverAddressByClientCIDRs: list[kubernetes.client.V1ServerAddressByClientCIDRDict]
     versions: list[str]

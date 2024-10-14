@@ -2,9 +2,9 @@ import kubernetes.client
 import typing
 
 class V1APIGroupList:
-    api_version: typing.Optional[str]
+    api_version: str
     groups: list[kubernetes.client.V1APIGroup]
-    kind: typing.Optional[str]
+    kind: str
 
     def __init__(
         self,
@@ -16,6 +16,6 @@ class V1APIGroupList:
     def to_dict(self) -> V1APIGroupListDict: ...
 
 class V1APIGroupListDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
+    apiVersion: str
     groups: list[kubernetes.client.V1APIGroupDict]
-    kind: typing.Optional[str]
+    kind: str

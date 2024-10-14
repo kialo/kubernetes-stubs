@@ -16,6 +16,6 @@ class V1NetworkPolicyPeer:
     def to_dict(self) -> V1NetworkPolicyPeerDict: ...
 
 class V1NetworkPolicyPeerDict(typing.TypedDict, total=False):
-    ipBlock: typing.Optional[kubernetes.client.V1IPBlockDict]
-    namespaceSelector: typing.Optional[kubernetes.client.V1LabelSelectorDict]
-    podSelector: typing.Optional[kubernetes.client.V1LabelSelectorDict]
+    ipBlock: kubernetes.client.V1IPBlockDict
+    namespaceSelector: kubernetes.client.V1LabelSelectorDict
+    podSelector: kubernetes.client.V1LabelSelectorDict

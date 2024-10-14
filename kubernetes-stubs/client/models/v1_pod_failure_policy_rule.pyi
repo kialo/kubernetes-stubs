@@ -25,9 +25,7 @@ class V1PodFailurePolicyRule:
 
 class V1PodFailurePolicyRuleDict(typing.TypedDict, total=False):
     action: str
-    onExitCodes: typing.Optional[
-        kubernetes.client.V1PodFailurePolicyOnExitCodesRequirementDict
-    ]
-    onPodConditions: typing.Optional[
-        list[kubernetes.client.V1PodFailurePolicyOnPodConditionsPatternDict]
+    onExitCodes: kubernetes.client.V1PodFailurePolicyOnExitCodesRequirementDict
+    onPodConditions: list[
+        kubernetes.client.V1PodFailurePolicyOnPodConditionsPatternDict
     ]

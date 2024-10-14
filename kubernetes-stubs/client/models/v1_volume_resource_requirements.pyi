@@ -13,5 +13,5 @@ class V1VolumeResourceRequirements:
     def to_dict(self) -> V1VolumeResourceRequirementsDict: ...
 
 class V1VolumeResourceRequirementsDict(typing.TypedDict, total=False):
-    limits: typing.Optional[dict[str, str]]
-    requests: typing.Optional[dict[str, str]]
+    limits: dict[str, str]
+    requests: dict[str, str]

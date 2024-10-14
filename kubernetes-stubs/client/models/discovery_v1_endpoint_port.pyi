@@ -17,7 +17,7 @@ class DiscoveryV1EndpointPort:
     def to_dict(self) -> DiscoveryV1EndpointPortDict: ...
 
 class DiscoveryV1EndpointPortDict(typing.TypedDict, total=False):
-    appProtocol: typing.Optional[str]
-    name: typing.Optional[str]
-    port: typing.Optional[int]
-    protocol: typing.Optional[str]
+    appProtocol: str
+    name: str
+    port: int
+    protocol: str

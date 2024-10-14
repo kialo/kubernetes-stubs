@@ -13,5 +13,5 @@ class V1beta3ExemptPriorityLevelConfiguration:
     def to_dict(self) -> V1beta3ExemptPriorityLevelConfigurationDict: ...
 
 class V1beta3ExemptPriorityLevelConfigurationDict(typing.TypedDict, total=False):
-    lendablePercent: typing.Optional[int]
-    nominalConcurrencyShares: typing.Optional[int]
+    lendablePercent: int
+    nominalConcurrencyShares: int

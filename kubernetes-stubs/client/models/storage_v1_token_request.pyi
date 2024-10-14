@@ -11,4 +11,4 @@ class StorageV1TokenRequest:
 
 class StorageV1TokenRequestDict(typing.TypedDict, total=False):
     audience: str
-    expirationSeconds: typing.Optional[int]
+    expirationSeconds: int

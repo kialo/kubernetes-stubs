@@ -10,5 +10,5 @@ class V1PodDNSConfigOption:
     def to_dict(self) -> V1PodDNSConfigOptionDict: ...
 
 class V1PodDNSConfigOptionDict(typing.TypedDict, total=False):
-    name: typing.Optional[str]
-    value: typing.Optional[str]
+    name: str
+    value: str

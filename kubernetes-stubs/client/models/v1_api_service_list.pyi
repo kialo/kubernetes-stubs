@@ -2,10 +2,10 @@ import kubernetes.client
 import typing
 
 class V1APIServiceList:
-    api_version: typing.Optional[str]
+    api_version: str
     items: list[kubernetes.client.V1APIService]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ListMeta]
+    kind: str
+    metadata: kubernetes.client.V1ListMeta
 
     def __init__(
         self,
@@ -18,7 +18,7 @@ class V1APIServiceList:
     def to_dict(self) -> V1APIServiceListDict: ...
 
 class V1APIServiceListDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
+    apiVersion: str
     items: list[kubernetes.client.V1APIServiceDict]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ListMetaDict]
+    kind: str
+    metadata: kubernetes.client.V1ListMetaDict

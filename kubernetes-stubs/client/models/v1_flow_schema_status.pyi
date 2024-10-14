@@ -14,4 +14,4 @@ class V1FlowSchemaStatus:
     def to_dict(self) -> V1FlowSchemaStatusDict: ...
 
 class V1FlowSchemaStatusDict(typing.TypedDict, total=False):
-    conditions: typing.Optional[list[kubernetes.client.V1FlowSchemaConditionDict]]
+    conditions: list[kubernetes.client.V1FlowSchemaConditionDict]

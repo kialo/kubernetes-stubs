@@ -17,7 +17,7 @@ class V1alpha1ServerStorageVersion:
     def to_dict(self) -> V1alpha1ServerStorageVersionDict: ...
 
 class V1alpha1ServerStorageVersionDict(typing.TypedDict, total=False):
-    apiServerID: typing.Optional[str]
-    decodableVersions: typing.Optional[list[str]]
-    encodingVersion: typing.Optional[str]
-    servedVersions: typing.Optional[list[str]]
+    apiServerID: str
+    decodableVersions: list[str]
+    encodingVersion: str
+    servedVersions: list[str]

@@ -18,7 +18,7 @@ class V1ConfigMapVolumeSource:
     def to_dict(self) -> V1ConfigMapVolumeSourceDict: ...
 
 class V1ConfigMapVolumeSourceDict(typing.TypedDict, total=False):
-    defaultMode: typing.Optional[int]
-    items: typing.Optional[list[kubernetes.client.V1KeyToPathDict]]
-    name: typing.Optional[str]
-    optional: typing.Optional[bool]
+    defaultMode: int
+    items: list[kubernetes.client.V1KeyToPathDict]
+    name: str
+    optional: bool

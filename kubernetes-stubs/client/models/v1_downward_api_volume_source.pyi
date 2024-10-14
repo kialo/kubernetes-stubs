@@ -14,5 +14,5 @@ class V1DownwardAPIVolumeSource:
     def to_dict(self) -> V1DownwardAPIVolumeSourceDict: ...
 
 class V1DownwardAPIVolumeSourceDict(typing.TypedDict, total=False):
-    defaultMode: typing.Optional[int]
-    items: typing.Optional[list[kubernetes.client.V1DownwardAPIVolumeFileDict]]
+    defaultMode: int
+    items: list[kubernetes.client.V1DownwardAPIVolumeFileDict]

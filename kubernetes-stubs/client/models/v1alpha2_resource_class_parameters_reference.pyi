@@ -17,7 +17,7 @@ class V1alpha2ResourceClassParametersReference:
     def to_dict(self) -> V1alpha2ResourceClassParametersReferenceDict: ...
 
 class V1alpha2ResourceClassParametersReferenceDict(typing.TypedDict, total=False):
-    apiGroup: typing.Optional[str]
+    apiGroup: str
     kind: str
     name: str
-    namespace: typing.Optional[str]
+    namespace: str

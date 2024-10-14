@@ -19,8 +19,8 @@ class V1IngressClassParametersReference:
     def to_dict(self) -> V1IngressClassParametersReferenceDict: ...
 
 class V1IngressClassParametersReferenceDict(typing.TypedDict, total=False):
-    apiGroup: typing.Optional[str]
+    apiGroup: str
     kind: str
     name: str
-    namespace: typing.Optional[str]
-    scope: typing.Optional[str]
+    namespace: str
+    scope: str

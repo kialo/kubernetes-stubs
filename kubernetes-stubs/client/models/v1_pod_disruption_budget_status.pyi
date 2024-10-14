@@ -25,10 +25,10 @@ class V1PodDisruptionBudgetStatus:
     def to_dict(self) -> V1PodDisruptionBudgetStatusDict: ...
 
 class V1PodDisruptionBudgetStatusDict(typing.TypedDict, total=False):
-    conditions: typing.Optional[list[kubernetes.client.V1ConditionDict]]
+    conditions: list[kubernetes.client.V1ConditionDict]
     currentHealthy: int
     desiredHealthy: int
-    disruptedPods: typing.Optional[dict[str, datetime.datetime]]
+    disruptedPods: dict[str, datetime.datetime]
     disruptionsAllowed: int
     expectedPods: int
-    observedGeneration: typing.Optional[int]
+    observedGeneration: int

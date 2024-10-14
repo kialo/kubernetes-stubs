@@ -19,5 +19,5 @@ class AdmissionregistrationV1ServiceReference:
 class AdmissionregistrationV1ServiceReferenceDict(typing.TypedDict, total=False):
     name: str
     namespace: str
-    path: typing.Optional[str]
-    port: typing.Optional[int]
+    path: str
+    port: int

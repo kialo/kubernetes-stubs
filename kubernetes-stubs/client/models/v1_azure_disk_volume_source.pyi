@@ -21,9 +21,9 @@ class V1AzureDiskVolumeSource:
     def to_dict(self) -> V1AzureDiskVolumeSourceDict: ...
 
 class V1AzureDiskVolumeSourceDict(typing.TypedDict, total=False):
-    cachingMode: typing.Optional[str]
+    cachingMode: str
     diskName: str
     diskURI: str
-    fsType: typing.Optional[str]
-    kind: typing.Optional[str]
-    readOnly: typing.Optional[bool]
+    fsType: str
+    kind: str
+    readOnly: bool

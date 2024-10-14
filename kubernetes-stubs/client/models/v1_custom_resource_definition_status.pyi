@@ -22,10 +22,6 @@ class V1CustomResourceDefinitionStatus:
     def to_dict(self) -> V1CustomResourceDefinitionStatusDict: ...
 
 class V1CustomResourceDefinitionStatusDict(typing.TypedDict, total=False):
-    acceptedNames: typing.Optional[
-        kubernetes.client.V1CustomResourceDefinitionNamesDict
-    ]
-    conditions: typing.Optional[
-        list[kubernetes.client.V1CustomResourceDefinitionConditionDict]
-    ]
-    storedVersions: typing.Optional[list[str]]
+    acceptedNames: kubernetes.client.V1CustomResourceDefinitionNamesDict
+    conditions: list[kubernetes.client.V1CustomResourceDefinitionConditionDict]
+    storedVersions: list[str]

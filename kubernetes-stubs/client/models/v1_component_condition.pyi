@@ -17,7 +17,7 @@ class V1ComponentCondition:
     def to_dict(self) -> V1ComponentConditionDict: ...
 
 class V1ComponentConditionDict(typing.TypedDict, total=False):
-    error: typing.Optional[str]
-    message: typing.Optional[str]
+    error: str
+    message: str
     status: str
     type: str

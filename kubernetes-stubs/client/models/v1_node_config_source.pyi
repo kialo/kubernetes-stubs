@@ -14,4 +14,4 @@ class V1NodeConfigSource:
     def to_dict(self) -> V1NodeConfigSourceDict: ...
 
 class V1NodeConfigSourceDict(typing.TypedDict, total=False):
-    configMap: typing.Optional[kubernetes.client.V1ConfigMapNodeConfigSourceDict]
+    configMap: kubernetes.client.V1ConfigMapNodeConfigSourceDict

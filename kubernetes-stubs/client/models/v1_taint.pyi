@@ -20,5 +20,5 @@ class V1Taint:
 class V1TaintDict(typing.TypedDict, total=False):
     effect: str
     key: str
-    timeAdded: typing.Optional[datetime.datetime]
-    value: typing.Optional[str]
+    timeAdded: datetime.datetime
+    value: str

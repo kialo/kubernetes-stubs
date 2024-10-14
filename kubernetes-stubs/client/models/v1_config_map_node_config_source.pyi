@@ -22,5 +22,5 @@ class V1ConfigMapNodeConfigSourceDict(typing.TypedDict, total=False):
     kubeletConfigKey: str
     name: str
     namespace: str
-    resourceVersion: typing.Optional[str]
-    uid: typing.Optional[str]
+    resourceVersion: str
+    uid: str

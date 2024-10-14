@@ -2,12 +2,12 @@ import kubernetes.client
 import typing
 
 class V1ConfigMap:
-    api_version: typing.Optional[str]
+    api_version: str
     binary_data: typing.Optional[dict[str, str]]
     data: typing.Optional[dict[str, str]]
     immutable: typing.Optional[bool]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ObjectMeta]
+    kind: str
+    metadata: kubernetes.client.V1ObjectMeta
 
     def __init__(
         self,
@@ -22,9 +22,9 @@ class V1ConfigMap:
     def to_dict(self) -> V1ConfigMapDict: ...
 
 class V1ConfigMapDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
-    binaryData: typing.Optional[dict[str, str]]
-    data: typing.Optional[dict[str, str]]
-    immutable: typing.Optional[bool]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ObjectMetaDict]
+    apiVersion: str
+    binaryData: dict[str, str]
+    data: dict[str, str]
+    immutable: bool
+    kind: str
+    metadata: kubernetes.client.V1ObjectMetaDict

@@ -16,5 +16,5 @@ class V1VolumeAttachmentSource:
     def to_dict(self) -> V1VolumeAttachmentSourceDict: ...
 
 class V1VolumeAttachmentSourceDict(typing.TypedDict, total=False):
-    inlineVolumeSpec: typing.Optional[kubernetes.client.V1PersistentVolumeSpecDict]
-    persistentVolumeName: typing.Optional[str]
+    inlineVolumeSpec: kubernetes.client.V1PersistentVolumeSpecDict
+    persistentVolumeName: str

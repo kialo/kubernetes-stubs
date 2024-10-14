@@ -26,11 +26,11 @@ class V1CronJobSpec:
     def to_dict(self) -> V1CronJobSpecDict: ...
 
 class V1CronJobSpecDict(typing.TypedDict, total=False):
-    concurrencyPolicy: typing.Optional[str]
-    failedJobsHistoryLimit: typing.Optional[int]
+    concurrencyPolicy: str
+    failedJobsHistoryLimit: int
     jobTemplate: kubernetes.client.V1JobTemplateSpecDict
     schedule: str
-    startingDeadlineSeconds: typing.Optional[int]
-    successfulJobsHistoryLimit: typing.Optional[int]
-    suspend: typing.Optional[bool]
-    timeZone: typing.Optional[str]
+    startingDeadlineSeconds: int
+    successfulJobsHistoryLimit: int
+    suspend: bool
+    timeZone: str

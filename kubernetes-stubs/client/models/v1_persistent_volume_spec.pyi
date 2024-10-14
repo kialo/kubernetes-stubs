@@ -98,42 +98,34 @@ class V1PersistentVolumeSpec:
     def to_dict(self) -> V1PersistentVolumeSpecDict: ...
 
 class V1PersistentVolumeSpecDict(typing.TypedDict, total=False):
-    accessModes: typing.Optional[list[str]]
-    awsElasticBlockStore: typing.Optional[
-        kubernetes.client.V1AWSElasticBlockStoreVolumeSourceDict
-    ]
-    azureDisk: typing.Optional[kubernetes.client.V1AzureDiskVolumeSourceDict]
-    azureFile: typing.Optional[kubernetes.client.V1AzureFilePersistentVolumeSourceDict]
-    capacity: typing.Optional[dict[str, str]]
-    cephfs: typing.Optional[kubernetes.client.V1CephFSPersistentVolumeSourceDict]
-    cinder: typing.Optional[kubernetes.client.V1CinderPersistentVolumeSourceDict]
-    claimRef: typing.Optional[kubernetes.client.V1ObjectReferenceDict]
-    csi: typing.Optional[kubernetes.client.V1CSIPersistentVolumeSourceDict]
-    fc: typing.Optional[kubernetes.client.V1FCVolumeSourceDict]
-    flexVolume: typing.Optional[kubernetes.client.V1FlexPersistentVolumeSourceDict]
-    flocker: typing.Optional[kubernetes.client.V1FlockerVolumeSourceDict]
-    gcePersistentDisk: typing.Optional[
-        kubernetes.client.V1GCEPersistentDiskVolumeSourceDict
-    ]
-    glusterfs: typing.Optional[kubernetes.client.V1GlusterfsPersistentVolumeSourceDict]
-    hostPath: typing.Optional[kubernetes.client.V1HostPathVolumeSourceDict]
-    iscsi: typing.Optional[kubernetes.client.V1ISCSIPersistentVolumeSourceDict]
-    local: typing.Optional[kubernetes.client.V1LocalVolumeSourceDict]
-    mountOptions: typing.Optional[list[str]]
-    nfs: typing.Optional[kubernetes.client.V1NFSVolumeSourceDict]
-    nodeAffinity: typing.Optional[kubernetes.client.V1VolumeNodeAffinityDict]
-    persistentVolumeReclaimPolicy: typing.Optional[str]
-    photonPersistentDisk: typing.Optional[
-        kubernetes.client.V1PhotonPersistentDiskVolumeSourceDict
-    ]
-    portworxVolume: typing.Optional[kubernetes.client.V1PortworxVolumeSourceDict]
-    quobyte: typing.Optional[kubernetes.client.V1QuobyteVolumeSourceDict]
-    rbd: typing.Optional[kubernetes.client.V1RBDPersistentVolumeSourceDict]
-    scaleIO: typing.Optional[kubernetes.client.V1ScaleIOPersistentVolumeSourceDict]
-    storageClassName: typing.Optional[str]
-    storageos: typing.Optional[kubernetes.client.V1StorageOSPersistentVolumeSourceDict]
-    volumeAttributesClassName: typing.Optional[str]
-    volumeMode: typing.Optional[str]
-    vsphereVolume: typing.Optional[
-        kubernetes.client.V1VsphereVirtualDiskVolumeSourceDict
-    ]
+    accessModes: list[str]
+    awsElasticBlockStore: kubernetes.client.V1AWSElasticBlockStoreVolumeSourceDict
+    azureDisk: kubernetes.client.V1AzureDiskVolumeSourceDict
+    azureFile: kubernetes.client.V1AzureFilePersistentVolumeSourceDict
+    capacity: dict[str, str]
+    cephfs: kubernetes.client.V1CephFSPersistentVolumeSourceDict
+    cinder: kubernetes.client.V1CinderPersistentVolumeSourceDict
+    claimRef: kubernetes.client.V1ObjectReferenceDict
+    csi: kubernetes.client.V1CSIPersistentVolumeSourceDict
+    fc: kubernetes.client.V1FCVolumeSourceDict
+    flexVolume: kubernetes.client.V1FlexPersistentVolumeSourceDict
+    flocker: kubernetes.client.V1FlockerVolumeSourceDict
+    gcePersistentDisk: kubernetes.client.V1GCEPersistentDiskVolumeSourceDict
+    glusterfs: kubernetes.client.V1GlusterfsPersistentVolumeSourceDict
+    hostPath: kubernetes.client.V1HostPathVolumeSourceDict
+    iscsi: kubernetes.client.V1ISCSIPersistentVolumeSourceDict
+    local: kubernetes.client.V1LocalVolumeSourceDict
+    mountOptions: list[str]
+    nfs: kubernetes.client.V1NFSVolumeSourceDict
+    nodeAffinity: kubernetes.client.V1VolumeNodeAffinityDict
+    persistentVolumeReclaimPolicy: str
+    photonPersistentDisk: kubernetes.client.V1PhotonPersistentDiskVolumeSourceDict
+    portworxVolume: kubernetes.client.V1PortworxVolumeSourceDict
+    quobyte: kubernetes.client.V1QuobyteVolumeSourceDict
+    rbd: kubernetes.client.V1RBDPersistentVolumeSourceDict
+    scaleIO: kubernetes.client.V1ScaleIOPersistentVolumeSourceDict
+    storageClassName: str
+    storageos: kubernetes.client.V1StorageOSPersistentVolumeSourceDict
+    volumeAttributesClassName: str
+    volumeMode: str
+    vsphereVolume: kubernetes.client.V1VsphereVirtualDiskVolumeSourceDict

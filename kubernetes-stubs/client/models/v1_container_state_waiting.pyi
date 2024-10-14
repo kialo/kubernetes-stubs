@@ -10,5 +10,5 @@ class V1ContainerStateWaiting:
     def to_dict(self) -> V1ContainerStateWaitingDict: ...
 
 class V1ContainerStateWaitingDict(typing.TypedDict, total=False):
-    message: typing.Optional[str]
-    reason: typing.Optional[str]
+    message: str
+    reason: str

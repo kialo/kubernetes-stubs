@@ -23,8 +23,8 @@ class V1CephFSVolumeSource:
 
 class V1CephFSVolumeSourceDict(typing.TypedDict, total=False):
     monitors: list[str]
-    path: typing.Optional[str]
-    readOnly: typing.Optional[bool]
-    secretFile: typing.Optional[str]
-    secretRef: typing.Optional[kubernetes.client.V1LocalObjectReferenceDict]
-    user: typing.Optional[str]
+    path: str
+    readOnly: bool
+    secretFile: str
+    secretRef: kubernetes.client.V1LocalObjectReferenceDict
+    user: str

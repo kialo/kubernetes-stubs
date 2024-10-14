@@ -12,5 +12,5 @@ class V1NFSVolumeSource:
 
 class V1NFSVolumeSourceDict(typing.TypedDict, total=False):
     path: str
-    readOnly: typing.Optional[bool]
+    readOnly: bool
     server: str

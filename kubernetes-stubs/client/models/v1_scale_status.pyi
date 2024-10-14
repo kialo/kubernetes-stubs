@@ -11,4 +11,4 @@ class V1ScaleStatus:
 
 class V1ScaleStatusDict(typing.TypedDict, total=False):
     replicas: int
-    selector: typing.Optional[str]
+    selector: str

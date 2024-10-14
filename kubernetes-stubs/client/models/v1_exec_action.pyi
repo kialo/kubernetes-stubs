@@ -7,4 +7,4 @@ class V1ExecAction:
     def to_dict(self) -> V1ExecActionDict: ...
 
 class V1ExecActionDict(typing.TypedDict, total=False):
-    command: typing.Optional[list[str]]
+    command: list[str]

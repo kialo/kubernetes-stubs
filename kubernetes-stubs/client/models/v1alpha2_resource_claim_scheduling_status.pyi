@@ -13,5 +13,5 @@ class V1alpha2ResourceClaimSchedulingStatus:
     def to_dict(self) -> V1alpha2ResourceClaimSchedulingStatusDict: ...
 
 class V1alpha2ResourceClaimSchedulingStatusDict(typing.TypedDict, total=False):
-    name: typing.Optional[str]
-    unsuitableNodes: typing.Optional[list[str]]
+    name: str
+    unsuitableNodes: list[str]

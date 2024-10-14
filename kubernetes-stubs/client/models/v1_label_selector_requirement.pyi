@@ -13,4 +13,4 @@ class V1LabelSelectorRequirement:
 class V1LabelSelectorRequirementDict(typing.TypedDict, total=False):
     key: str
     operator: str
-    values: typing.Optional[list[str]]
+    values: list[str]

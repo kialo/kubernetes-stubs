@@ -10,4 +10,4 @@ class V1alpha1SelfSubjectReviewStatus:
     def to_dict(self) -> V1alpha1SelfSubjectReviewStatusDict: ...
 
 class V1alpha1SelfSubjectReviewStatusDict(typing.TypedDict, total=False):
-    userInfo: typing.Optional[kubernetes.client.V1UserInfoDict]
+    userInfo: kubernetes.client.V1UserInfoDict

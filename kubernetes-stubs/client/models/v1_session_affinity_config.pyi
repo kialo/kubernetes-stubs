@@ -10,4 +10,4 @@ class V1SessionAffinityConfig:
     def to_dict(self) -> V1SessionAffinityConfigDict: ...
 
 class V1SessionAffinityConfigDict(typing.TypedDict, total=False):
-    clientIP: typing.Optional[kubernetes.client.V1ClientIPConfigDict]
+    clientIP: kubernetes.client.V1ClientIPConfigDict

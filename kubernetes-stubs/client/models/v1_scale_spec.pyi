@@ -7,4 +7,4 @@ class V1ScaleSpec:
     def to_dict(self) -> V1ScaleSpecDict: ...
 
 class V1ScaleSpecDict(typing.TypedDict, total=False):
-    replicas: typing.Optional[int]
+    replicas: int

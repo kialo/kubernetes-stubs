@@ -10,4 +10,4 @@ class V1VolumeNodeAffinity:
     def to_dict(self) -> V1VolumeNodeAffinityDict: ...
 
 class V1VolumeNodeAffinityDict(typing.TypedDict, total=False):
-    required: typing.Optional[kubernetes.client.V1NodeSelectorDict]
+    required: kubernetes.client.V1NodeSelectorDict

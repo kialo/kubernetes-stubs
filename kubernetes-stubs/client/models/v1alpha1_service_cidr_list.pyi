@@ -2,10 +2,10 @@ import kubernetes.client
 import typing
 
 class V1alpha1ServiceCIDRList:
-    api_version: typing.Optional[str]
+    api_version: str
     items: list[kubernetes.client.V1alpha1ServiceCIDR]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ListMeta]
+    kind: str
+    metadata: kubernetes.client.V1ListMeta
 
     def __init__(
         self,
@@ -18,7 +18,7 @@ class V1alpha1ServiceCIDRList:
     def to_dict(self) -> V1alpha1ServiceCIDRListDict: ...
 
 class V1alpha1ServiceCIDRListDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
+    apiVersion: str
     items: list[kubernetes.client.V1alpha1ServiceCIDRDict]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ListMetaDict]
+    kind: str
+    metadata: kubernetes.client.V1ListMetaDict

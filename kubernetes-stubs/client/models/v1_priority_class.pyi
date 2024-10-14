@@ -2,11 +2,11 @@ import kubernetes.client
 import typing
 
 class V1PriorityClass:
-    api_version: typing.Optional[str]
+    api_version: str
     description: typing.Optional[str]
     global_default: typing.Optional[bool]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ObjectMeta]
+    kind: str
+    metadata: kubernetes.client.V1ObjectMeta
     preemption_policy: typing.Optional[str]
     value: int
 
@@ -24,10 +24,10 @@ class V1PriorityClass:
     def to_dict(self) -> V1PriorityClassDict: ...
 
 class V1PriorityClassDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
-    description: typing.Optional[str]
-    globalDefault: typing.Optional[bool]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ObjectMetaDict]
-    preemptionPolicy: typing.Optional[str]
+    apiVersion: str
+    description: str
+    globalDefault: bool
+    kind: str
+    metadata: kubernetes.client.V1ObjectMetaDict
+    preemptionPolicy: str
     value: int

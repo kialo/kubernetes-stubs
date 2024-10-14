@@ -19,5 +19,5 @@ class ApiextensionsV1ServiceReference:
 class ApiextensionsV1ServiceReferenceDict(typing.TypedDict, total=False):
     name: str
     namespace: str
-    path: typing.Optional[str]
-    port: typing.Optional[int]
+    path: str
+    port: int

@@ -32,14 +32,14 @@ class V1ISCSIPersistentVolumeSource:
     def to_dict(self) -> V1ISCSIPersistentVolumeSourceDict: ...
 
 class V1ISCSIPersistentVolumeSourceDict(typing.TypedDict, total=False):
-    chapAuthDiscovery: typing.Optional[bool]
-    chapAuthSession: typing.Optional[bool]
-    fsType: typing.Optional[str]
-    initiatorName: typing.Optional[str]
+    chapAuthDiscovery: bool
+    chapAuthSession: bool
+    fsType: str
+    initiatorName: str
     iqn: str
-    iscsiInterface: typing.Optional[str]
+    iscsiInterface: str
     lun: int
-    portals: typing.Optional[list[str]]
-    readOnly: typing.Optional[bool]
-    secretRef: typing.Optional[kubernetes.client.V1SecretReferenceDict]
+    portals: list[str]
+    readOnly: bool
+    secretRef: kubernetes.client.V1SecretReferenceDict
     targetPortal: str

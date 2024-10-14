@@ -1,7 +1,7 @@
 import typing
 
 class V2CrossVersionObjectReference:
-    api_version: typing.Optional[str]
+    api_version: str
     kind: str
     name: str
 
@@ -11,6 +11,6 @@ class V2CrossVersionObjectReference:
     def to_dict(self) -> V2CrossVersionObjectReferenceDict: ...
 
 class V2CrossVersionObjectReferenceDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
+    apiVersion: str
     kind: str
     name: str

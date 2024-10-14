@@ -18,6 +18,6 @@ class V1alpha1Validation:
 
 class V1alpha1ValidationDict(typing.TypedDict, total=False):
     expression: str
-    message: typing.Optional[str]
-    messageExpression: typing.Optional[str]
-    reason: typing.Optional[str]
+    message: str
+    messageExpression: str
+    reason: str

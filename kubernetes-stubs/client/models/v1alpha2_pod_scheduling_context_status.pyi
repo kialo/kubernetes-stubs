@@ -16,6 +16,4 @@ class V1alpha2PodSchedulingContextStatus:
     def to_dict(self) -> V1alpha2PodSchedulingContextStatusDict: ...
 
 class V1alpha2PodSchedulingContextStatusDict(typing.TypedDict, total=False):
-    resourceClaims: typing.Optional[
-        list[kubernetes.client.V1alpha2ResourceClaimSchedulingStatusDict]
-    ]
+    resourceClaims: list[kubernetes.client.V1alpha2ResourceClaimSchedulingStatusDict]

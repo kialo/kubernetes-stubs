@@ -18,7 +18,7 @@ class V1PodDisruptionBudgetSpec:
     def to_dict(self) -> V1PodDisruptionBudgetSpecDict: ...
 
 class V1PodDisruptionBudgetSpecDict(typing.TypedDict, total=False):
-    maxUnavailable: typing.Optional[typing.Any]
-    minAvailable: typing.Optional[typing.Any]
-    selector: typing.Optional[kubernetes.client.V1LabelSelectorDict]
-    unhealthyPodEvictionPolicy: typing.Optional[str]
+    maxUnavailable: typing.Any
+    minAvailable: typing.Any
+    selector: kubernetes.client.V1LabelSelectorDict
+    unhealthyPodEvictionPolicy: str

@@ -10,5 +10,5 @@ class V1alpha1ClusterTrustBundleSpec:
     def to_dict(self) -> V1alpha1ClusterTrustBundleSpecDict: ...
 
 class V1alpha1ClusterTrustBundleSpecDict(typing.TypedDict, total=False):
-    signerName: typing.Optional[str]
+    signerName: str
     trustBundle: str

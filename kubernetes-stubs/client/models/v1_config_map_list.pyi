@@ -2,10 +2,10 @@ import kubernetes.client
 import typing
 
 class V1ConfigMapList:
-    api_version: typing.Optional[str]
+    api_version: str
     items: list[kubernetes.client.V1ConfigMap]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ListMeta]
+    kind: str
+    metadata: kubernetes.client.V1ListMeta
 
     def __init__(
         self,
@@ -18,7 +18,7 @@ class V1ConfigMapList:
     def to_dict(self) -> V1ConfigMapListDict: ...
 
 class V1ConfigMapListDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
+    apiVersion: str
     items: list[kubernetes.client.V1ConfigMapDict]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ListMetaDict]
+    kind: str
+    metadata: kubernetes.client.V1ListMetaDict

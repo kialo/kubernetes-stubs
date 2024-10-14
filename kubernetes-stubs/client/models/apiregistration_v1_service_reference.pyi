@@ -15,6 +15,6 @@ class ApiregistrationV1ServiceReference:
     def to_dict(self) -> ApiregistrationV1ServiceReferenceDict: ...
 
 class ApiregistrationV1ServiceReferenceDict(typing.TypedDict, total=False):
-    name: typing.Optional[str]
-    namespace: typing.Optional[str]
-    port: typing.Optional[int]
+    name: str
+    namespace: str
+    port: int

@@ -28,12 +28,8 @@ class V1alpha1MatchResources:
     def to_dict(self) -> V1alpha1MatchResourcesDict: ...
 
 class V1alpha1MatchResourcesDict(typing.TypedDict, total=False):
-    excludeResourceRules: typing.Optional[
-        list[kubernetes.client.V1alpha1NamedRuleWithOperationsDict]
-    ]
-    matchPolicy: typing.Optional[str]
-    namespaceSelector: typing.Optional[kubernetes.client.V1LabelSelectorDict]
-    objectSelector: typing.Optional[kubernetes.client.V1LabelSelectorDict]
-    resourceRules: typing.Optional[
-        list[kubernetes.client.V1alpha1NamedRuleWithOperationsDict]
-    ]
+    excludeResourceRules: list[kubernetes.client.V1alpha1NamedRuleWithOperationsDict]
+    matchPolicy: str
+    namespaceSelector: kubernetes.client.V1LabelSelectorDict
+    objectSelector: kubernetes.client.V1LabelSelectorDict
+    resourceRules: list[kubernetes.client.V1alpha1NamedRuleWithOperationsDict]

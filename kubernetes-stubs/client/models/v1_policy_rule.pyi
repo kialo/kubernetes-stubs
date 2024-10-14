@@ -19,8 +19,8 @@ class V1PolicyRule:
     def to_dict(self) -> V1PolicyRuleDict: ...
 
 class V1PolicyRuleDict(typing.TypedDict, total=False):
-    apiGroups: typing.Optional[list[str]]
-    nonResourceURLs: typing.Optional[list[str]]
-    resourceNames: typing.Optional[list[str]]
-    resources: typing.Optional[list[str]]
+    apiGroups: list[str]
+    nonResourceURLs: list[str]
+    resourceNames: list[str]
+    resources: list[str]
     verbs: list[str]

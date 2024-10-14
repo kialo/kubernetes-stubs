@@ -17,4 +17,4 @@ class V1ScopedResourceSelectorRequirement:
 class V1ScopedResourceSelectorRequirementDict(typing.TypedDict, total=False):
     operator: str
     scopeName: str
-    values: typing.Optional[list[str]]
+    values: list[str]

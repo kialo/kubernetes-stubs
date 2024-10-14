@@ -10,4 +10,4 @@ class V1alpha1ServiceCIDRStatus:
     def to_dict(self) -> V1alpha1ServiceCIDRStatusDict: ...
 
 class V1alpha1ServiceCIDRStatusDict(typing.TypedDict, total=False):
-    conditions: typing.Optional[list[kubernetes.client.V1ConditionDict]]
+    conditions: list[kubernetes.client.V1ConditionDict]

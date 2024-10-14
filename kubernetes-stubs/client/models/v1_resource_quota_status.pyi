@@ -13,5 +13,5 @@ class V1ResourceQuotaStatus:
     def to_dict(self) -> V1ResourceQuotaStatusDict: ...
 
 class V1ResourceQuotaStatusDict(typing.TypedDict, total=False):
-    hard: typing.Optional[dict[str, str]]
-    used: typing.Optional[dict[str, str]]
+    hard: dict[str, str]
+    used: dict[str, str]

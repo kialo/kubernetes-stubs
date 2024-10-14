@@ -42,18 +42,16 @@ class V1StatefulSetSpec:
     def to_dict(self) -> V1StatefulSetSpecDict: ...
 
 class V1StatefulSetSpecDict(typing.TypedDict, total=False):
-    minReadySeconds: typing.Optional[int]
-    ordinals: typing.Optional[kubernetes.client.V1StatefulSetOrdinalsDict]
-    persistentVolumeClaimRetentionPolicy: typing.Optional[
+    minReadySeconds: int
+    ordinals: kubernetes.client.V1StatefulSetOrdinalsDict
+    persistentVolumeClaimRetentionPolicy: (
         kubernetes.client.V1StatefulSetPersistentVolumeClaimRetentionPolicyDict
-    ]
-    podManagementPolicy: typing.Optional[str]
-    replicas: typing.Optional[int]
-    revisionHistoryLimit: typing.Optional[int]
+    )
+    podManagementPolicy: str
+    replicas: int
+    revisionHistoryLimit: int
     selector: kubernetes.client.V1LabelSelectorDict
     serviceName: str
     template: kubernetes.client.V1PodTemplateSpecDict
-    updateStrategy: typing.Optional[kubernetes.client.V1StatefulSetUpdateStrategyDict]
-    volumeClaimTemplates: typing.Optional[
-        list[kubernetes.client.V1PersistentVolumeClaimDict]
-    ]
+    updateStrategy: kubernetes.client.V1StatefulSetUpdateStrategyDict
+    volumeClaimTemplates: list[kubernetes.client.V1PersistentVolumeClaimDict]

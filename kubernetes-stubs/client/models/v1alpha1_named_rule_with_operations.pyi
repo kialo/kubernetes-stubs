@@ -21,9 +21,9 @@ class V1alpha1NamedRuleWithOperations:
     def to_dict(self) -> V1alpha1NamedRuleWithOperationsDict: ...
 
 class V1alpha1NamedRuleWithOperationsDict(typing.TypedDict, total=False):
-    apiGroups: typing.Optional[list[str]]
-    apiVersions: typing.Optional[list[str]]
-    operations: typing.Optional[list[str]]
-    resourceNames: typing.Optional[list[str]]
-    resources: typing.Optional[list[str]]
-    scope: typing.Optional[str]
+    apiGroups: list[str]
+    apiVersions: list[str]
+    operations: list[str]
+    resourceNames: list[str]
+    resources: list[str]
+    scope: str

@@ -24,10 +24,10 @@ class V1ContainerStateTerminated:
     def to_dict(self) -> V1ContainerStateTerminatedDict: ...
 
 class V1ContainerStateTerminatedDict(typing.TypedDict, total=False):
-    containerID: typing.Optional[str]
+    containerID: str
     exitCode: int
-    finishedAt: typing.Optional[datetime.datetime]
-    message: typing.Optional[str]
-    reason: typing.Optional[str]
-    signal: typing.Optional[int]
-    startedAt: typing.Optional[datetime.datetime]
+    finishedAt: datetime.datetime
+    message: str
+    reason: str
+    signal: int
+    startedAt: datetime.datetime

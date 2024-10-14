@@ -10,5 +10,5 @@ class V1SecretReference:
     def to_dict(self) -> V1SecretReferenceDict: ...
 
 class V1SecretReferenceDict(typing.TypedDict, total=False):
-    name: typing.Optional[str]
-    namespace: typing.Optional[str]
+    name: str
+    namespace: str

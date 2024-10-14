@@ -16,6 +16,6 @@ class V2HPAScalingRules:
     def to_dict(self) -> V2HPAScalingRulesDict: ...
 
 class V2HPAScalingRulesDict(typing.TypedDict, total=False):
-    policies: typing.Optional[list[kubernetes.client.V2HPAScalingPolicyDict]]
-    selectPolicy: typing.Optional[str]
-    stabilizationWindowSeconds: typing.Optional[int]
+    policies: list[kubernetes.client.V2HPAScalingPolicyDict]
+    selectPolicy: str
+    stabilizationWindowSeconds: int

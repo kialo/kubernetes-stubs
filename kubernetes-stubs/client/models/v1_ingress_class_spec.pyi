@@ -16,5 +16,5 @@ class V1IngressClassSpec:
     def to_dict(self) -> V1IngressClassSpecDict: ...
 
 class V1IngressClassSpecDict(typing.TypedDict, total=False):
-    controller: typing.Optional[str]
-    parameters: typing.Optional[kubernetes.client.V1IngressClassParametersReferenceDict]
+    controller: str
+    parameters: kubernetes.client.V1IngressClassParametersReferenceDict

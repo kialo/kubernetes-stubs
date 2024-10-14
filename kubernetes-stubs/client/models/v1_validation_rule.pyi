@@ -21,9 +21,9 @@ class V1ValidationRule:
     def to_dict(self) -> V1ValidationRuleDict: ...
 
 class V1ValidationRuleDict(typing.TypedDict, total=False):
-    fieldPath: typing.Optional[str]
-    message: typing.Optional[str]
-    messageExpression: typing.Optional[str]
-    optionalOldSelf: typing.Optional[bool]
-    reason: typing.Optional[str]
+    fieldPath: str
+    message: str
+    messageExpression: str
+    optionalOldSelf: bool
+    reason: str
     rule: str

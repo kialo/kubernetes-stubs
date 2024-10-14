@@ -20,8 +20,8 @@ class V2HorizontalPodAutoscalerCondition:
     def to_dict(self) -> V2HorizontalPodAutoscalerConditionDict: ...
 
 class V2HorizontalPodAutoscalerConditionDict(typing.TypedDict, total=False):
-    lastTransitionTime: typing.Optional[datetime.datetime]
-    message: typing.Optional[str]
-    reason: typing.Optional[str]
+    lastTransitionTime: datetime.datetime
+    message: str
+    reason: str
     status: str
     type: str

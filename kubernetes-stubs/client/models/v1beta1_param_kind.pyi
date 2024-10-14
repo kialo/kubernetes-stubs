@@ -1,8 +1,8 @@
 import typing
 
 class V1beta1ParamKind:
-    api_version: typing.Optional[str]
-    kind: typing.Optional[str]
+    api_version: str
+    kind: str
 
     def __init__(
         self,
@@ -13,5 +13,5 @@ class V1beta1ParamKind:
     def to_dict(self) -> V1beta1ParamKindDict: ...
 
 class V1beta1ParamKindDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
-    kind: typing.Optional[str]
+    apiVersion: str
+    kind: str

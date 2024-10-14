@@ -20,8 +20,8 @@ class V1StorageOSPersistentVolumeSource:
     def to_dict(self) -> V1StorageOSPersistentVolumeSourceDict: ...
 
 class V1StorageOSPersistentVolumeSourceDict(typing.TypedDict, total=False):
-    fsType: typing.Optional[str]
-    readOnly: typing.Optional[bool]
-    secretRef: typing.Optional[kubernetes.client.V1ObjectReferenceDict]
-    volumeName: typing.Optional[str]
-    volumeNamespace: typing.Optional[str]
+    fsType: str
+    readOnly: bool
+    secretRef: kubernetes.client.V1ObjectReferenceDict
+    volumeName: str
+    volumeNamespace: str

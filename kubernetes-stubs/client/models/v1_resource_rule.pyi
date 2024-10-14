@@ -17,7 +17,7 @@ class V1ResourceRule:
     def to_dict(self) -> V1ResourceRuleDict: ...
 
 class V1ResourceRuleDict(typing.TypedDict, total=False):
-    apiGroups: typing.Optional[list[str]]
-    resourceNames: typing.Optional[list[str]]
-    resources: typing.Optional[list[str]]
+    apiGroups: list[str]
+    resourceNames: list[str]
+    resources: list[str]
     verbs: list[str]

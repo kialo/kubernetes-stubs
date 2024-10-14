@@ -17,7 +17,7 @@ class V1alpha2ResourceClaimConsumerReference:
     def to_dict(self) -> V1alpha2ResourceClaimConsumerReferenceDict: ...
 
 class V1alpha2ResourceClaimConsumerReferenceDict(typing.TypedDict, total=False):
-    apiGroup: typing.Optional[str]
+    apiGroup: str
     name: str
     resource: str
     uid: str

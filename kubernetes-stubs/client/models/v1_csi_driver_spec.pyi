@@ -28,11 +28,11 @@ class V1CSIDriverSpec:
     def to_dict(self) -> V1CSIDriverSpecDict: ...
 
 class V1CSIDriverSpecDict(typing.TypedDict, total=False):
-    attachRequired: typing.Optional[bool]
-    fsGroupPolicy: typing.Optional[str]
-    podInfoOnMount: typing.Optional[bool]
-    requiresRepublish: typing.Optional[bool]
-    seLinuxMount: typing.Optional[bool]
-    storageCapacity: typing.Optional[bool]
-    tokenRequests: typing.Optional[list[kubernetes.client.StorageV1TokenRequestDict]]
-    volumeLifecycleModes: typing.Optional[list[str]]
+    attachRequired: bool
+    fsGroupPolicy: str
+    podInfoOnMount: bool
+    requiresRepublish: bool
+    seLinuxMount: bool
+    storageCapacity: bool
+    tokenRequests: list[kubernetes.client.StorageV1TokenRequestDict]
+    volumeLifecycleModes: list[str]

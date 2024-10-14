@@ -13,5 +13,5 @@ class V1ContainerImage:
     def to_dict(self) -> V1ContainerImageDict: ...
 
 class V1ContainerImageDict(typing.TypedDict, total=False):
-    names: typing.Optional[list[str]]
-    sizeBytes: typing.Optional[int]
+    names: list[str]
+    sizeBytes: int

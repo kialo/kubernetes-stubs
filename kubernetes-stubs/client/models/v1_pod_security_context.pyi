@@ -2,7 +2,6 @@ import kubernetes.client
 import typing
 
 class V1PodSecurityContext:
-    app_armor_profile: typing.Optional[kubernetes.client.V1AppArmorProfile]
     fs_group: typing.Optional[int]
     fs_group_change_policy: typing.Optional[str]
     run_as_group: typing.Optional[int]
@@ -17,7 +16,6 @@ class V1PodSecurityContext:
     def __init__(
         self,
         *,
-        app_armor_profile: typing.Optional[kubernetes.client.V1AppArmorProfile] = ...,
         fs_group: typing.Optional[int] = ...,
         fs_group_change_policy: typing.Optional[str] = ...,
         run_as_group: typing.Optional[int] = ...,
@@ -34,16 +32,13 @@ class V1PodSecurityContext:
     def to_dict(self) -> V1PodSecurityContextDict: ...
 
 class V1PodSecurityContextDict(typing.TypedDict, total=False):
-    appArmorProfile: typing.Optional[kubernetes.client.V1AppArmorProfileDict]
-    fsGroup: typing.Optional[int]
-    fsGroupChangePolicy: typing.Optional[str]
-    runAsGroup: typing.Optional[int]
-    runAsNonRoot: typing.Optional[bool]
-    runAsUser: typing.Optional[int]
-    seLinuxOptions: typing.Optional[kubernetes.client.V1SELinuxOptionsDict]
-    seccompProfile: typing.Optional[kubernetes.client.V1SeccompProfileDict]
-    supplementalGroups: typing.Optional[list[int]]
-    sysctls: typing.Optional[list[kubernetes.client.V1SysctlDict]]
-    windowsOptions: typing.Optional[
-        kubernetes.client.V1WindowsSecurityContextOptionsDict
-    ]
+    fsGroup: int
+    fsGroupChangePolicy: str
+    runAsGroup: int
+    runAsNonRoot: bool
+    runAsUser: int
+    seLinuxOptions: kubernetes.client.V1SELinuxOptionsDict
+    seccompProfile: kubernetes.client.V1SeccompProfileDict
+    supplementalGroups: list[int]
+    sysctls: list[kubernetes.client.V1SysctlDict]
+    windowsOptions: kubernetes.client.V1WindowsSecurityContextOptionsDict

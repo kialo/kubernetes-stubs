@@ -17,5 +17,5 @@ class V1HTTPIngressPath:
 
 class V1HTTPIngressPathDict(typing.TypedDict, total=False):
     backend: kubernetes.client.V1IngressBackendDict
-    path: typing.Optional[str]
+    path: str
     pathType: str

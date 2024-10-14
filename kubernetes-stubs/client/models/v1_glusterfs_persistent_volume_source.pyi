@@ -18,6 +18,6 @@ class V1GlusterfsPersistentVolumeSource:
 
 class V1GlusterfsPersistentVolumeSourceDict(typing.TypedDict, total=False):
     endpoints: str
-    endpointsNamespace: typing.Optional[str]
+    endpointsNamespace: str
     path: str
-    readOnly: typing.Optional[bool]
+    readOnly: bool

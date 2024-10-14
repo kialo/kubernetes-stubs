@@ -2,9 +2,9 @@ import kubernetes.client
 import typing
 
 class V1ValidatingWebhookConfiguration:
-    api_version: typing.Optional[str]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ObjectMeta]
+    api_version: str
+    kind: str
+    metadata: kubernetes.client.V1ObjectMeta
     webhooks: typing.Optional[list[kubernetes.client.V1ValidatingWebhook]]
 
     def __init__(
@@ -18,7 +18,7 @@ class V1ValidatingWebhookConfiguration:
     def to_dict(self) -> V1ValidatingWebhookConfigurationDict: ...
 
 class V1ValidatingWebhookConfigurationDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ObjectMetaDict]
-    webhooks: typing.Optional[list[kubernetes.client.V1ValidatingWebhookDict]]
+    apiVersion: str
+    kind: str
+    metadata: kubernetes.client.V1ObjectMetaDict
+    webhooks: list[kubernetes.client.V1ValidatingWebhookDict]

@@ -22,9 +22,9 @@ class V1PodCondition:
     def to_dict(self) -> V1PodConditionDict: ...
 
 class V1PodConditionDict(typing.TypedDict, total=False):
-    lastProbeTime: typing.Optional[datetime.datetime]
-    lastTransitionTime: typing.Optional[datetime.datetime]
-    message: typing.Optional[str]
-    reason: typing.Optional[str]
+    lastProbeTime: datetime.datetime
+    lastTransitionTime: datetime.datetime
+    message: str
+    reason: str
     status: str
     type: str

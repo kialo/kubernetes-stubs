@@ -17,7 +17,7 @@ class V2MetricTarget:
     def to_dict(self) -> V2MetricTargetDict: ...
 
 class V2MetricTargetDict(typing.TypedDict, total=False):
-    averageUtilization: typing.Optional[int]
-    averageValue: typing.Optional[str]
+    averageUtilization: int
+    averageValue: str
     type: str
-    value: typing.Optional[str]
+    value: str

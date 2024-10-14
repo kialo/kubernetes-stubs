@@ -18,7 +18,7 @@ class V1CinderPersistentVolumeSource:
     def to_dict(self) -> V1CinderPersistentVolumeSourceDict: ...
 
 class V1CinderPersistentVolumeSourceDict(typing.TypedDict, total=False):
-    fsType: typing.Optional[str]
-    readOnly: typing.Optional[bool]
-    secretRef: typing.Optional[kubernetes.client.V1SecretReferenceDict]
+    fsType: str
+    readOnly: bool
+    secretRef: kubernetes.client.V1SecretReferenceDict
     volumeID: str

@@ -18,7 +18,7 @@ class V1beta1ValidatingAdmissionPolicyBindingSpec:
     def to_dict(self) -> V1beta1ValidatingAdmissionPolicyBindingSpecDict: ...
 
 class V1beta1ValidatingAdmissionPolicyBindingSpecDict(typing.TypedDict, total=False):
-    matchResources: typing.Optional[kubernetes.client.V1beta1MatchResourcesDict]
-    paramRef: typing.Optional[kubernetes.client.V1beta1ParamRefDict]
-    policyName: typing.Optional[str]
-    validationActions: typing.Optional[list[str]]
+    matchResources: kubernetes.client.V1beta1MatchResourcesDict
+    paramRef: kubernetes.client.V1beta1ParamRefDict
+    policyName: str
+    validationActions: list[str]

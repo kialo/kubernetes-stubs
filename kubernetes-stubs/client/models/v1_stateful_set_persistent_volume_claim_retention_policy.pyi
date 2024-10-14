@@ -15,5 +15,5 @@ class V1StatefulSetPersistentVolumeClaimRetentionPolicy:
 class V1StatefulSetPersistentVolumeClaimRetentionPolicyDict(
     typing.TypedDict, total=False
 ):
-    whenDeleted: typing.Optional[str]
-    whenScaled: typing.Optional[str]
+    whenDeleted: str
+    whenScaled: str

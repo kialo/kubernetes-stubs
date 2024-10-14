@@ -9,7 +9,6 @@ class V1CustomResourceDefinitionVersion:
     deprecation_warning: typing.Optional[str]
     name: str
     schema: typing.Optional[kubernetes.client.V1CustomResourceValidation]
-    selectable_fields: typing.Optional[list[kubernetes.client.V1SelectableField]]
     served: bool
     storage: bool
     subresources: typing.Optional[kubernetes.client.V1CustomResourceSubresources]
@@ -24,9 +23,6 @@ class V1CustomResourceDefinitionVersion:
         deprecation_warning: typing.Optional[str] = ...,
         name: str,
         schema: typing.Optional[kubernetes.client.V1CustomResourceValidation] = ...,
-        selectable_fields: typing.Optional[
-            list[kubernetes.client.V1SelectableField]
-        ] = ...,
         served: bool,
         storage: bool,
         subresources: typing.Optional[
@@ -36,14 +32,13 @@ class V1CustomResourceDefinitionVersion:
     def to_dict(self) -> V1CustomResourceDefinitionVersionDict: ...
 
 class V1CustomResourceDefinitionVersionDict(typing.TypedDict, total=False):
-    additionalPrinterColumns: typing.Optional[
-        list[kubernetes.client.V1CustomResourceColumnDefinitionDict]
+    additionalPrinterColumns: list[
+        kubernetes.client.V1CustomResourceColumnDefinitionDict
     ]
-    deprecated: typing.Optional[bool]
-    deprecationWarning: typing.Optional[str]
+    deprecated: bool
+    deprecationWarning: str
     name: str
-    schema: typing.Optional[kubernetes.client.V1CustomResourceValidationDict]
-    selectableFields: typing.Optional[list[kubernetes.client.V1SelectableFieldDict]]
+    schema: kubernetes.client.V1CustomResourceValidationDict
     served: bool
     storage: bool
-    subresources: typing.Optional[kubernetes.client.V1CustomResourceSubresourcesDict]
+    subresources: kubernetes.client.V1CustomResourceSubresourcesDict

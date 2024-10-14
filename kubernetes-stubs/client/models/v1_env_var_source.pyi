@@ -22,7 +22,7 @@ class V1EnvVarSource:
     def to_dict(self) -> V1EnvVarSourceDict: ...
 
 class V1EnvVarSourceDict(typing.TypedDict, total=False):
-    configMapKeyRef: typing.Optional[kubernetes.client.V1ConfigMapKeySelectorDict]
-    fieldRef: typing.Optional[kubernetes.client.V1ObjectFieldSelectorDict]
-    resourceFieldRef: typing.Optional[kubernetes.client.V1ResourceFieldSelectorDict]
-    secretKeyRef: typing.Optional[kubernetes.client.V1SecretKeySelectorDict]
+    configMapKeyRef: kubernetes.client.V1ConfigMapKeySelectorDict
+    fieldRef: kubernetes.client.V1ObjectFieldSelectorDict
+    resourceFieldRef: kubernetes.client.V1ResourceFieldSelectorDict
+    secretKeyRef: kubernetes.client.V1SecretKeySelectorDict

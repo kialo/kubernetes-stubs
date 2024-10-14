@@ -13,5 +13,5 @@ class V1RollingUpdateDeployment:
     def to_dict(self) -> V1RollingUpdateDeploymentDict: ...
 
 class V1RollingUpdateDeploymentDict(typing.TypedDict, total=False):
-    maxSurge: typing.Optional[typing.Any]
-    maxUnavailable: typing.Optional[typing.Any]
+    maxSurge: typing.Any
+    maxUnavailable: typing.Any

@@ -20,7 +20,7 @@ class V1ContainerPort:
 
 class V1ContainerPortDict(typing.TypedDict, total=False):
     containerPort: int
-    hostIP: typing.Optional[str]
-    hostPort: typing.Optional[int]
-    name: typing.Optional[str]
-    protocol: typing.Optional[str]
+    hostIP: str
+    hostPort: int
+    name: str
+    protocol: str

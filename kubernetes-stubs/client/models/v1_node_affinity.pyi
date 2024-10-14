@@ -22,9 +22,7 @@ class V1NodeAffinity:
     def to_dict(self) -> V1NodeAffinityDict: ...
 
 class V1NodeAffinityDict(typing.TypedDict, total=False):
-    preferredDuringSchedulingIgnoredDuringExecution: typing.Optional[
-        list[kubernetes.client.V1PreferredSchedulingTermDict]
+    preferredDuringSchedulingIgnoredDuringExecution: list[
+        kubernetes.client.V1PreferredSchedulingTermDict
     ]
-    requiredDuringSchedulingIgnoredDuringExecution: typing.Optional[
-        kubernetes.client.V1NodeSelectorDict
-    ]
+    requiredDuringSchedulingIgnoredDuringExecution: kubernetes.client.V1NodeSelectorDict

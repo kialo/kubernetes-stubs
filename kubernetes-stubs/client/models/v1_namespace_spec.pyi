@@ -7,4 +7,4 @@ class V1NamespaceSpec:
     def to_dict(self) -> V1NamespaceSpecDict: ...
 
 class V1NamespaceSpecDict(typing.TypedDict, total=False):
-    finalizers: typing.Optional[list[str]]
+    finalizers: list[str]

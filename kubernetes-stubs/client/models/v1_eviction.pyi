@@ -2,10 +2,10 @@ import kubernetes.client
 import typing
 
 class V1Eviction:
-    api_version: typing.Optional[str]
+    api_version: str
     delete_options: typing.Optional[kubernetes.client.V1DeleteOptions]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ObjectMeta]
+    kind: str
+    metadata: kubernetes.client.V1ObjectMeta
 
     def __init__(
         self,
@@ -18,7 +18,7 @@ class V1Eviction:
     def to_dict(self) -> V1EvictionDict: ...
 
 class V1EvictionDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
-    deleteOptions: typing.Optional[kubernetes.client.V1DeleteOptionsDict]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ObjectMetaDict]
+    apiVersion: str
+    deleteOptions: kubernetes.client.V1DeleteOptionsDict
+    kind: str
+    metadata: kubernetes.client.V1ObjectMetaDict

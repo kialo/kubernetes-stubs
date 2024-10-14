@@ -11,4 +11,4 @@ class V1PodResourceClaimStatus:
 
 class V1PodResourceClaimStatusDict(typing.TypedDict, total=False):
     name: str
-    resourceClaimName: typing.Optional[str]
+    resourceClaimName: str

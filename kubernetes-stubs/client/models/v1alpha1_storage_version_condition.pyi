@@ -3,7 +3,7 @@ import typing
 
 class V1alpha1StorageVersionCondition:
     last_transition_time: typing.Optional[datetime.datetime]
-    message: str
+    message: typing.Optional[str]
     observed_generation: typing.Optional[int]
     reason: str
     status: str
@@ -13,7 +13,7 @@ class V1alpha1StorageVersionCondition:
         self,
         *,
         last_transition_time: typing.Optional[datetime.datetime] = ...,
-        message: str,
+        message: typing.Optional[str] = ...,
         observed_generation: typing.Optional[int] = ...,
         reason: str,
         status: str,
@@ -22,9 +22,9 @@ class V1alpha1StorageVersionCondition:
     def to_dict(self) -> V1alpha1StorageVersionConditionDict: ...
 
 class V1alpha1StorageVersionConditionDict(typing.TypedDict, total=False):
-    lastTransitionTime: typing.Optional[datetime.datetime]
+    lastTransitionTime: datetime.datetime
     message: str
-    observedGeneration: typing.Optional[int]
+    observedGeneration: int
     reason: str
     status: str
     type: str

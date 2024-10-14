@@ -16,6 +16,4 @@ class V1alpha1TypeChecking:
     def to_dict(self) -> V1alpha1TypeCheckingDict: ...
 
 class V1alpha1TypeCheckingDict(typing.TypedDict, total=False):
-    expressionWarnings: typing.Optional[
-        list[kubernetes.client.V1alpha1ExpressionWarningDict]
-    ]
+    expressionWarnings: list[kubernetes.client.V1alpha1ExpressionWarningDict]

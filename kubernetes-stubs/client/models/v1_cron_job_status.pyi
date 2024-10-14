@@ -17,6 +17,6 @@ class V1CronJobStatus:
     def to_dict(self) -> V1CronJobStatusDict: ...
 
 class V1CronJobStatusDict(typing.TypedDict, total=False):
-    active: typing.Optional[list[kubernetes.client.V1ObjectReferenceDict]]
-    lastScheduleTime: typing.Optional[datetime.datetime]
-    lastSuccessfulTime: typing.Optional[datetime.datetime]
+    active: list[kubernetes.client.V1ObjectReferenceDict]
+    lastScheduleTime: datetime.datetime
+    lastSuccessfulTime: datetime.datetime

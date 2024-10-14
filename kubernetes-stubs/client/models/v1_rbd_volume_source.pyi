@@ -26,11 +26,11 @@ class V1RBDVolumeSource:
     def to_dict(self) -> V1RBDVolumeSourceDict: ...
 
 class V1RBDVolumeSourceDict(typing.TypedDict, total=False):
-    fsType: typing.Optional[str]
+    fsType: str
     image: str
-    keyring: typing.Optional[str]
+    keyring: str
     monitors: list[str]
-    pool: typing.Optional[str]
-    readOnly: typing.Optional[bool]
-    secretRef: typing.Optional[kubernetes.client.V1LocalObjectReferenceDict]
-    user: typing.Optional[str]
+    pool: str
+    readOnly: bool
+    secretRef: kubernetes.client.V1LocalObjectReferenceDict
+    user: str

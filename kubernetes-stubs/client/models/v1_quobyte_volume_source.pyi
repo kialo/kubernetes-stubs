@@ -21,9 +21,9 @@ class V1QuobyteVolumeSource:
     def to_dict(self) -> V1QuobyteVolumeSourceDict: ...
 
 class V1QuobyteVolumeSourceDict(typing.TypedDict, total=False):
-    group: typing.Optional[str]
-    readOnly: typing.Optional[bool]
+    group: str
+    readOnly: bool
     registry: str
-    tenant: typing.Optional[str]
-    user: typing.Optional[str]
+    tenant: str
+    user: str
     volume: str

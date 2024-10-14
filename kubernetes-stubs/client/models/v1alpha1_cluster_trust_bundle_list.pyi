@@ -2,10 +2,10 @@ import kubernetes.client
 import typing
 
 class V1alpha1ClusterTrustBundleList:
-    api_version: typing.Optional[str]
+    api_version: str
     items: list[kubernetes.client.V1alpha1ClusterTrustBundle]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ListMeta]
+    kind: str
+    metadata: kubernetes.client.V1ListMeta
 
     def __init__(
         self,
@@ -18,7 +18,7 @@ class V1alpha1ClusterTrustBundleList:
     def to_dict(self) -> V1alpha1ClusterTrustBundleListDict: ...
 
 class V1alpha1ClusterTrustBundleListDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
+    apiVersion: str
     items: list[kubernetes.client.V1alpha1ClusterTrustBundleDict]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ListMetaDict]
+    kind: str
+    metadata: kubernetes.client.V1ListMetaDict

@@ -11,6 +11,6 @@ class V1alpha2ResourceClaimParametersReference:
     def to_dict(self) -> V1alpha2ResourceClaimParametersReferenceDict: ...
 
 class V1alpha2ResourceClaimParametersReferenceDict(typing.TypedDict, total=False):
-    apiGroup: typing.Optional[str]
+    apiGroup: str
     kind: str
     name: str

@@ -20,7 +20,6 @@ class V1ServiceSpec:
     selector: typing.Optional[dict[str, str]]
     session_affinity: typing.Optional[str]
     session_affinity_config: typing.Optional[kubernetes.client.V1SessionAffinityConfig]
-    traffic_distribution: typing.Optional[str]
     type: typing.Optional[str]
 
     def __init__(
@@ -46,31 +45,27 @@ class V1ServiceSpec:
         session_affinity_config: typing.Optional[
             kubernetes.client.V1SessionAffinityConfig
         ] = ...,
-        traffic_distribution: typing.Optional[str] = ...,
         type: typing.Optional[str] = ...,
     ) -> None: ...
     def to_dict(self) -> V1ServiceSpecDict: ...
 
 class V1ServiceSpecDict(typing.TypedDict, total=False):
-    allocateLoadBalancerNodePorts: typing.Optional[bool]
-    clusterIP: typing.Optional[str]
-    clusterIPs: typing.Optional[list[str]]
-    externalIPs: typing.Optional[list[str]]
-    externalName: typing.Optional[str]
-    externalTrafficPolicy: typing.Optional[str]
-    healthCheckNodePort: typing.Optional[int]
-    internalTrafficPolicy: typing.Optional[str]
-    ipFamilies: typing.Optional[list[str]]
-    ipFamilyPolicy: typing.Optional[str]
-    loadBalancerClass: typing.Optional[str]
-    loadBalancerIP: typing.Optional[str]
-    loadBalancerSourceRanges: typing.Optional[list[str]]
-    ports: typing.Optional[list[kubernetes.client.V1ServicePortDict]]
-    publishNotReadyAddresses: typing.Optional[bool]
-    selector: typing.Optional[dict[str, str]]
-    sessionAffinity: typing.Optional[str]
-    sessionAffinityConfig: typing.Optional[
-        kubernetes.client.V1SessionAffinityConfigDict
-    ]
-    trafficDistribution: typing.Optional[str]
-    type: typing.Optional[str]
+    allocateLoadBalancerNodePorts: bool
+    clusterIP: str
+    clusterIPs: list[str]
+    externalIPs: list[str]
+    externalName: str
+    externalTrafficPolicy: str
+    healthCheckNodePort: int
+    internalTrafficPolicy: str
+    ipFamilies: list[str]
+    ipFamilyPolicy: str
+    loadBalancerClass: str
+    loadBalancerIP: str
+    loadBalancerSourceRanges: list[str]
+    ports: list[kubernetes.client.V1ServicePortDict]
+    publishNotReadyAddresses: bool
+    selector: dict[str, str]
+    sessionAffinity: str
+    sessionAffinityConfig: kubernetes.client.V1SessionAffinityConfigDict
+    type: str

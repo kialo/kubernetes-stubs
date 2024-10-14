@@ -10,5 +10,5 @@ class V1SeccompProfile:
     def to_dict(self) -> V1SeccompProfileDict: ...
 
 class V1SeccompProfileDict(typing.TypedDict, total=False):
-    localhostProfile: typing.Optional[str]
+    localhostProfile: str
     type: str

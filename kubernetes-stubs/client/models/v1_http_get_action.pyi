@@ -20,8 +20,8 @@ class V1HTTPGetAction:
     def to_dict(self) -> V1HTTPGetActionDict: ...
 
 class V1HTTPGetActionDict(typing.TypedDict, total=False):
-    host: typing.Optional[str]
-    httpHeaders: typing.Optional[list[kubernetes.client.V1HTTPHeaderDict]]
-    path: typing.Optional[str]
+    host: str
+    httpHeaders: list[kubernetes.client.V1HTTPHeaderDict]
+    path: str
     port: typing.Any
-    scheme: typing.Optional[str]
+    scheme: str

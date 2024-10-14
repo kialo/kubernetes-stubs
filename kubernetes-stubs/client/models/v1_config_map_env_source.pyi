@@ -10,5 +10,5 @@ class V1ConfigMapEnvSource:
     def to_dict(self) -> V1ConfigMapEnvSourceDict: ...
 
 class V1ConfigMapEnvSourceDict(typing.TypedDict, total=False):
-    name: typing.Optional[str]
-    optional: typing.Optional[bool]
+    name: str
+    optional: bool

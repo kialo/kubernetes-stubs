@@ -7,4 +7,4 @@ class V1Overhead:
     def to_dict(self) -> V1OverheadDict: ...
 
 class V1OverheadDict(typing.TypedDict, total=False):
-    podFixed: typing.Optional[dict[str, str]]
+    podFixed: dict[str, str]

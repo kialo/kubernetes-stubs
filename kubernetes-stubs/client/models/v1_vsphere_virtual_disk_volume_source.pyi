@@ -17,7 +17,7 @@ class V1VsphereVirtualDiskVolumeSource:
     def to_dict(self) -> V1VsphereVirtualDiskVolumeSourceDict: ...
 
 class V1VsphereVirtualDiskVolumeSourceDict(typing.TypedDict, total=False):
-    fsType: typing.Optional[str]
-    storagePolicyID: typing.Optional[str]
-    storagePolicyName: typing.Optional[str]
+    fsType: str
+    storagePolicyID: str
+    storagePolicyName: str
     volumePath: str

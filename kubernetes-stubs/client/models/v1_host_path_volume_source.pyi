@@ -9,4 +9,4 @@ class V1HostPathVolumeSource:
 
 class V1HostPathVolumeSourceDict(typing.TypedDict, total=False):
     path: str
-    type: typing.Optional[str]
+    type: str

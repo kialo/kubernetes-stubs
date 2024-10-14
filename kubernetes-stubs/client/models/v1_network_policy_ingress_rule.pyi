@@ -14,5 +14,5 @@ class V1NetworkPolicyIngressRule:
     def to_dict(self) -> V1NetworkPolicyIngressRuleDict: ...
 
 class V1NetworkPolicyIngressRuleDict(typing.TypedDict, total=False):
-    _from: typing.Optional[list[kubernetes.client.V1NetworkPolicyPeerDict]]
-    ports: typing.Optional[list[kubernetes.client.V1NetworkPolicyPortDict]]
+    _from: list[kubernetes.client.V1NetworkPolicyPeerDict]
+    ports: list[kubernetes.client.V1NetworkPolicyPortDict]

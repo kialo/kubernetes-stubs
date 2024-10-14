@@ -10,5 +10,5 @@ class V1EventSource:
     def to_dict(self) -> V1EventSourceDict: ...
 
 class V1EventSourceDict(typing.TypedDict, total=False):
-    component: typing.Optional[str]
-    host: typing.Optional[str]
+    component: str
+    host: str

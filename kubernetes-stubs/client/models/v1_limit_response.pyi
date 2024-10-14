@@ -14,5 +14,5 @@ class V1LimitResponse:
     def to_dict(self) -> V1LimitResponseDict: ...
 
 class V1LimitResponseDict(typing.TypedDict, total=False):
-    queuing: typing.Optional[kubernetes.client.V1QueuingConfigurationDict]
+    queuing: kubernetes.client.V1QueuingConfigurationDict
     type: str

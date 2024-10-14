@@ -9,4 +9,4 @@ class V1GRPCAction:
 
 class V1GRPCActionDict(typing.TypedDict, total=False):
     port: int
-    service: typing.Optional[str]
+    service: str

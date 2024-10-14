@@ -20,8 +20,8 @@ class V1LeaseSpec:
     def to_dict(self) -> V1LeaseSpecDict: ...
 
 class V1LeaseSpecDict(typing.TypedDict, total=False):
-    acquireTime: typing.Optional[datetime.datetime]
-    holderIdentity: typing.Optional[str]
-    leaseDurationSeconds: typing.Optional[int]
-    leaseTransitions: typing.Optional[int]
-    renewTime: typing.Optional[datetime.datetime]
+    acquireTime: datetime.datetime
+    holderIdentity: str
+    leaseDurationSeconds: int
+    leaseTransitions: int
+    renewTime: datetime.datetime

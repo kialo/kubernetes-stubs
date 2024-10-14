@@ -16,6 +16,6 @@ class V1PodDNSConfig:
     def to_dict(self) -> V1PodDNSConfigDict: ...
 
 class V1PodDNSConfigDict(typing.TypedDict, total=False):
-    nameservers: typing.Optional[list[str]]
-    options: typing.Optional[list[kubernetes.client.V1PodDNSConfigOptionDict]]
-    searches: typing.Optional[list[str]]
+    nameservers: list[str]
+    options: list[kubernetes.client.V1PodDNSConfigOptionDict]
+    searches: list[str]

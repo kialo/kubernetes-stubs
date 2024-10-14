@@ -22,9 +22,9 @@ class V1DeploymentCondition:
     def to_dict(self) -> V1DeploymentConditionDict: ...
 
 class V1DeploymentConditionDict(typing.TypedDict, total=False):
-    lastTransitionTime: typing.Optional[datetime.datetime]
-    lastUpdateTime: typing.Optional[datetime.datetime]
-    message: typing.Optional[str]
-    reason: typing.Optional[str]
+    lastTransitionTime: datetime.datetime
+    lastUpdateTime: datetime.datetime
+    message: str
+    reason: str
     status: str
     type: str

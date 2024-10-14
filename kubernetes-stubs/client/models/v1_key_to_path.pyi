@@ -12,5 +12,5 @@ class V1KeyToPath:
 
 class V1KeyToPathDict(typing.TypedDict, total=False):
     key: str
-    mode: typing.Optional[int]
+    mode: int
     path: str

@@ -2,10 +2,10 @@ import kubernetes.client
 import typing
 
 class V1FlowSchemaList:
-    api_version: typing.Optional[str]
+    api_version: str
     items: list[kubernetes.client.V1FlowSchema]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ListMeta]
+    kind: str
+    metadata: kubernetes.client.V1ListMeta
 
     def __init__(
         self,
@@ -18,7 +18,7 @@ class V1FlowSchemaList:
     def to_dict(self) -> V1FlowSchemaListDict: ...
 
 class V1FlowSchemaListDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
+    apiVersion: str
     items: list[kubernetes.client.V1FlowSchemaDict]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ListMetaDict]
+    kind: str
+    metadata: kubernetes.client.V1ListMetaDict

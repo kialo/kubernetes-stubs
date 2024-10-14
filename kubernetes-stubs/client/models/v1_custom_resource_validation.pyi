@@ -12,4 +12,4 @@ class V1CustomResourceValidation:
     def to_dict(self) -> V1CustomResourceValidationDict: ...
 
 class V1CustomResourceValidationDict(typing.TypedDict, total=False):
-    openAPIV3Schema: typing.Optional[kubernetes.client.V1JSONSchemaPropsDict]
+    openAPIV3Schema: kubernetes.client.V1JSONSchemaPropsDict

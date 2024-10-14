@@ -13,5 +13,5 @@ class V1alpha2PodSchedulingContextSpec:
     def to_dict(self) -> V1alpha2PodSchedulingContextSpecDict: ...
 
 class V1alpha2PodSchedulingContextSpecDict(typing.TypedDict, total=False):
-    potentialNodes: typing.Optional[list[str]]
-    selectedNode: typing.Optional[str]
+    potentialNodes: list[str]
+    selectedNode: str

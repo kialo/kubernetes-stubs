@@ -12,4 +12,4 @@ class V1NodeDaemonEndpoints:
     def to_dict(self) -> V1NodeDaemonEndpointsDict: ...
 
 class V1NodeDaemonEndpointsDict(typing.TypedDict, total=False):
-    kubeletEndpoint: typing.Optional[kubernetes.client.V1DaemonEndpointDict]
+    kubeletEndpoint: kubernetes.client.V1DaemonEndpointDict

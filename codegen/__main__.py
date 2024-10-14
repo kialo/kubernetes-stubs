@@ -49,9 +49,7 @@ def make_file_name(s: str):
     return "_".join(inflection.underscore(s) for s in s.split("."))
 
 
-def make_type_name(
-    config: dict[str, Any], is_optional: bool, use_dict: bool = False
-) -> str:
+def make_type_name(config: dict[str, Any], use_dict: bool = False) -> str:
     def inner():
         ty = config.get("type")
         if not ty and "schema" in config:
@@ -69,15 +67,12 @@ def make_type_name(
             elif ty == "number":
                 return "float"
             elif ty == "array":
-                item_ty = make_type_name(
-                    config["items"], is_optional=False, use_dict=use_dict
-                )
+                item_ty = make_type_name(config["items"], use_dict=use_dict)
                 return f"list[{item_ty}]"
             elif ty == "object":
                 if "additionalProperties" in config:
                     val_ty = make_type_name(
                         config["additionalProperties"],
-                        is_optional=False,
                         use_dict=use_dict,
                     )
                     return f"dict[str, {val_ty}]"
@@ -94,8 +89,6 @@ def make_type_name(
             out += "Dict"
         return out
 
-    if is_optional:
-        return f"typing.Optional[{inner()}]"
     return inner()
 
 
@@ -114,20 +107,28 @@ def make_property_name(s: str, underscored: bool = True):
 class Property:
     name: str
     ty: str
-    is_optional: bool
+    is_optional_argument: bool
+    is_optional_attribute: bool
 
     def __str__(self):
         return f"{self.name}: {self.ty}"
 
+    def typing(self, attribute: bool) -> str:
+        if (attribute and self.is_optional_attribute) or (
+            self.is_optional_argument and not attribute
+        ):
+            return f"{self.name}: typing.Optional[{self.ty}]"
+        return f"{self.name}: {self.ty}"
+
     def arg_str(self) -> str:
-        s = str(self)
-        if self.is_optional:
+        s = self.typing(attribute=False)
+        if self.is_optional_argument:
             s += " = None"
         return s
 
     def param_str(self) -> str:
-        s = str(self)
-        if self.is_optional:
+        s = self.typing(attribute=False)
+        if self.is_optional_argument:
             s += " = ..."
         return s
 
@@ -151,23 +152,35 @@ class ManagerOp:
 for name, config in schema["definitions"].items():
     class_name = make_class_name(name)
     file_name = make_file_name(name)
-    required = config.get("required", [])
+    # Required arguments are those documented as required in the swagger spec
+    required_arguments = config.get("required", [])
+    # Required attributes are those that are always included in an API response
+    required_attributes = list(required_arguments)
     props: list[Property] = []
     dict_props: list[Property] = []
+    if "apiVersion" in config["properties"]:
+        # Top-level attributes can't be None
+        required_attributes += ["apiVersion", "kind", "metadata", "spec", "status"]
+    elif class_name.startswith("V1ObjectMeta"):
+        required_arguments.append(["name"])
+        required_attributes += ["name", "namespace", "uid", "labels"]
     for name, config in config["properties"].items():
-        is_optional = name not in required
+        is_optional_argument = name not in required_arguments
+        is_optional_attribute = name not in required_attributes
         props.append(
             Property(
                 name=make_property_name(name),
-                ty=make_type_name(config, is_optional=is_optional),
-                is_optional=is_optional,
+                ty=make_type_name(config),
+                is_optional_argument=is_optional_argument,
+                is_optional_attribute=is_optional_attribute,
             )
         )
         dict_props.append(
             Property(
                 name=make_property_name(name, underscored=False),
-                ty=make_type_name(config, is_optional=is_optional, use_dict=True),
-                is_optional=is_optional,
+                ty=make_type_name(config, use_dict=True),
+                is_optional_argument=is_optional_argument,
+                is_optional_attribute=is_optional_attribute,
             )
         )
     buf = CodegenBuf(MODELS_STUBS_DIR / (file_name + ".pyi"))
@@ -177,7 +190,7 @@ for name, config in schema["definitions"].items():
     buf.writeln()
     buf.start_block(f"class {class_name}")
     for prop in props:
-        buf.writeln(str(prop))
+        buf.writeln(prop.typing(attribute=True))
     buf.writeln()
     params_str = ", ".join(prop.param_str() for prop in props)
     buf.start_block(f"def __init__(self, *, {params_str}) -> None")
@@ -233,12 +246,12 @@ for name, api in apis.items():
         name = inflection.underscore(op["operationId"])
         responses = op["responses"]
         if "200" in responses:
-            return_ty = make_type_name(responses["200"]["schema"], is_optional=False)
+            return_ty = make_type_name(responses["200"]["schema"])
         else:
             return_ty = "None"
         params: list[Property] = []
         for param in op.get("parameters", []):
-            is_optional = not param.get("required", False)
+            is_optional_argument = not param.get("required", False)
             param_name = param["name"]
             i = 2
             while any(param.name == param_name for param in params):
@@ -247,13 +260,14 @@ for name, api in apis.items():
             params.append(
                 Property(
                     name=make_property_name(param_name),
-                    ty=make_type_name(param, is_optional=is_optional),
-                    is_optional=is_optional,
+                    ty=make_type_name(param),
+                    is_optional_argument=is_optional_argument,
+                    is_optional_attribute=False,
                 )
             )
         required_params, optional_params = [], []
         for param in params:
-            if param.is_optional:
+            if param.is_optional_argument:
                 optional_params.append(param)
             else:
                 required_params.append(param)

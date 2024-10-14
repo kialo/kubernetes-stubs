@@ -22,9 +22,9 @@ class V1NodeCondition:
     def to_dict(self) -> V1NodeConditionDict: ...
 
 class V1NodeConditionDict(typing.TypedDict, total=False):
-    lastHeartbeatTime: typing.Optional[datetime.datetime]
-    lastTransitionTime: typing.Optional[datetime.datetime]
-    message: typing.Optional[str]
-    reason: typing.Optional[str]
+    lastHeartbeatTime: datetime.datetime
+    lastTransitionTime: datetime.datetime
+    message: str
+    reason: str
     status: str
     type: str

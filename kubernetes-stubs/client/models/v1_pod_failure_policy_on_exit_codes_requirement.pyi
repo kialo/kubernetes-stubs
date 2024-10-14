@@ -15,6 +15,6 @@ class V1PodFailurePolicyOnExitCodesRequirement:
     def to_dict(self) -> V1PodFailurePolicyOnExitCodesRequirementDict: ...
 
 class V1PodFailurePolicyOnExitCodesRequirementDict(typing.TypedDict, total=False):
-    containerName: typing.Optional[str]
+    containerName: str
     operator: str
     values: list[int]

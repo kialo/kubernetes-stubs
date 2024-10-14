@@ -1,7 +1,7 @@
 import typing
 
 class V1ObjectFieldSelector:
-    api_version: typing.Optional[str]
+    api_version: str
     field_path: str
 
     def __init__(
@@ -10,5 +10,5 @@ class V1ObjectFieldSelector:
     def to_dict(self) -> V1ObjectFieldSelectorDict: ...
 
 class V1ObjectFieldSelectorDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
+    apiVersion: str
     fieldPath: str

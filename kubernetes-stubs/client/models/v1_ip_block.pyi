@@ -11,4 +11,4 @@ class V1IPBlock:
 
 class V1IPBlockDict(typing.TypedDict, total=False):
     cidr: str
-    _except: typing.Optional[list[str]]
+    _except: list[str]

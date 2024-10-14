@@ -2,10 +2,10 @@ import kubernetes.client
 import typing
 
 class V1alpha1VolumeAttributesClass:
-    api_version: typing.Optional[str]
+    api_version: str
     driver_name: str
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ObjectMeta]
+    kind: str
+    metadata: kubernetes.client.V1ObjectMeta
     parameters: typing.Optional[dict[str, str]]
 
     def __init__(
@@ -20,8 +20,8 @@ class V1alpha1VolumeAttributesClass:
     def to_dict(self) -> V1alpha1VolumeAttributesClassDict: ...
 
 class V1alpha1VolumeAttributesClassDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
+    apiVersion: str
     driverName: str
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ObjectMetaDict]
-    parameters: typing.Optional[dict[str, str]]
+    kind: str
+    metadata: kubernetes.client.V1ObjectMetaDict
+    parameters: dict[str, str]

@@ -18,7 +18,7 @@ class V1beta3LimitedPriorityLevelConfiguration:
     def to_dict(self) -> V1beta3LimitedPriorityLevelConfigurationDict: ...
 
 class V1beta3LimitedPriorityLevelConfigurationDict(typing.TypedDict, total=False):
-    borrowingLimitPercent: typing.Optional[int]
-    lendablePercent: typing.Optional[int]
-    limitResponse: typing.Optional[kubernetes.client.V1beta3LimitResponseDict]
-    nominalConcurrencyShares: typing.Optional[int]
+    borrowingLimitPercent: int
+    lendablePercent: int
+    limitResponse: kubernetes.client.V1beta3LimitResponseDict
+    nominalConcurrencyShares: int

@@ -17,7 +17,7 @@ class V1TypedObjectReference:
     def to_dict(self) -> V1TypedObjectReferenceDict: ...
 
 class V1TypedObjectReferenceDict(typing.TypedDict, total=False):
-    apiGroup: typing.Optional[str]
+    apiGroup: str
     kind: str
     name: str
-    namespace: typing.Optional[str]
+    namespace: str

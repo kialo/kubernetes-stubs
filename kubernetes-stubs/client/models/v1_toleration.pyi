@@ -19,8 +19,8 @@ class V1Toleration:
     def to_dict(self) -> V1TolerationDict: ...
 
 class V1TolerationDict(typing.TypedDict, total=False):
-    effect: typing.Optional[str]
-    key: typing.Optional[str]
-    operator: typing.Optional[str]
-    tolerationSeconds: typing.Optional[int]
-    value: typing.Optional[str]
+    effect: str
+    key: str
+    operator: str
+    tolerationSeconds: int
+    value: str

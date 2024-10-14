@@ -13,5 +13,5 @@ class V1Preconditions:
     def to_dict(self) -> V1PreconditionsDict: ...
 
 class V1PreconditionsDict(typing.TypedDict, total=False):
-    resourceVersion: typing.Optional[str]
-    uid: typing.Optional[str]
+    resourceVersion: str
+    uid: str

@@ -22,11 +22,9 @@ class V1FlowSchemaSpec:
     def to_dict(self) -> V1FlowSchemaSpecDict: ...
 
 class V1FlowSchemaSpecDict(typing.TypedDict, total=False):
-    distinguisherMethod: typing.Optional[
-        kubernetes.client.V1FlowDistinguisherMethodDict
-    ]
-    matchingPrecedence: typing.Optional[int]
+    distinguisherMethod: kubernetes.client.V1FlowDistinguisherMethodDict
+    matchingPrecedence: int
     priorityLevelConfiguration: (
         kubernetes.client.V1PriorityLevelConfigurationReferenceDict
     )
-    rules: typing.Optional[list[kubernetes.client.V1PolicyRulesWithSubjectsDict]]
+    rules: list[kubernetes.client.V1PolicyRulesWithSubjectsDict]

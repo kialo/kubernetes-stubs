@@ -17,7 +17,7 @@ class CoreV1EndpointPort:
     def to_dict(self) -> CoreV1EndpointPortDict: ...
 
 class CoreV1EndpointPortDict(typing.TypedDict, total=False):
-    appProtocol: typing.Optional[str]
-    name: typing.Optional[str]
+    appProtocol: str
+    name: str
     port: int
-    protocol: typing.Optional[str]
+    protocol: str

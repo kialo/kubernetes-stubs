@@ -13,5 +13,5 @@ class V1Capabilities:
     def to_dict(self) -> V1CapabilitiesDict: ...
 
 class V1CapabilitiesDict(typing.TypedDict, total=False):
-    add: typing.Optional[list[str]]
-    drop: typing.Optional[list[str]]
+    add: list[str]
+    drop: list[str]

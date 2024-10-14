@@ -11,6 +11,6 @@ class V1IngressPortStatus:
     def to_dict(self) -> V1IngressPortStatusDict: ...
 
 class V1IngressPortStatusDict(typing.TypedDict, total=False):
-    error: typing.Optional[str]
+    error: str
     port: int
     protocol: str

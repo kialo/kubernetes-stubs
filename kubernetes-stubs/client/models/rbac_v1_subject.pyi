@@ -17,7 +17,7 @@ class RbacV1Subject:
     def to_dict(self) -> RbacV1SubjectDict: ...
 
 class RbacV1SubjectDict(typing.TypedDict, total=False):
-    apiGroup: typing.Optional[str]
+    apiGroup: str
     kind: str
     name: str
-    namespace: typing.Optional[str]
+    namespace: str

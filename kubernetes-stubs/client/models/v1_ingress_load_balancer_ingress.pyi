@@ -16,6 +16,6 @@ class V1IngressLoadBalancerIngress:
     def to_dict(self) -> V1IngressLoadBalancerIngressDict: ...
 
 class V1IngressLoadBalancerIngressDict(typing.TypedDict, total=False):
-    hostname: typing.Optional[str]
-    ip: typing.Optional[str]
-    ports: typing.Optional[list[kubernetes.client.V1IngressPortStatusDict]]
+    hostname: str
+    ip: str
+    ports: list[kubernetes.client.V1IngressPortStatusDict]

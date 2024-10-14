@@ -30,13 +30,13 @@ class V1ScaleIOPersistentVolumeSource:
     def to_dict(self) -> V1ScaleIOPersistentVolumeSourceDict: ...
 
 class V1ScaleIOPersistentVolumeSourceDict(typing.TypedDict, total=False):
-    fsType: typing.Optional[str]
+    fsType: str
     gateway: str
-    protectionDomain: typing.Optional[str]
-    readOnly: typing.Optional[bool]
+    protectionDomain: str
+    readOnly: bool
     secretRef: kubernetes.client.V1SecretReferenceDict
-    sslEnabled: typing.Optional[bool]
-    storageMode: typing.Optional[str]
-    storagePool: typing.Optional[str]
+    sslEnabled: bool
+    storageMode: str
+    storagePool: str
     system: str
-    volumeName: typing.Optional[str]
+    volumeName: str

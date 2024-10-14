@@ -17,7 +17,7 @@ class V1SELinuxOptions:
     def to_dict(self) -> V1SELinuxOptionsDict: ...
 
 class V1SELinuxOptionsDict(typing.TypedDict, total=False):
-    level: typing.Optional[str]
-    role: typing.Optional[str]
-    type: typing.Optional[str]
-    user: typing.Optional[str]
+    level: str
+    role: str
+    type: str
+    user: str

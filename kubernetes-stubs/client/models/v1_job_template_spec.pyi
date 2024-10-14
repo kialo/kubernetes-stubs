@@ -14,5 +14,5 @@ class V1JobTemplateSpec:
     def to_dict(self) -> V1JobTemplateSpecDict: ...
 
 class V1JobTemplateSpecDict(typing.TypedDict, total=False):
-    metadata: typing.Optional[kubernetes.client.V1ObjectMetaDict]
-    spec: typing.Optional[kubernetes.client.V1JobSpecDict]
+    metadata: kubernetes.client.V1ObjectMetaDict
+    spec: kubernetes.client.V1JobSpecDict

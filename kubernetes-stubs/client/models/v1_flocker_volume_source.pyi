@@ -13,5 +13,5 @@ class V1FlockerVolumeSource:
     def to_dict(self) -> V1FlockerVolumeSourceDict: ...
 
 class V1FlockerVolumeSourceDict(typing.TypedDict, total=False):
-    datasetName: typing.Optional[str]
-    datasetUUID: typing.Optional[str]
+    datasetName: str
+    datasetUUID: str

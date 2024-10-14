@@ -10,5 +10,5 @@ class V1NonResourceRule:
     def to_dict(self) -> V1NonResourceRuleDict: ...
 
 class V1NonResourceRuleDict(typing.TypedDict, total=False):
-    nonResourceURLs: typing.Optional[list[str]]
+    nonResourceURLs: list[str]
     verbs: list[str]

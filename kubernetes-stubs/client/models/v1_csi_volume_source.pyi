@@ -23,7 +23,7 @@ class V1CSIVolumeSource:
 
 class V1CSIVolumeSourceDict(typing.TypedDict, total=False):
     driver: str
-    fsType: typing.Optional[str]
-    nodePublishSecretRef: typing.Optional[kubernetes.client.V1LocalObjectReferenceDict]
-    readOnly: typing.Optional[bool]
-    volumeAttributes: typing.Optional[dict[str, str]]
+    fsType: str
+    nodePublishSecretRef: kubernetes.client.V1LocalObjectReferenceDict
+    readOnly: bool
+    volumeAttributes: dict[str, str]

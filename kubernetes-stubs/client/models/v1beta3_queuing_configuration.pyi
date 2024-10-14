@@ -15,6 +15,6 @@ class V1beta3QueuingConfiguration:
     def to_dict(self) -> V1beta3QueuingConfigurationDict: ...
 
 class V1beta3QueuingConfigurationDict(typing.TypedDict, total=False):
-    handSize: typing.Optional[int]
-    queueLengthLimit: typing.Optional[int]
-    queues: typing.Optional[int]
+    handSize: int
+    queueLengthLimit: int
+    queues: int

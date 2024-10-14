@@ -4,14 +4,14 @@ import typing
 
 class EventsV1Event:
     action: typing.Optional[str]
-    api_version: typing.Optional[str]
+    api_version: str
     deprecated_count: typing.Optional[int]
     deprecated_first_timestamp: typing.Optional[datetime.datetime]
     deprecated_last_timestamp: typing.Optional[datetime.datetime]
     deprecated_source: typing.Optional[kubernetes.client.V1EventSource]
     event_time: datetime.datetime
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ObjectMeta]
+    kind: str
+    metadata: kubernetes.client.V1ObjectMeta
     note: typing.Optional[str]
     reason: typing.Optional[str]
     regarding: typing.Optional[kubernetes.client.V1ObjectReference]
@@ -45,20 +45,20 @@ class EventsV1Event:
     def to_dict(self) -> EventsV1EventDict: ...
 
 class EventsV1EventDict(typing.TypedDict, total=False):
-    action: typing.Optional[str]
-    apiVersion: typing.Optional[str]
-    deprecatedCount: typing.Optional[int]
-    deprecatedFirstTimestamp: typing.Optional[datetime.datetime]
-    deprecatedLastTimestamp: typing.Optional[datetime.datetime]
-    deprecatedSource: typing.Optional[kubernetes.client.V1EventSourceDict]
+    action: str
+    apiVersion: str
+    deprecatedCount: int
+    deprecatedFirstTimestamp: datetime.datetime
+    deprecatedLastTimestamp: datetime.datetime
+    deprecatedSource: kubernetes.client.V1EventSourceDict
     eventTime: datetime.datetime
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ObjectMetaDict]
-    note: typing.Optional[str]
-    reason: typing.Optional[str]
-    regarding: typing.Optional[kubernetes.client.V1ObjectReferenceDict]
-    related: typing.Optional[kubernetes.client.V1ObjectReferenceDict]
-    reportingController: typing.Optional[str]
-    reportingInstance: typing.Optional[str]
-    series: typing.Optional[kubernetes.client.EventsV1EventSeriesDict]
-    type: typing.Optional[str]
+    kind: str
+    metadata: kubernetes.client.V1ObjectMetaDict
+    note: str
+    reason: str
+    regarding: kubernetes.client.V1ObjectReferenceDict
+    related: kubernetes.client.V1ObjectReferenceDict
+    reportingController: str
+    reportingInstance: str
+    series: kubernetes.client.EventsV1EventSeriesDict
+    type: str

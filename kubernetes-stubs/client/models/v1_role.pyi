@@ -2,9 +2,9 @@ import kubernetes.client
 import typing
 
 class V1Role:
-    api_version: typing.Optional[str]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ObjectMeta]
+    api_version: str
+    kind: str
+    metadata: kubernetes.client.V1ObjectMeta
     rules: typing.Optional[list[kubernetes.client.V1PolicyRule]]
 
     def __init__(
@@ -18,7 +18,7 @@ class V1Role:
     def to_dict(self) -> V1RoleDict: ...
 
 class V1RoleDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ObjectMetaDict]
-    rules: typing.Optional[list[kubernetes.client.V1PolicyRuleDict]]
+    apiVersion: str
+    kind: str
+    metadata: kubernetes.client.V1ObjectMetaDict
+    rules: list[kubernetes.client.V1PolicyRuleDict]

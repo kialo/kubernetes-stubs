@@ -30,13 +30,13 @@ class V1DaemonSetStatus:
     def to_dict(self) -> V1DaemonSetStatusDict: ...
 
 class V1DaemonSetStatusDict(typing.TypedDict, total=False):
-    collisionCount: typing.Optional[int]
-    conditions: typing.Optional[list[kubernetes.client.V1DaemonSetConditionDict]]
+    collisionCount: int
+    conditions: list[kubernetes.client.V1DaemonSetConditionDict]
     currentNumberScheduled: int
     desiredNumberScheduled: int
-    numberAvailable: typing.Optional[int]
+    numberAvailable: int
     numberMisscheduled: int
     numberReady: int
-    numberUnavailable: typing.Optional[int]
-    observedGeneration: typing.Optional[int]
-    updatedNumberScheduled: typing.Optional[int]
+    numberUnavailable: int
+    observedGeneration: int
+    updatedNumberScheduled: int

@@ -16,6 +16,6 @@ class V1ContainerState:
     def to_dict(self) -> V1ContainerStateDict: ...
 
 class V1ContainerStateDict(typing.TypedDict, total=False):
-    running: typing.Optional[kubernetes.client.V1ContainerStateRunningDict]
-    terminated: typing.Optional[kubernetes.client.V1ContainerStateTerminatedDict]
-    waiting: typing.Optional[kubernetes.client.V1ContainerStateWaitingDict]
+    running: kubernetes.client.V1ContainerStateRunningDict
+    terminated: kubernetes.client.V1ContainerStateTerminatedDict
+    waiting: kubernetes.client.V1ContainerStateWaitingDict

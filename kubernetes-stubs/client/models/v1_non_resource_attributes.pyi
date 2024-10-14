@@ -10,5 +10,5 @@ class V1NonResourceAttributes:
     def to_dict(self) -> V1NonResourceAttributesDict: ...
 
 class V1NonResourceAttributesDict(typing.TypedDict, total=False):
-    path: typing.Optional[str]
-    verb: typing.Optional[str]
+    path: str
+    verb: str

@@ -19,6 +19,6 @@ class V1HorizontalPodAutoscalerSpec:
 
 class V1HorizontalPodAutoscalerSpecDict(typing.TypedDict, total=False):
     maxReplicas: int
-    minReplicas: typing.Optional[int]
+    minReplicas: int
     scaleTargetRef: kubernetes.client.V1CrossVersionObjectReferenceDict
-    targetCPUUtilizationPercentage: typing.Optional[int]
+    targetCPUUtilizationPercentage: int

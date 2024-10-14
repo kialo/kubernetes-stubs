@@ -11,6 +11,6 @@ class V1TypedLocalObjectReference:
     def to_dict(self) -> V1TypedLocalObjectReferenceDict: ...
 
 class V1TypedLocalObjectReferenceDict(typing.TypedDict, total=False):
-    apiGroup: typing.Optional[str]
+    apiGroup: str
     kind: str
     name: str

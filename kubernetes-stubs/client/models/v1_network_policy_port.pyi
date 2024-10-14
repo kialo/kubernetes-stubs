@@ -15,6 +15,6 @@ class V1NetworkPolicyPort:
     def to_dict(self) -> V1NetworkPolicyPortDict: ...
 
 class V1NetworkPolicyPortDict(typing.TypedDict, total=False):
-    endPort: typing.Optional[int]
-    port: typing.Optional[typing.Any]
-    protocol: typing.Optional[str]
+    endPort: int
+    port: typing.Any
+    protocol: str

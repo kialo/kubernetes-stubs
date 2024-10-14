@@ -13,5 +13,5 @@ class V1ExternalDocumentation:
     def to_dict(self) -> V1ExternalDocumentationDict: ...
 
 class V1ExternalDocumentationDict(typing.TypedDict, total=False):
-    description: typing.Optional[str]
-    url: typing.Optional[str]
+    description: str
+    url: str

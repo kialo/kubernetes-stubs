@@ -13,4 +13,4 @@ class V1GlusterfsVolumeSource:
 class V1GlusterfsVolumeSourceDict(typing.TypedDict, total=False):
     endpoints: str
     path: str
-    readOnly: typing.Optional[bool]
+    readOnly: bool

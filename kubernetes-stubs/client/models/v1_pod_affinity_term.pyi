@@ -22,9 +22,9 @@ class V1PodAffinityTerm:
     def to_dict(self) -> V1PodAffinityTermDict: ...
 
 class V1PodAffinityTermDict(typing.TypedDict, total=False):
-    labelSelector: typing.Optional[kubernetes.client.V1LabelSelectorDict]
-    matchLabelKeys: typing.Optional[list[str]]
-    mismatchLabelKeys: typing.Optional[list[str]]
-    namespaceSelector: typing.Optional[kubernetes.client.V1LabelSelectorDict]
-    namespaces: typing.Optional[list[str]]
+    labelSelector: kubernetes.client.V1LabelSelectorDict
+    matchLabelKeys: list[str]
+    mismatchLabelKeys: list[str]
+    namespaceSelector: kubernetes.client.V1LabelSelectorDict
+    namespaces: list[str]
     topologyKey: str

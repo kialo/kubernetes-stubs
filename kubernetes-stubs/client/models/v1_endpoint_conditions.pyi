@@ -15,6 +15,6 @@ class V1EndpointConditions:
     def to_dict(self) -> V1EndpointConditionsDict: ...
 
 class V1EndpointConditionsDict(typing.TypedDict, total=False):
-    ready: typing.Optional[bool]
-    serving: typing.Optional[bool]
-    terminating: typing.Optional[bool]
+    ready: bool
+    serving: bool
+    terminating: bool

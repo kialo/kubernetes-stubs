@@ -15,4 +15,4 @@ class V2MetricIdentifier:
 
 class V2MetricIdentifierDict(typing.TypedDict, total=False):
     name: str
-    selector: typing.Optional[kubernetes.client.V1LabelSelectorDict]
+    selector: kubernetes.client.V1LabelSelectorDict

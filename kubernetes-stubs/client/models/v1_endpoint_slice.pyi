@@ -3,10 +3,10 @@ import typing
 
 class V1EndpointSlice:
     address_type: str
-    api_version: typing.Optional[str]
+    api_version: str
     endpoints: list[kubernetes.client.V1Endpoint]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ObjectMeta]
+    kind: str
+    metadata: kubernetes.client.V1ObjectMeta
     ports: typing.Optional[list[kubernetes.client.DiscoveryV1EndpointPort]]
 
     def __init__(
@@ -23,8 +23,8 @@ class V1EndpointSlice:
 
 class V1EndpointSliceDict(typing.TypedDict, total=False):
     addressType: str
-    apiVersion: typing.Optional[str]
+    apiVersion: str
     endpoints: list[kubernetes.client.V1EndpointDict]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ObjectMetaDict]
-    ports: typing.Optional[list[kubernetes.client.DiscoveryV1EndpointPortDict]]
+    kind: str
+    metadata: kubernetes.client.V1ObjectMetaDict
+    ports: list[kubernetes.client.DiscoveryV1EndpointPortDict]

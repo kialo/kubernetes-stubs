@@ -10,4 +10,4 @@ class V1ContainerStateRunning:
     def to_dict(self) -> V1ContainerStateRunningDict: ...
 
 class V1ContainerStateRunningDict(typing.TypedDict, total=False):
-    startedAt: typing.Optional[datetime.datetime]
+    startedAt: datetime.datetime

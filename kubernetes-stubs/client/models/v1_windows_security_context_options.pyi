@@ -17,7 +17,7 @@ class V1WindowsSecurityContextOptions:
     def to_dict(self) -> V1WindowsSecurityContextOptionsDict: ...
 
 class V1WindowsSecurityContextOptionsDict(typing.TypedDict, total=False):
-    gmsaCredentialSpec: typing.Optional[str]
-    gmsaCredentialSpecName: typing.Optional[str]
-    hostProcess: typing.Optional[bool]
-    runAsUserName: typing.Optional[str]
+    gmsaCredentialSpec: str
+    gmsaCredentialSpecName: str
+    hostProcess: bool
+    runAsUserName: str

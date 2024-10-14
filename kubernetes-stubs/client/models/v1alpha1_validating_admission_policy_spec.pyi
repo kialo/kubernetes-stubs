@@ -30,12 +30,10 @@ class V1alpha1ValidatingAdmissionPolicySpec:
     def to_dict(self) -> V1alpha1ValidatingAdmissionPolicySpecDict: ...
 
 class V1alpha1ValidatingAdmissionPolicySpecDict(typing.TypedDict, total=False):
-    auditAnnotations: typing.Optional[
-        list[kubernetes.client.V1alpha1AuditAnnotationDict]
-    ]
-    failurePolicy: typing.Optional[str]
-    matchConditions: typing.Optional[list[kubernetes.client.V1alpha1MatchConditionDict]]
-    matchConstraints: typing.Optional[kubernetes.client.V1alpha1MatchResourcesDict]
-    paramKind: typing.Optional[kubernetes.client.V1alpha1ParamKindDict]
-    validations: typing.Optional[list[kubernetes.client.V1alpha1ValidationDict]]
-    variables: typing.Optional[list[kubernetes.client.V1alpha1VariableDict]]
+    auditAnnotations: list[kubernetes.client.V1alpha1AuditAnnotationDict]
+    failurePolicy: str
+    matchConditions: list[kubernetes.client.V1alpha1MatchConditionDict]
+    matchConstraints: kubernetes.client.V1alpha1MatchResourcesDict
+    paramKind: kubernetes.client.V1alpha1ParamKindDict
+    validations: list[kubernetes.client.V1alpha1ValidationDict]
+    variables: list[kubernetes.client.V1alpha1VariableDict]

@@ -15,6 +15,6 @@ class V1ResourceFieldSelector:
     def to_dict(self) -> V1ResourceFieldSelectorDict: ...
 
 class V1ResourceFieldSelectorDict(typing.TypedDict, total=False):
-    containerName: typing.Optional[str]
-    divisor: typing.Optional[str]
+    containerName: str
+    divisor: str
     resource: str

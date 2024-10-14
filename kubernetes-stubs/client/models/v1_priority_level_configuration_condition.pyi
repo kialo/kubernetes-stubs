@@ -20,8 +20,8 @@ class V1PriorityLevelConfigurationCondition:
     def to_dict(self) -> V1PriorityLevelConfigurationConditionDict: ...
 
 class V1PriorityLevelConfigurationConditionDict(typing.TypedDict, total=False):
-    lastTransitionTime: typing.Optional[datetime.datetime]
-    message: typing.Optional[str]
-    reason: typing.Optional[str]
-    status: typing.Optional[str]
-    type: typing.Optional[str]
+    lastTransitionTime: datetime.datetime
+    message: str
+    reason: str
+    status: str
+    type: str

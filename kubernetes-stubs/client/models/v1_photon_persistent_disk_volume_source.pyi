@@ -8,5 +8,5 @@ class V1PhotonPersistentDiskVolumeSource:
     def to_dict(self) -> V1PhotonPersistentDiskVolumeSourceDict: ...
 
 class V1PhotonPersistentDiskVolumeSourceDict(typing.TypedDict, total=False):
-    fsType: typing.Optional[str]
+    fsType: str
     pdID: str

@@ -14,5 +14,5 @@ class V1ProjectedVolumeSource:
     def to_dict(self) -> V1ProjectedVolumeSourceDict: ...
 
 class V1ProjectedVolumeSourceDict(typing.TypedDict, total=False):
-    defaultMode: typing.Optional[int]
-    sources: typing.Optional[list[kubernetes.client.V1VolumeProjectionDict]]
+    defaultMode: int
+    sources: list[kubernetes.client.V1VolumeProjectionDict]

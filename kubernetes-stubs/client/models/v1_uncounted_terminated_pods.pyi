@@ -13,5 +13,5 @@ class V1UncountedTerminatedPods:
     def to_dict(self) -> V1UncountedTerminatedPodsDict: ...
 
 class V1UncountedTerminatedPodsDict(typing.TypedDict, total=False):
-    failed: typing.Optional[list[str]]
-    succeeded: typing.Optional[list[str]]
+    failed: list[str]
+    succeeded: list[str]

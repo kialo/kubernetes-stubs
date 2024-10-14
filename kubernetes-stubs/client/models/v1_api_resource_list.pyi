@@ -2,9 +2,9 @@ import kubernetes.client
 import typing
 
 class V1APIResourceList:
-    api_version: typing.Optional[str]
+    api_version: str
     group_version: str
-    kind: typing.Optional[str]
+    kind: str
     resources: list[kubernetes.client.V1APIResource]
 
     def __init__(
@@ -18,7 +18,7 @@ class V1APIResourceList:
     def to_dict(self) -> V1APIResourceListDict: ...
 
 class V1APIResourceListDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
+    apiVersion: str
     groupVersion: str
-    kind: typing.Optional[str]
+    kind: str
     resources: list[kubernetes.client.V1APIResourceDict]

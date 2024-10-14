@@ -20,8 +20,8 @@ class V1ClusterTrustBundleProjection:
     def to_dict(self) -> V1ClusterTrustBundleProjectionDict: ...
 
 class V1ClusterTrustBundleProjectionDict(typing.TypedDict, total=False):
-    labelSelector: typing.Optional[kubernetes.client.V1LabelSelectorDict]
-    name: typing.Optional[str]
-    optional: typing.Optional[bool]
+    labelSelector: kubernetes.client.V1LabelSelectorDict
+    name: str
+    optional: bool
     path: str
-    signerName: typing.Optional[str]
+    signerName: str

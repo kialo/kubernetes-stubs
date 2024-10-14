@@ -14,5 +14,5 @@ class V1alpha2ResourceClaimTemplateSpec:
     def to_dict(self) -> V1alpha2ResourceClaimTemplateSpecDict: ...
 
 class V1alpha2ResourceClaimTemplateSpecDict(typing.TypedDict, total=False):
-    metadata: typing.Optional[kubernetes.client.V1ObjectMetaDict]
+    metadata: kubernetes.client.V1ObjectMetaDict
     spec: kubernetes.client.V1alpha2ResourceClaimSpecDict

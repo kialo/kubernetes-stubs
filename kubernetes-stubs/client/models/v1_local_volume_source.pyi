@@ -8,5 +8,5 @@ class V1LocalVolumeSource:
     def to_dict(self) -> V1LocalVolumeSourceDict: ...
 
 class V1LocalVolumeSourceDict(typing.TypedDict, total=False):
-    fsType: typing.Optional[str]
+    fsType: str
     path: str

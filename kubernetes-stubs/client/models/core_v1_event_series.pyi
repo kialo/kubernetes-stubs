@@ -14,5 +14,5 @@ class CoreV1EventSeries:
     def to_dict(self) -> CoreV1EventSeriesDict: ...
 
 class CoreV1EventSeriesDict(typing.TypedDict, total=False):
-    count: typing.Optional[int]
-    lastObservedTime: typing.Optional[datetime.datetime]
+    count: int
+    lastObservedTime: datetime.datetime

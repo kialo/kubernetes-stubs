@@ -27,11 +27,9 @@ class V2HorizontalPodAutoscalerStatus:
     def to_dict(self) -> V2HorizontalPodAutoscalerStatusDict: ...
 
 class V2HorizontalPodAutoscalerStatusDict(typing.TypedDict, total=False):
-    conditions: typing.Optional[
-        list[kubernetes.client.V2HorizontalPodAutoscalerConditionDict]
-    ]
-    currentMetrics: typing.Optional[list[kubernetes.client.V2MetricStatusDict]]
-    currentReplicas: typing.Optional[int]
+    conditions: list[kubernetes.client.V2HorizontalPodAutoscalerConditionDict]
+    currentMetrics: list[kubernetes.client.V2MetricStatusDict]
+    currentReplicas: int
     desiredReplicas: int
-    lastScaleTime: typing.Optional[datetime.datetime]
-    observedGeneration: typing.Optional[int]
+    lastScaleTime: datetime.datetime
+    observedGeneration: int

@@ -13,5 +13,5 @@ class V1ClaimSource:
     def to_dict(self) -> V1ClaimSourceDict: ...
 
 class V1ClaimSourceDict(typing.TypedDict, total=False):
-    resourceClaimName: typing.Optional[str]
-    resourceClaimTemplateName: typing.Optional[str]
+    resourceClaimName: str
+    resourceClaimTemplateName: str

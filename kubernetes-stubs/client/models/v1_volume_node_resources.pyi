@@ -7,4 +7,4 @@ class V1VolumeNodeResources:
     def to_dict(self) -> V1VolumeNodeResourcesDict: ...
 
 class V1VolumeNodeResourcesDict(typing.TypedDict, total=False):
-    count: typing.Optional[int]
+    count: int

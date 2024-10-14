@@ -15,6 +15,6 @@ class V1ServiceAccountTokenProjection:
     def to_dict(self) -> V1ServiceAccountTokenProjectionDict: ...
 
 class V1ServiceAccountTokenProjectionDict(typing.TypedDict, total=False):
-    audience: typing.Optional[str]
-    expirationSeconds: typing.Optional[int]
+    audience: str
+    expirationSeconds: int
     path: str

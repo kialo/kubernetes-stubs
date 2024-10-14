@@ -2,11 +2,11 @@ import kubernetes.client
 import typing
 
 class V1CertificateSigningRequest:
-    api_version: typing.Optional[str]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ObjectMeta]
+    api_version: str
+    kind: str
+    metadata: kubernetes.client.V1ObjectMeta
     spec: kubernetes.client.V1CertificateSigningRequestSpec
-    status: typing.Optional[kubernetes.client.V1CertificateSigningRequestStatus]
+    status: kubernetes.client.V1CertificateSigningRequestStatus
 
     def __init__(
         self,
@@ -22,8 +22,8 @@ class V1CertificateSigningRequest:
     def to_dict(self) -> V1CertificateSigningRequestDict: ...
 
 class V1CertificateSigningRequestDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ObjectMetaDict]
+    apiVersion: str
+    kind: str
+    metadata: kubernetes.client.V1ObjectMetaDict
     spec: kubernetes.client.V1CertificateSigningRequestSpecDict
-    status: typing.Optional[kubernetes.client.V1CertificateSigningRequestStatusDict]
+    status: kubernetes.client.V1CertificateSigningRequestStatusDict

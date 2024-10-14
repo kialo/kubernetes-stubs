@@ -20,6 +20,6 @@ class V1PriorityLevelConfigurationSpec:
     def to_dict(self) -> V1PriorityLevelConfigurationSpecDict: ...
 
 class V1PriorityLevelConfigurationSpecDict(typing.TypedDict, total=False):
-    exempt: typing.Optional[kubernetes.client.V1ExemptPriorityLevelConfigurationDict]
-    limited: typing.Optional[kubernetes.client.V1LimitedPriorityLevelConfigurationDict]
+    exempt: kubernetes.client.V1ExemptPriorityLevelConfigurationDict
+    limited: kubernetes.client.V1LimitedPriorityLevelConfigurationDict
     type: str

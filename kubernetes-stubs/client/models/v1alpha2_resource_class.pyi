@@ -2,14 +2,13 @@ import kubernetes.client
 import typing
 
 class V1alpha2ResourceClass:
-    api_version: typing.Optional[str]
+    api_version: str
     driver_name: str
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ObjectMeta]
+    kind: str
+    metadata: kubernetes.client.V1ObjectMeta
     parameters_ref: typing.Optional[
         kubernetes.client.V1alpha2ResourceClassParametersReference
     ]
-    structured_parameters: typing.Optional[bool]
     suitable_nodes: typing.Optional[kubernetes.client.V1NodeSelector]
 
     def __init__(
@@ -22,18 +21,14 @@ class V1alpha2ResourceClass:
         parameters_ref: typing.Optional[
             kubernetes.client.V1alpha2ResourceClassParametersReference
         ] = ...,
-        structured_parameters: typing.Optional[bool] = ...,
         suitable_nodes: typing.Optional[kubernetes.client.V1NodeSelector] = ...,
     ) -> None: ...
     def to_dict(self) -> V1alpha2ResourceClassDict: ...
 
 class V1alpha2ResourceClassDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
+    apiVersion: str
     driverName: str
-    kind: typing.Optional[str]
-    metadata: typing.Optional[kubernetes.client.V1ObjectMetaDict]
-    parametersRef: typing.Optional[
-        kubernetes.client.V1alpha2ResourceClassParametersReferenceDict
-    ]
-    structuredParameters: typing.Optional[bool]
-    suitableNodes: typing.Optional[kubernetes.client.V1NodeSelectorDict]
+    kind: str
+    metadata: kubernetes.client.V1ObjectMetaDict
+    parametersRef: kubernetes.client.V1alpha2ResourceClassParametersReferenceDict
+    suitableNodes: kubernetes.client.V1NodeSelectorDict

@@ -15,6 +15,6 @@ class V1AzureFileVolumeSource:
     def to_dict(self) -> V1AzureFileVolumeSourceDict: ...
 
 class V1AzureFileVolumeSourceDict(typing.TypedDict, total=False):
-    readOnly: typing.Optional[bool]
+    readOnly: bool
     secretName: str
     shareName: str

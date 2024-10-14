@@ -7,4 +7,4 @@ class V1LocalObjectReference:
     def to_dict(self) -> V1LocalObjectReferenceDict: ...
 
 class V1LocalObjectReferenceDict(typing.TypedDict, total=False):
-    name: typing.Optional[str]
+    name: str

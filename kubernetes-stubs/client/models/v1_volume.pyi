@@ -92,43 +92,33 @@ class V1Volume:
     def to_dict(self) -> V1VolumeDict: ...
 
 class V1VolumeDict(typing.TypedDict, total=False):
-    awsElasticBlockStore: typing.Optional[
-        kubernetes.client.V1AWSElasticBlockStoreVolumeSourceDict
-    ]
-    azureDisk: typing.Optional[kubernetes.client.V1AzureDiskVolumeSourceDict]
-    azureFile: typing.Optional[kubernetes.client.V1AzureFileVolumeSourceDict]
-    cephfs: typing.Optional[kubernetes.client.V1CephFSVolumeSourceDict]
-    cinder: typing.Optional[kubernetes.client.V1CinderVolumeSourceDict]
-    configMap: typing.Optional[kubernetes.client.V1ConfigMapVolumeSourceDict]
-    csi: typing.Optional[kubernetes.client.V1CSIVolumeSourceDict]
-    downwardAPI: typing.Optional[kubernetes.client.V1DownwardAPIVolumeSourceDict]
-    emptyDir: typing.Optional[kubernetes.client.V1EmptyDirVolumeSourceDict]
-    ephemeral: typing.Optional[kubernetes.client.V1EphemeralVolumeSourceDict]
-    fc: typing.Optional[kubernetes.client.V1FCVolumeSourceDict]
-    flexVolume: typing.Optional[kubernetes.client.V1FlexVolumeSourceDict]
-    flocker: typing.Optional[kubernetes.client.V1FlockerVolumeSourceDict]
-    gcePersistentDisk: typing.Optional[
-        kubernetes.client.V1GCEPersistentDiskVolumeSourceDict
-    ]
-    gitRepo: typing.Optional[kubernetes.client.V1GitRepoVolumeSourceDict]
-    glusterfs: typing.Optional[kubernetes.client.V1GlusterfsVolumeSourceDict]
-    hostPath: typing.Optional[kubernetes.client.V1HostPathVolumeSourceDict]
-    iscsi: typing.Optional[kubernetes.client.V1ISCSIVolumeSourceDict]
+    awsElasticBlockStore: kubernetes.client.V1AWSElasticBlockStoreVolumeSourceDict
+    azureDisk: kubernetes.client.V1AzureDiskVolumeSourceDict
+    azureFile: kubernetes.client.V1AzureFileVolumeSourceDict
+    cephfs: kubernetes.client.V1CephFSVolumeSourceDict
+    cinder: kubernetes.client.V1CinderVolumeSourceDict
+    configMap: kubernetes.client.V1ConfigMapVolumeSourceDict
+    csi: kubernetes.client.V1CSIVolumeSourceDict
+    downwardAPI: kubernetes.client.V1DownwardAPIVolumeSourceDict
+    emptyDir: kubernetes.client.V1EmptyDirVolumeSourceDict
+    ephemeral: kubernetes.client.V1EphemeralVolumeSourceDict
+    fc: kubernetes.client.V1FCVolumeSourceDict
+    flexVolume: kubernetes.client.V1FlexVolumeSourceDict
+    flocker: kubernetes.client.V1FlockerVolumeSourceDict
+    gcePersistentDisk: kubernetes.client.V1GCEPersistentDiskVolumeSourceDict
+    gitRepo: kubernetes.client.V1GitRepoVolumeSourceDict
+    glusterfs: kubernetes.client.V1GlusterfsVolumeSourceDict
+    hostPath: kubernetes.client.V1HostPathVolumeSourceDict
+    iscsi: kubernetes.client.V1ISCSIVolumeSourceDict
     name: str
-    nfs: typing.Optional[kubernetes.client.V1NFSVolumeSourceDict]
-    persistentVolumeClaim: typing.Optional[
-        kubernetes.client.V1PersistentVolumeClaimVolumeSourceDict
-    ]
-    photonPersistentDisk: typing.Optional[
-        kubernetes.client.V1PhotonPersistentDiskVolumeSourceDict
-    ]
-    portworxVolume: typing.Optional[kubernetes.client.V1PortworxVolumeSourceDict]
-    projected: typing.Optional[kubernetes.client.V1ProjectedVolumeSourceDict]
-    quobyte: typing.Optional[kubernetes.client.V1QuobyteVolumeSourceDict]
-    rbd: typing.Optional[kubernetes.client.V1RBDVolumeSourceDict]
-    scaleIO: typing.Optional[kubernetes.client.V1ScaleIOVolumeSourceDict]
-    secret: typing.Optional[kubernetes.client.V1SecretVolumeSourceDict]
-    storageos: typing.Optional[kubernetes.client.V1StorageOSVolumeSourceDict]
-    vsphereVolume: typing.Optional[
-        kubernetes.client.V1VsphereVirtualDiskVolumeSourceDict
-    ]
+    nfs: kubernetes.client.V1NFSVolumeSourceDict
+    persistentVolumeClaim: kubernetes.client.V1PersistentVolumeClaimVolumeSourceDict
+    photonPersistentDisk: kubernetes.client.V1PhotonPersistentDiskVolumeSourceDict
+    portworxVolume: kubernetes.client.V1PortworxVolumeSourceDict
+    projected: kubernetes.client.V1ProjectedVolumeSourceDict
+    quobyte: kubernetes.client.V1QuobyteVolumeSourceDict
+    rbd: kubernetes.client.V1RBDVolumeSourceDict
+    scaleIO: kubernetes.client.V1ScaleIOVolumeSourceDict
+    secret: kubernetes.client.V1SecretVolumeSourceDict
+    storageos: kubernetes.client.V1StorageOSVolumeSourceDict
+    vsphereVolume: kubernetes.client.V1VsphereVirtualDiskVolumeSourceDict

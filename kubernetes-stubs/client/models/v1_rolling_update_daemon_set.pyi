@@ -13,5 +13,5 @@ class V1RollingUpdateDaemonSet:
     def to_dict(self) -> V1RollingUpdateDaemonSetDict: ...
 
 class V1RollingUpdateDaemonSetDict(typing.TypedDict, total=False):
-    maxSurge: typing.Optional[typing.Any]
-    maxUnavailable: typing.Optional[typing.Any]
+    maxSurge: typing.Any
+    maxUnavailable: typing.Any

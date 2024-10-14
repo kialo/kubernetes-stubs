@@ -10,4 +10,4 @@ class V1EndpointHints:
     def to_dict(self) -> V1EndpointHintsDict: ...
 
 class V1EndpointHintsDict(typing.TypedDict, total=False):
-    forZones: typing.Optional[list[kubernetes.client.V1ForZoneDict]]
+    forZones: list[kubernetes.client.V1ForZoneDict]

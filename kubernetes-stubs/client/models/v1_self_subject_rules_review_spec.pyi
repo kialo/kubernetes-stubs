@@ -7,4 +7,4 @@ class V1SelfSubjectRulesReviewSpec:
     def to_dict(self) -> V1SelfSubjectRulesReviewSpecDict: ...
 
 class V1SelfSubjectRulesReviewSpecDict(typing.TypedDict, total=False):
-    namespace: typing.Optional[str]
+    namespace: str

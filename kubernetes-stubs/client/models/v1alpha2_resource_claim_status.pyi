@@ -22,9 +22,7 @@ class V1alpha2ResourceClaimStatus:
     def to_dict(self) -> V1alpha2ResourceClaimStatusDict: ...
 
 class V1alpha2ResourceClaimStatusDict(typing.TypedDict, total=False):
-    allocation: typing.Optional[kubernetes.client.V1alpha2AllocationResultDict]
-    deallocationRequested: typing.Optional[bool]
-    driverName: typing.Optional[str]
-    reservedFor: typing.Optional[
-        list[kubernetes.client.V1alpha2ResourceClaimConsumerReferenceDict]
-    ]
+    allocation: kubernetes.client.V1alpha2AllocationResultDict
+    deallocationRequested: bool
+    driverName: str
+    reservedFor: list[kubernetes.client.V1alpha2ResourceClaimConsumerReferenceDict]

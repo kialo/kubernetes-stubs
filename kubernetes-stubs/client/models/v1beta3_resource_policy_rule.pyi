@@ -20,7 +20,7 @@ class V1beta3ResourcePolicyRule:
 
 class V1beta3ResourcePolicyRuleDict(typing.TypedDict, total=False):
     apiGroups: list[str]
-    clusterScope: typing.Optional[bool]
-    namespaces: typing.Optional[list[str]]
+    clusterScope: bool
+    namespaces: list[str]
     resources: list[str]
     verbs: list[str]

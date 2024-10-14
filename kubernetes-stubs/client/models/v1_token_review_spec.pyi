@@ -13,5 +13,5 @@ class V1TokenReviewSpec:
     def to_dict(self) -> V1TokenReviewSpecDict: ...
 
 class V1TokenReviewSpecDict(typing.TypedDict, total=False):
-    audiences: typing.Optional[list[str]]
-    token: typing.Optional[str]
+    audiences: list[str]
+    token: str

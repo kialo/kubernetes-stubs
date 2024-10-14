@@ -14,5 +14,5 @@ class V2HorizontalPodAutoscalerBehavior:
     def to_dict(self) -> V2HorizontalPodAutoscalerBehaviorDict: ...
 
 class V2HorizontalPodAutoscalerBehaviorDict(typing.TypedDict, total=False):
-    scaleDown: typing.Optional[kubernetes.client.V2HPAScalingRulesDict]
-    scaleUp: typing.Optional[kubernetes.client.V2HPAScalingRulesDict]
+    scaleDown: kubernetes.client.V2HPAScalingRulesDict
+    scaleUp: kubernetes.client.V2HPAScalingRulesDict

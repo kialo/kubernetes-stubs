@@ -16,5 +16,5 @@ class V1CustomResourceSubresources:
     def to_dict(self) -> V1CustomResourceSubresourcesDict: ...
 
 class V1CustomResourceSubresourcesDict(typing.TypedDict, total=False):
-    scale: typing.Optional[kubernetes.client.V1CustomResourceSubresourceScaleDict]
-    status: typing.Optional[typing.Any]
+    scale: kubernetes.client.V1CustomResourceSubresourceScaleDict
+    status: typing.Any

@@ -7,4 +7,4 @@ class V1HostIP:
     def to_dict(self) -> V1HostIPDict: ...
 
 class V1HostIPDict(typing.TypedDict, total=False):
-    ip: typing.Optional[str]
+    ip: str

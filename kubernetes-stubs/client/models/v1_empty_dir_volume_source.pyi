@@ -13,5 +13,5 @@ class V1EmptyDirVolumeSource:
     def to_dict(self) -> V1EmptyDirVolumeSourceDict: ...
 
 class V1EmptyDirVolumeSourceDict(typing.TypedDict, total=False):
-    medium: typing.Optional[str]
-    sizeLimit: typing.Optional[str]
+    medium: str
+    sizeLimit: str

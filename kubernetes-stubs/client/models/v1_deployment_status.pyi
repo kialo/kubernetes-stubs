@@ -28,11 +28,11 @@ class V1DeploymentStatus:
     def to_dict(self) -> V1DeploymentStatusDict: ...
 
 class V1DeploymentStatusDict(typing.TypedDict, total=False):
-    availableReplicas: typing.Optional[int]
-    collisionCount: typing.Optional[int]
-    conditions: typing.Optional[list[kubernetes.client.V1DeploymentConditionDict]]
-    observedGeneration: typing.Optional[int]
-    readyReplicas: typing.Optional[int]
-    replicas: typing.Optional[int]
-    unavailableReplicas: typing.Optional[int]
-    updatedReplicas: typing.Optional[int]
+    availableReplicas: int
+    collisionCount: int
+    conditions: list[kubernetes.client.V1DeploymentConditionDict]
+    observedGeneration: int
+    readyReplicas: int
+    replicas: int
+    unavailableReplicas: int
+    updatedReplicas: int

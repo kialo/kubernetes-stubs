@@ -13,5 +13,5 @@ class V1RollingUpdateStatefulSetStrategy:
     def to_dict(self) -> V1RollingUpdateStatefulSetStrategyDict: ...
 
 class V1RollingUpdateStatefulSetStrategyDict(typing.TypedDict, total=False):
-    maxUnavailable: typing.Optional[typing.Any]
-    partition: typing.Optional[int]
+    maxUnavailable: typing.Any
+    partition: int

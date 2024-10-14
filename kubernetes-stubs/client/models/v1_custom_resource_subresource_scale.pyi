@@ -15,6 +15,6 @@ class V1CustomResourceSubresourceScale:
     def to_dict(self) -> V1CustomResourceSubresourceScaleDict: ...
 
 class V1CustomResourceSubresourceScaleDict(typing.TypedDict, total=False):
-    labelSelectorPath: typing.Optional[str]
+    labelSelectorPath: str
     specReplicasPath: str
     statusReplicasPath: str

@@ -11,4 +11,4 @@ class V1PersistentVolumeClaimVolumeSource:
 
 class V1PersistentVolumeClaimVolumeSourceDict(typing.TypedDict, total=False):
     claimName: str
-    readOnly: typing.Optional[bool]
+    readOnly: bool

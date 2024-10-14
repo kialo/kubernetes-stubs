@@ -16,6 +16,6 @@ class V1EnvFromSource:
     def to_dict(self) -> V1EnvFromSourceDict: ...
 
 class V1EnvFromSourceDict(typing.TypedDict, total=False):
-    configMapRef: typing.Optional[kubernetes.client.V1ConfigMapEnvSourceDict]
-    prefix: typing.Optional[str]
-    secretRef: typing.Optional[kubernetes.client.V1SecretEnvSourceDict]
+    configMapRef: kubernetes.client.V1ConfigMapEnvSourceDict
+    prefix: str
+    secretRef: kubernetes.client.V1SecretEnvSourceDict

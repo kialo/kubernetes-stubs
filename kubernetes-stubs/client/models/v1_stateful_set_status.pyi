@@ -32,13 +32,13 @@ class V1StatefulSetStatus:
     def to_dict(self) -> V1StatefulSetStatusDict: ...
 
 class V1StatefulSetStatusDict(typing.TypedDict, total=False):
-    availableReplicas: typing.Optional[int]
-    collisionCount: typing.Optional[int]
-    conditions: typing.Optional[list[kubernetes.client.V1StatefulSetConditionDict]]
-    currentReplicas: typing.Optional[int]
-    currentRevision: typing.Optional[str]
-    observedGeneration: typing.Optional[int]
-    readyReplicas: typing.Optional[int]
+    availableReplicas: int
+    collisionCount: int
+    conditions: list[kubernetes.client.V1StatefulSetConditionDict]
+    currentReplicas: int
+    currentRevision: str
+    observedGeneration: int
+    readyReplicas: int
     replicas: int
-    updateRevision: typing.Optional[str]
-    updatedReplicas: typing.Optional[int]
+    updateRevision: str
+    updatedReplicas: int

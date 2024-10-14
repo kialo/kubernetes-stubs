@@ -14,4 +14,4 @@ class V1ModifyVolumeStatus:
 
 class V1ModifyVolumeStatusDict(typing.TypedDict, total=False):
     status: str
-    targetVolumeAttributesClassName: typing.Optional[str]
+    targetVolumeAttributesClassName: str

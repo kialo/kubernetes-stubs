@@ -10,5 +10,5 @@ class V1TCPSocketAction:
     def to_dict(self) -> V1TCPSocketActionDict: ...
 
 class V1TCPSocketActionDict(typing.TypedDict, total=False):
-    host: typing.Optional[str]
+    host: str
     port: typing.Any

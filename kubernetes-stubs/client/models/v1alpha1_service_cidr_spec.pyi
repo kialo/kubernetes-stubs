@@ -7,4 +7,4 @@ class V1alpha1ServiceCIDRSpec:
     def to_dict(self) -> V1alpha1ServiceCIDRSpecDict: ...
 
 class V1alpha1ServiceCIDRSpecDict(typing.TypedDict, total=False):
-    cidrs: typing.Optional[list[str]]
+    cidrs: list[str]

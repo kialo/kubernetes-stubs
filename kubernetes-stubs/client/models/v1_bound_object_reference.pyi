@@ -1,8 +1,8 @@
 import typing
 
 class V1BoundObjectReference:
-    api_version: typing.Optional[str]
-    kind: typing.Optional[str]
+    api_version: str
+    kind: str
     name: typing.Optional[str]
     uid: typing.Optional[str]
 
@@ -17,7 +17,7 @@ class V1BoundObjectReference:
     def to_dict(self) -> V1BoundObjectReferenceDict: ...
 
 class V1BoundObjectReferenceDict(typing.TypedDict, total=False):
-    apiVersion: typing.Optional[str]
-    kind: typing.Optional[str]
-    name: typing.Optional[str]
-    uid: typing.Optional[str]
+    apiVersion: str
+    kind: str
+    name: str
+    uid: str

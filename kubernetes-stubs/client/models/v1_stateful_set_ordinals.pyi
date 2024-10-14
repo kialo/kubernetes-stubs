@@ -7,4 +7,4 @@ class V1StatefulSetOrdinals:
     def to_dict(self) -> V1StatefulSetOrdinalsDict: ...
 
 class V1StatefulSetOrdinalsDict(typing.TypedDict, total=False):
-    start: typing.Optional[int]
+    start: int

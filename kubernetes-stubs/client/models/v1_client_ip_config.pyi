@@ -7,4 +7,4 @@ class V1ClientIPConfig:
     def to_dict(self) -> V1ClientIPConfigDict: ...
 
 class V1ClientIPConfigDict(typing.TypedDict, total=False):
-    timeoutSeconds: typing.Optional[int]
+    timeoutSeconds: int

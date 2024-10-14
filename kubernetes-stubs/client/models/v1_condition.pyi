@@ -24,7 +24,7 @@ class V1Condition:
 class V1ConditionDict(typing.TypedDict, total=False):
     lastTransitionTime: datetime.datetime
     message: str
-    observedGeneration: typing.Optional[int]
+    observedGeneration: int
     reason: str
     status: str
     type: str

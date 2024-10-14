@@ -28,12 +28,8 @@ class V1VolumeProjection:
     def to_dict(self) -> V1VolumeProjectionDict: ...
 
 class V1VolumeProjectionDict(typing.TypedDict, total=False):
-    clusterTrustBundle: typing.Optional[
-        kubernetes.client.V1ClusterTrustBundleProjectionDict
-    ]
-    configMap: typing.Optional[kubernetes.client.V1ConfigMapProjectionDict]
-    downwardAPI: typing.Optional[kubernetes.client.V1DownwardAPIProjectionDict]
-    secret: typing.Optional[kubernetes.client.V1SecretProjectionDict]
-    serviceAccountToken: typing.Optional[
-        kubernetes.client.V1ServiceAccountTokenProjectionDict
-    ]
+    clusterTrustBundle: kubernetes.client.V1ClusterTrustBundleProjectionDict
+    configMap: kubernetes.client.V1ConfigMapProjectionDict
+    downwardAPI: kubernetes.client.V1DownwardAPIProjectionDict
+    secret: kubernetes.client.V1SecretProjectionDict
+    serviceAccountToken: kubernetes.client.V1ServiceAccountTokenProjectionDict

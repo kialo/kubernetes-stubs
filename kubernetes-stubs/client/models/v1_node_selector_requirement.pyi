@@ -13,4 +13,4 @@ class V1NodeSelectorRequirement:
 class V1NodeSelectorRequirementDict(typing.TypedDict, total=False):
     key: str
     operator: str
-    values: typing.Optional[list[str]]
+    values: list[str]

@@ -22,8 +22,8 @@ class V1DaemonSetSpec:
     def to_dict(self) -> V1DaemonSetSpecDict: ...
 
 class V1DaemonSetSpecDict(typing.TypedDict, total=False):
-    minReadySeconds: typing.Optional[int]
-    revisionHistoryLimit: typing.Optional[int]
+    minReadySeconds: int
+    revisionHistoryLimit: int
     selector: kubernetes.client.V1LabelSelectorDict
     template: kubernetes.client.V1PodTemplateSpecDict
-    updateStrategy: typing.Optional[kubernetes.client.V1DaemonSetUpdateStrategyDict]
+    updateStrategy: kubernetes.client.V1DaemonSetUpdateStrategyDict

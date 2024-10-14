@@ -16,5 +16,5 @@ class V1SecretKeySelector:
 
 class V1SecretKeySelectorDict(typing.TypedDict, total=False):
     key: str
-    name: typing.Optional[str]
-    optional: typing.Optional[bool]
+    name: str
+    optional: bool

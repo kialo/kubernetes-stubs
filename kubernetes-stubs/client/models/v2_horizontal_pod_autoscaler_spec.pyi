@@ -22,8 +22,8 @@ class V2HorizontalPodAutoscalerSpec:
     def to_dict(self) -> V2HorizontalPodAutoscalerSpecDict: ...
 
 class V2HorizontalPodAutoscalerSpecDict(typing.TypedDict, total=False):
-    behavior: typing.Optional[kubernetes.client.V2HorizontalPodAutoscalerBehaviorDict]
+    behavior: kubernetes.client.V2HorizontalPodAutoscalerBehaviorDict
     maxReplicas: int
-    metrics: typing.Optional[list[kubernetes.client.V2MetricSpecDict]]
-    minReplicas: typing.Optional[int]
+    metrics: list[kubernetes.client.V2MetricSpecDict]
+    minReplicas: int
     scaleTargetRef: kubernetes.client.V2CrossVersionObjectReferenceDict

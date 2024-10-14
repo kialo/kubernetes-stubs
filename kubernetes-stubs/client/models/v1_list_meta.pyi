@@ -17,7 +17,7 @@ class V1ListMeta:
     def to_dict(self) -> V1ListMetaDict: ...
 
 class V1ListMetaDict(typing.TypedDict, total=False):
-    _continue: typing.Optional[str]
-    remainingItemCount: typing.Optional[int]
-    resourceVersion: typing.Optional[str]
-    selfLink: typing.Optional[str]
+    _continue: str
+    remainingItemCount: int
+    resourceVersion: str
+    selfLink: str

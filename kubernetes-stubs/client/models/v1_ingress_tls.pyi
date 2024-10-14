@@ -13,5 +13,5 @@ class V1IngressTLS:
     def to_dict(self) -> V1IngressTLSDict: ...
 
 class V1IngressTLSDict(typing.TypedDict, total=False):
-    hosts: typing.Optional[list[str]]
-    secretName: typing.Optional[str]
+    hosts: list[str]
+    secretName: str

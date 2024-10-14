@@ -106,12 +106,6 @@ from kubernetes.client.api.storage_v1_api import StorageV1Api as StorageV1Api
 from kubernetes.client.api.storage_v1alpha1_api import (
     StorageV1alpha1Api as StorageV1alpha1Api,
 )
-from kubernetes.client.api.storagemigration_api import (
-    StoragemigrationApi as StoragemigrationApi,
-)
-from kubernetes.client.api.storagemigration_v1alpha1_api import (
-    StoragemigrationV1alpha1Api as StoragemigrationV1alpha1Api,
-)
 from kubernetes.client.api.logs_api import LogsApi as LogsApi
 from kubernetes.client.api.version_api import VersionApi as VersionApi
 from kubernetes.client.api.custom_objects_api import (

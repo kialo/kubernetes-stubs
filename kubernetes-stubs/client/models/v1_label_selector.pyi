@@ -18,7 +18,5 @@ class V1LabelSelector:
     def to_dict(self) -> V1LabelSelectorDict: ...
 
 class V1LabelSelectorDict(typing.TypedDict, total=False):
-    matchExpressions: typing.Optional[
-        list[kubernetes.client.V1LabelSelectorRequirementDict]
-    ]
-    matchLabels: typing.Optional[dict[str, str]]
+    matchExpressions: list[kubernetes.client.V1LabelSelectorRequirementDict]
+    matchLabels: dict[str, str]

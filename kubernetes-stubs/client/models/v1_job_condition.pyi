@@ -22,9 +22,9 @@ class V1JobCondition:
     def to_dict(self) -> V1JobConditionDict: ...
 
 class V1JobConditionDict(typing.TypedDict, total=False):
-    lastProbeTime: typing.Optional[datetime.datetime]
-    lastTransitionTime: typing.Optional[datetime.datetime]
-    message: typing.Optional[str]
-    reason: typing.Optional[str]
+    lastProbeTime: datetime.datetime
+    lastTransitionTime: datetime.datetime
+    message: str
+    reason: str
     status: str
     type: str
