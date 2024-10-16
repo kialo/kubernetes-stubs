@@ -1,19 +1,9 @@
-[tool.poetry]
+[project]
 name = "kubernetes-stubs"
-version = "29.0.0"
+version = "30.1.0"
 description = "Type stubs for the Kubernetes Python API client"
-authors = ["Kialo <sre@kialo.com>"]
-license = "Apache-2.0"
+authors = [{ name = "Kialo", email = "sre@kialo.com" }]
+license = { file = "LICENSE.md" }
 readme = "Readme.md"
-packages = [{ include = "kubernetes_ext" }, { include = "kubernetes-stubs" }]
-
-[tool.poetry.dependencies]
-python = "^3.12.0"
-
-[tool.poetry.group.dev.dependencies]
-inflection = "^0.5.1"
-ruff = "^0.6.2"
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+dependencies = ["inflection == 0.5.1", "ruff == 0.6.9"]
+requires-python = ">=3.12"
