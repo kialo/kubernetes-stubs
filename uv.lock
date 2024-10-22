@@ -13,14 +13,18 @@ wheels = [
 [[package]]
 name = "kubernetes-stubs"
 version = "30.1.0"
-source = { virtual = "." }
-dependencies = [
+source = { editable = "." }
+
+[package.dev-dependencies]
+dev = [
     { name = "inflection" },
     { name = "ruff" },
 ]
 
 [package.metadata]
-requires-dist = [
+
+[package.metadata.requires-dev]
+dev = [
     { name = "inflection", specifier = "==0.5.1" },
     { name = "ruff", specifier = "==0.6.9" },
 ]
