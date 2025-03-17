@@ -8,6 +8,7 @@ class V1NodeStatus:
     conditions: typing.Optional[list[kubernetes.client.V1NodeCondition]]
     config: typing.Optional[kubernetes.client.V1NodeConfigStatus]
     daemon_endpoints: typing.Optional[kubernetes.client.V1NodeDaemonEndpoints]
+    features: typing.Optional[kubernetes.client.V1NodeFeatures]
     images: typing.Optional[list[kubernetes.client.V1ContainerImage]]
     node_info: typing.Optional[kubernetes.client.V1NodeSystemInfo]
     phase: typing.Optional[str]
@@ -26,6 +27,7 @@ class V1NodeStatus:
         daemon_endpoints: typing.Optional[
             kubernetes.client.V1NodeDaemonEndpoints
         ] = ...,
+        features: typing.Optional[kubernetes.client.V1NodeFeatures] = ...,
         images: typing.Optional[list[kubernetes.client.V1ContainerImage]] = ...,
         node_info: typing.Optional[kubernetes.client.V1NodeSystemInfo] = ...,
         phase: typing.Optional[str] = ...,
@@ -46,6 +48,7 @@ class V1NodeStatusDict(typing.TypedDict, total=False):
     conditions: list[kubernetes.client.V1NodeConditionDict]
     config: kubernetes.client.V1NodeConfigStatusDict
     daemonEndpoints: kubernetes.client.V1NodeDaemonEndpointsDict
+    features: kubernetes.client.V1NodeFeaturesDict
     images: list[kubernetes.client.V1ContainerImageDict]
     nodeInfo: kubernetes.client.V1NodeSystemInfoDict
     phase: str

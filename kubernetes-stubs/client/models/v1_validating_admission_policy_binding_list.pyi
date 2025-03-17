@@ -3,7 +3,7 @@ import typing
 
 class V1ValidatingAdmissionPolicyBindingList:
     api_version: str
-    items: typing.Optional[list[kubernetes.client.V1ValidatingAdmissionPolicyBinding]]
+    items: list[kubernetes.client.V1ValidatingAdmissionPolicyBinding]
     kind: str
     metadata: kubernetes.client.V1ListMeta
 
@@ -11,9 +11,7 @@ class V1ValidatingAdmissionPolicyBindingList:
         self,
         *,
         api_version: typing.Optional[str] = ...,
-        items: typing.Optional[
-            list[kubernetes.client.V1ValidatingAdmissionPolicyBinding]
-        ] = ...,
+        items: list[kubernetes.client.V1ValidatingAdmissionPolicyBinding],
         kind: typing.Optional[str] = ...,
         metadata: typing.Optional[kubernetes.client.V1ListMeta] = ...,
     ) -> None: ...

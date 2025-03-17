@@ -23,6 +23,7 @@ class V1Volume:
     git_repo: typing.Optional[kubernetes.client.V1GitRepoVolumeSource]
     glusterfs: typing.Optional[kubernetes.client.V1GlusterfsVolumeSource]
     host_path: typing.Optional[kubernetes.client.V1HostPathVolumeSource]
+    image: typing.Optional[kubernetes.client.V1ImageVolumeSource]
     iscsi: typing.Optional[kubernetes.client.V1ISCSIVolumeSource]
     name: str
     nfs: typing.Optional[kubernetes.client.V1NFSVolumeSource]
@@ -67,6 +68,7 @@ class V1Volume:
         git_repo: typing.Optional[kubernetes.client.V1GitRepoVolumeSource] = ...,
         glusterfs: typing.Optional[kubernetes.client.V1GlusterfsVolumeSource] = ...,
         host_path: typing.Optional[kubernetes.client.V1HostPathVolumeSource] = ...,
+        image: typing.Optional[kubernetes.client.V1ImageVolumeSource] = ...,
         iscsi: typing.Optional[kubernetes.client.V1ISCSIVolumeSource] = ...,
         name: str,
         nfs: typing.Optional[kubernetes.client.V1NFSVolumeSource] = ...,
@@ -109,6 +111,7 @@ class V1VolumeDict(typing.TypedDict, total=False):
     gitRepo: kubernetes.client.V1GitRepoVolumeSourceDict
     glusterfs: kubernetes.client.V1GlusterfsVolumeSourceDict
     hostPath: kubernetes.client.V1HostPathVolumeSourceDict
+    image: kubernetes.client.V1ImageVolumeSourceDict
     iscsi: kubernetes.client.V1ISCSIVolumeSourceDict
     name: str
     nfs: kubernetes.client.V1NFSVolumeSourceDict

@@ -1,6 +1,6 @@
 [project]
 name = "kubernetes-stubs"
-version = "30.1.0"
+version = "31.0.0"
 description = "Type stubs for the Kubernetes Python API client"
 authors = [{ name = "Kialo", email = "sre@kialo.com" }]
 readme = "Readme.md"

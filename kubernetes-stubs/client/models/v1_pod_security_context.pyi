@@ -11,6 +11,7 @@ class V1PodSecurityContext:
     se_linux_options: typing.Optional[kubernetes.client.V1SELinuxOptions]
     seccomp_profile: typing.Optional[kubernetes.client.V1SeccompProfile]
     supplemental_groups: typing.Optional[list[int]]
+    supplemental_groups_policy: typing.Optional[str]
     sysctls: typing.Optional[list[kubernetes.client.V1Sysctl]]
     windows_options: typing.Optional[kubernetes.client.V1WindowsSecurityContextOptions]
 
@@ -26,6 +27,7 @@ class V1PodSecurityContext:
         se_linux_options: typing.Optional[kubernetes.client.V1SELinuxOptions] = ...,
         seccomp_profile: typing.Optional[kubernetes.client.V1SeccompProfile] = ...,
         supplemental_groups: typing.Optional[list[int]] = ...,
+        supplemental_groups_policy: typing.Optional[str] = ...,
         sysctls: typing.Optional[list[kubernetes.client.V1Sysctl]] = ...,
         windows_options: typing.Optional[
             kubernetes.client.V1WindowsSecurityContextOptions
@@ -43,5 +45,6 @@ class V1PodSecurityContextDict(typing.TypedDict, total=False):
     seLinuxOptions: kubernetes.client.V1SELinuxOptionsDict
     seccompProfile: kubernetes.client.V1SeccompProfileDict
     supplementalGroups: list[int]
+    supplementalGroupsPolicy: str
     sysctls: list[kubernetes.client.V1SysctlDict]
     windowsOptions: kubernetes.client.V1WindowsSecurityContextOptionsDict

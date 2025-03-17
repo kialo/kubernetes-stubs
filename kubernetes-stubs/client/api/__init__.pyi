@@ -61,6 +61,9 @@ from kubernetes.client.api.coordination_api import CoordinationApi as Coordinati
 from kubernetes.client.api.coordination_v1_api import (
     CoordinationV1Api as CoordinationV1Api,
 )
+from kubernetes.client.api.coordination_v1alpha1_api import (
+    CoordinationV1alpha1Api as CoordinationV1alpha1Api,
+)
 from kubernetes.client.api.discovery_api import DiscoveryApi as DiscoveryApi
 from kubernetes.client.api.discovery_v1_api import DiscoveryV1Api as DiscoveryV1Api
 from kubernetes.client.api.events_api import EventsApi as EventsApi
@@ -82,8 +85,8 @@ from kubernetes.client.api.internalApiserver_v1alpha1_api import (
 )
 from kubernetes.client.api.networking_api import NetworkingApi as NetworkingApi
 from kubernetes.client.api.networking_v1_api import NetworkingV1Api as NetworkingV1Api
-from kubernetes.client.api.networking_v1alpha1_api import (
-    NetworkingV1alpha1Api as NetworkingV1alpha1Api,
+from kubernetes.client.api.networking_v1beta1_api import (
+    NetworkingV1beta1Api as NetworkingV1beta1Api,
 )
 from kubernetes.client.api.node_api import NodeApi as NodeApi
 from kubernetes.client.api.node_v1_api import NodeV1Api as NodeV1Api
@@ -96,8 +99,8 @@ from kubernetes.client.api.rbacAuthorization_v1_api import (
     RbacAuthorizationV1Api as RbacAuthorizationV1Api,
 )
 from kubernetes.client.api.resource_api import ResourceApi as ResourceApi
-from kubernetes.client.api.resource_v1alpha2_api import (
-    ResourceV1alpha2Api as ResourceV1alpha2Api,
+from kubernetes.client.api.resource_v1alpha3_api import (
+    ResourceV1alpha3Api as ResourceV1alpha3Api,
 )
 from kubernetes.client.api.scheduling_api import SchedulingApi as SchedulingApi
 from kubernetes.client.api.scheduling_v1_api import SchedulingV1Api as SchedulingV1Api
@@ -105,6 +108,9 @@ from kubernetes.client.api.storage_api import StorageApi as StorageApi
 from kubernetes.client.api.storage_v1_api import StorageV1Api as StorageV1Api
 from kubernetes.client.api.storage_v1alpha1_api import (
     StorageV1alpha1Api as StorageV1alpha1Api,
+)
+from kubernetes.client.api.storage_v1beta1_api import (
+    StorageV1beta1Api as StorageV1beta1Api,
 )
 from kubernetes.client.api.storagemigration_api import (
     StoragemigrationApi as StoragemigrationApi,
