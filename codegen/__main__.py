@@ -2,12 +2,43 @@ import collections
 import json
 import keyword
 import shutil
+import sys
 from dataclasses import dataclass
 from pathlib import Path
 from subprocess import run
 from typing import Any
+import tomllib
 
 import inflection
+
+target_version = sys.argv[1]
+
+print(f"Ensure environment is set up for {target_version}")
+
+current_submodule_rev = run(
+    ["git", "rev-parse", "HEAD"],
+    capture_output=True,
+    universal_newlines=True,
+    check=True,
+    cwd="kubernetes-client",
+)
+expected_submodule_rev = run(
+    ["git", "rev-parse", f"v{target_version}"],
+    capture_output=True,
+    universal_newlines=True,
+    check=True,
+    cwd="kubernetes-client",
+)
+if current_submodule_rev.stdout != expected_submodule_rev.stdout:
+    print(
+        f"The kubernetes-client submodule must trackt the target revision ({target_version} => {expected_submodule_rev.stdout.strip()}); however, it is at {current_submodule_rev.stdout.strip()}"
+    )
+    sys.exit(1)
+
+pyproject = tomllib.load(open("pyproject.toml", "rb"))
+if (py_version := pyproject["project"]["version"]) != target_version:
+    print(f"The pyproject's version is at {py_version} not {target_version}")
+    sys.exit(1)
 
 ROOT_DIR = Path(__file__).parent.parent
 SCHEMA_FILE = ROOT_DIR / "kubernetes-client" / "scripts" / "swagger.json"
@@ -365,3 +396,5 @@ for manager, ops in managers.items():
 
 process = run(["ruff", "check", "--fix", "--quiet", STUBS_DIR])
 process = run(["ruff", "format", "--quiet", STUBS_DIR])
+
+print(f"Stubs gernated for {target_version}")
