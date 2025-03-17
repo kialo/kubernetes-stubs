@@ -15,4 +15,4 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [tool.uv]
-dev-dependencies = ["inflection == 0.5.1", "ruff == 0.6.9"]
+dev-dependencies = ["inflection", "ruff"]

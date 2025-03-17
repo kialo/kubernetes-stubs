@@ -14,6 +14,14 @@ pip install git+https://github.com/kialo/kubernetes-stubs.git@v1.29
 
 Change the version number accordingly.
 
+## Update def dependencies
+
+Dev dependencies are currently only pinned via uv's lock file. You can upgrade them via:
+
+```bash
+uv sync --upgrade
+```
+
 ## Generate stubs for a new version
 
 - Update `kubernetes-client` submodule to target release
