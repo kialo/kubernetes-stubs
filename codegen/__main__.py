@@ -360,7 +360,7 @@ for name in apis:
 
 # `kubernetes` root.
 buf = CodegenBuf(STUBS_DIR / "__init__.pyi")
-for submodule in STUBS_DIR.iterdir():
+for submodule in sorted(STUBS_DIR.iterdir()):
     if submodule.is_dir() or (
         submodule.suffix == ".pyi" and not submodule.name.startswith("_")
     ):
