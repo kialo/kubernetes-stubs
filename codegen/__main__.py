@@ -46,12 +46,10 @@ STUBS_DIR = ROOT_DIR / "kubernetes-stubs"
 CLIENT_STUBS_DIR = STUBS_DIR / "client"
 MODELS_STUBS_DIR = CLIENT_STUBS_DIR / "models"
 API_STUBS_DIR = CLIENT_STUBS_DIR / "api"
-EXT_DIR = ROOT_DIR / "kubernetes_ext"
 
 schema = json.load(open(SCHEMA_FILE))
 
-for dir in [STUBS_DIR, EXT_DIR]:
-    shutil.rmtree(dir, ignore_errors=True)
+shutil.rmtree(STUBS_DIR, ignore_errors=True)
 shutil.copytree(ROOT_DIR / "codegen" / "base", ROOT_DIR, dirs_exist_ok=True)
 
 
@@ -365,34 +363,6 @@ for submodule in sorted(STUBS_DIR.iterdir()):
         submodule.suffix == ".pyi" and not submodule.name.startswith("_")
     ):
         buf.writeln(f"from . import {submodule.stem} as {submodule.stem}")
-
-# `kubernetes_ext` root.
-buf = CodegenBuf(EXT_DIR / "__init__.py")
-buf.writeln("import kubernetes.client")
-buf.writeln("import typing")
-for manager, ops in managers.items():
-    buf.start_block(f"class {manager.name}Manager")
-    buf.start_block(
-        f"def __init__(self, client: kubernetes.client.{manager.api_name}Api) -> None"
-    )
-    buf.writeln("self.client = client")
-    buf.end_block()
-    for op in ops:
-        required_params_str = ", ".join(param.arg_str() for param in op.required_params)
-        if required_params_str:
-            required_params_str = ", " + required_params_str
-        optional_params_str = ", ".join(param.arg_str() for param in op.optional_params)
-        if optional_params_str:
-            optional_params_str = ", *, " + optional_params_str
-        params_str = required_params_str + optional_params_str
-        buf.start_block(f"def {op.name}(self{params_str}) -> {op.return_ty}")
-        args = ", ".join(
-            f"{param.name}={param.name}"
-            for param in op.required_params + op.optional_params
-        )
-        buf.writeln(f"return self.client.{op.api_name}({args})")
-        buf.end_block()
-    buf.end_block()
 
 process = run(["ruff", "check", "--fix", "--quiet", STUBS_DIR])
 process = run(["ruff", "format", "--quiet", STUBS_DIR])
