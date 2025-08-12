@@ -8,6 +8,23 @@ class CustomObjectsApi:
     def get_api_resources(
         self, group: str, version: str
     ) -> kubernetes.client.V1APIResourceList: ...
+    def list_custom_object_for_all_namespaces(
+        self,
+        group: str,
+        version: str,
+        resource_plural: str,
+        *,
+        pretty: typing.Optional[str] = ...,
+        allow_watch_bookmarks: typing.Optional[bool] = ...,
+        _continue: typing.Optional[str] = ...,
+        field_selector: typing.Optional[str] = ...,
+        label_selector: typing.Optional[str] = ...,
+        limit: typing.Optional[int] = ...,
+        resource_version: typing.Optional[str] = ...,
+        resource_version_match: typing.Optional[str] = ...,
+        timeout_seconds: typing.Optional[int] = ...,
+        watch: typing.Optional[bool] = ...,
+    ) -> typing.Any: ...
     def list_cluster_custom_object(
         self,
         group: str,
@@ -96,6 +113,7 @@ class CustomObjectsApi:
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
         dry_run: typing.Optional[str] = ...,
+        field_selector: typing.Optional[str] = ...,
     ) -> typing.Any: ...
     def get_cluster_custom_object(
         self, group: str, version: str, plural: str, name: str
