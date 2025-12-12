@@ -1,3 +1,4 @@
+import kubernetes.client
 import typing
 
 class V1alpha3DeviceRequestAllocationResult:
@@ -6,6 +7,7 @@ class V1alpha3DeviceRequestAllocationResult:
     driver: str
     pool: str
     request: str
+    tolerations: typing.Optional[list[kubernetes.client.V1alpha3DeviceToleration]]
 
     def __init__(
         self,
@@ -15,6 +17,9 @@ class V1alpha3DeviceRequestAllocationResult:
         driver: str,
         pool: str,
         request: str,
+        tolerations: typing.Optional[
+            list[kubernetes.client.V1alpha3DeviceToleration]
+        ] = ...,
     ) -> None: ...
     def to_dict(self) -> V1alpha3DeviceRequestAllocationResultDict: ...
 
@@ -24,3 +29,4 @@ class V1alpha3DeviceRequestAllocationResultDict(typing.TypedDict, total=False):
     driver: str
     pool: str
     request: str
+    tolerations: list[kubernetes.client.V1alpha3DeviceTolerationDict]

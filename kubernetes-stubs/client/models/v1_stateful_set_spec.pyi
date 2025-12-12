@@ -11,7 +11,7 @@ class V1StatefulSetSpec:
     replicas: typing.Optional[int]
     revision_history_limit: typing.Optional[int]
     selector: kubernetes.client.V1LabelSelector
-    service_name: str
+    service_name: typing.Optional[str]
     template: kubernetes.client.V1PodTemplateSpec
     update_strategy: typing.Optional[kubernetes.client.V1StatefulSetUpdateStrategy]
     volume_claim_templates: typing.Optional[
@@ -30,7 +30,7 @@ class V1StatefulSetSpec:
         replicas: typing.Optional[int] = ...,
         revision_history_limit: typing.Optional[int] = ...,
         selector: kubernetes.client.V1LabelSelector,
-        service_name: str,
+        service_name: typing.Optional[str] = ...,
         template: kubernetes.client.V1PodTemplateSpec,
         update_strategy: typing.Optional[
             kubernetes.client.V1StatefulSetUpdateStrategy

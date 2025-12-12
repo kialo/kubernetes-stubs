@@ -576,18 +576,6 @@ from kubernetes.client.models.v1_token_review_status import (
 )
 from kubernetes.client.models.v1_user_info import V1UserInfo as V1UserInfo
 from kubernetes.client.models.v1_user_info import V1UserInfoDict as V1UserInfoDict
-from kubernetes.client.models.v1beta1_self_subject_review import (
-    V1beta1SelfSubjectReview as V1beta1SelfSubjectReview,
-)
-from kubernetes.client.models.v1beta1_self_subject_review import (
-    V1beta1SelfSubjectReviewDict as V1beta1SelfSubjectReviewDict,
-)
-from kubernetes.client.models.v1beta1_self_subject_review_status import (
-    V1beta1SelfSubjectReviewStatus as V1beta1SelfSubjectReviewStatus,
-)
-from kubernetes.client.models.v1beta1_self_subject_review_status import (
-    V1beta1SelfSubjectReviewStatusDict as V1beta1SelfSubjectReviewStatusDict,
-)
 from kubernetes.client.models.v1_field_selector_attributes import (
     V1FieldSelectorAttributes as V1FieldSelectorAttributes,
 )
@@ -974,6 +962,24 @@ from kubernetes.client.models.v1alpha1_cluster_trust_bundle_spec import (
 from kubernetes.client.models.v1alpha1_cluster_trust_bundle_spec import (
     V1alpha1ClusterTrustBundleSpecDict as V1alpha1ClusterTrustBundleSpecDict,
 )
+from kubernetes.client.models.v1beta1_cluster_trust_bundle import (
+    V1beta1ClusterTrustBundle as V1beta1ClusterTrustBundle,
+)
+from kubernetes.client.models.v1beta1_cluster_trust_bundle import (
+    V1beta1ClusterTrustBundleDict as V1beta1ClusterTrustBundleDict,
+)
+from kubernetes.client.models.v1beta1_cluster_trust_bundle_list import (
+    V1beta1ClusterTrustBundleList as V1beta1ClusterTrustBundleList,
+)
+from kubernetes.client.models.v1beta1_cluster_trust_bundle_list import (
+    V1beta1ClusterTrustBundleListDict as V1beta1ClusterTrustBundleListDict,
+)
+from kubernetes.client.models.v1beta1_cluster_trust_bundle_spec import (
+    V1beta1ClusterTrustBundleSpec as V1beta1ClusterTrustBundleSpec,
+)
+from kubernetes.client.models.v1beta1_cluster_trust_bundle_spec import (
+    V1beta1ClusterTrustBundleSpecDict as V1beta1ClusterTrustBundleSpecDict,
+)
 from kubernetes.client.models.v1_lease import V1Lease as V1Lease
 from kubernetes.client.models.v1_lease import V1LeaseDict as V1LeaseDict
 from kubernetes.client.models.v1_lease_list import V1LeaseList as V1LeaseList
@@ -997,6 +1003,24 @@ from kubernetes.client.models.v1alpha2_lease_candidate_spec import (
 )
 from kubernetes.client.models.v1alpha2_lease_candidate_spec import (
     V1alpha2LeaseCandidateSpecDict as V1alpha2LeaseCandidateSpecDict,
+)
+from kubernetes.client.models.v1beta1_lease_candidate import (
+    V1beta1LeaseCandidate as V1beta1LeaseCandidate,
+)
+from kubernetes.client.models.v1beta1_lease_candidate import (
+    V1beta1LeaseCandidateDict as V1beta1LeaseCandidateDict,
+)
+from kubernetes.client.models.v1beta1_lease_candidate_list import (
+    V1beta1LeaseCandidateList as V1beta1LeaseCandidateList,
+)
+from kubernetes.client.models.v1beta1_lease_candidate_list import (
+    V1beta1LeaseCandidateListDict as V1beta1LeaseCandidateListDict,
+)
+from kubernetes.client.models.v1beta1_lease_candidate_spec import (
+    V1beta1LeaseCandidateSpec as V1beta1LeaseCandidateSpec,
+)
+from kubernetes.client.models.v1beta1_lease_candidate_spec import (
+    V1beta1LeaseCandidateSpecDict as V1beta1LeaseCandidateSpecDict,
 )
 from kubernetes.client.models.v1_aws_elastic_block_store_volume_source import (
     V1AWSElasticBlockStoreVolumeSource as V1AWSElasticBlockStoreVolumeSource,
@@ -1558,6 +1582,12 @@ from kubernetes.client.models.v1_node_spec import V1NodeSpec as V1NodeSpec
 from kubernetes.client.models.v1_node_spec import V1NodeSpecDict as V1NodeSpecDict
 from kubernetes.client.models.v1_node_status import V1NodeStatus as V1NodeStatus
 from kubernetes.client.models.v1_node_status import V1NodeStatusDict as V1NodeStatusDict
+from kubernetes.client.models.v1_node_swap_status import (
+    V1NodeSwapStatus as V1NodeSwapStatus,
+)
+from kubernetes.client.models.v1_node_swap_status import (
+    V1NodeSwapStatusDict as V1NodeSwapStatusDict,
+)
 from kubernetes.client.models.v1_node_system_info import (
     V1NodeSystemInfo as V1NodeSystemInfo,
 )
@@ -2122,6 +2152,8 @@ from kubernetes.client.models.v1_endpoint_slice_list import (
 from kubernetes.client.models.v1_endpoint_slice_list import (
     V1EndpointSliceListDict as V1EndpointSliceListDict,
 )
+from kubernetes.client.models.v1_for_node import V1ForNode as V1ForNode
+from kubernetes.client.models.v1_for_node import V1ForNodeDict as V1ForNodeDict
 from kubernetes.client.models.v1_for_zone import V1ForZone as V1ForZone
 from kubernetes.client.models.v1_for_zone import V1ForZoneDict as V1ForZoneDict
 from kubernetes.client.models.events_v1_event import EventsV1Event as EventsV1Event
@@ -2282,6 +2314,20 @@ from kubernetes.client.models.v1_http_ingress_rule_value import (
 from kubernetes.client.models.v1_http_ingress_rule_value import (
     V1HTTPIngressRuleValueDict as V1HTTPIngressRuleValueDict,
 )
+from kubernetes.client.models.v1_ip_address import V1IPAddress as V1IPAddress
+from kubernetes.client.models.v1_ip_address import V1IPAddressDict as V1IPAddressDict
+from kubernetes.client.models.v1_ip_address_list import (
+    V1IPAddressList as V1IPAddressList,
+)
+from kubernetes.client.models.v1_ip_address_list import (
+    V1IPAddressListDict as V1IPAddressListDict,
+)
+from kubernetes.client.models.v1_ip_address_spec import (
+    V1IPAddressSpec as V1IPAddressSpec,
+)
+from kubernetes.client.models.v1_ip_address_spec import (
+    V1IPAddressSpecDict as V1IPAddressSpecDict,
+)
 from kubernetes.client.models.v1_ip_block import V1IPBlock as V1IPBlock
 from kubernetes.client.models.v1_ip_block import V1IPBlockDict as V1IPBlockDict
 from kubernetes.client.models.v1_ingress import V1Ingress as V1Ingress
@@ -2400,11 +2446,39 @@ from kubernetes.client.models.v1_network_policy_spec import (
 from kubernetes.client.models.v1_network_policy_spec import (
     V1NetworkPolicySpecDict as V1NetworkPolicySpecDict,
 )
+from kubernetes.client.models.v1_parent_reference import (
+    V1ParentReference as V1ParentReference,
+)
+from kubernetes.client.models.v1_parent_reference import (
+    V1ParentReferenceDict as V1ParentReferenceDict,
+)
 from kubernetes.client.models.v1_service_backend_port import (
     V1ServiceBackendPort as V1ServiceBackendPort,
 )
 from kubernetes.client.models.v1_service_backend_port import (
     V1ServiceBackendPortDict as V1ServiceBackendPortDict,
+)
+from kubernetes.client.models.v1_service_cidr import V1ServiceCIDR as V1ServiceCIDR
+from kubernetes.client.models.v1_service_cidr import (
+    V1ServiceCIDRDict as V1ServiceCIDRDict,
+)
+from kubernetes.client.models.v1_service_cidr_list import (
+    V1ServiceCIDRList as V1ServiceCIDRList,
+)
+from kubernetes.client.models.v1_service_cidr_list import (
+    V1ServiceCIDRListDict as V1ServiceCIDRListDict,
+)
+from kubernetes.client.models.v1_service_cidr_spec import (
+    V1ServiceCIDRSpec as V1ServiceCIDRSpec,
+)
+from kubernetes.client.models.v1_service_cidr_spec import (
+    V1ServiceCIDRSpecDict as V1ServiceCIDRSpecDict,
+)
+from kubernetes.client.models.v1_service_cidr_status import (
+    V1ServiceCIDRStatus as V1ServiceCIDRStatus,
+)
+from kubernetes.client.models.v1_service_cidr_status import (
+    V1ServiceCIDRStatusDict as V1ServiceCIDRStatusDict,
 )
 from kubernetes.client.models.v1beta1_ip_address import (
     V1beta1IPAddress as V1beta1IPAddress,
@@ -2568,6 +2642,16 @@ from kubernetes.client.models.v1alpha3_cel_device_selector import (
 from kubernetes.client.models.v1alpha3_cel_device_selector import (
     V1alpha3CELDeviceSelectorDict as V1alpha3CELDeviceSelectorDict,
 )
+from kubernetes.client.models.v1alpha3_counter import V1alpha3Counter as V1alpha3Counter
+from kubernetes.client.models.v1alpha3_counter import (
+    V1alpha3CounterDict as V1alpha3CounterDict,
+)
+from kubernetes.client.models.v1alpha3_counter_set import (
+    V1alpha3CounterSet as V1alpha3CounterSet,
+)
+from kubernetes.client.models.v1alpha3_counter_set import (
+    V1alpha3CounterSetDict as V1alpha3CounterSetDict,
+)
 from kubernetes.client.models.v1alpha3_device import V1alpha3Device as V1alpha3Device
 from kubernetes.client.models.v1alpha3_device import (
     V1alpha3DeviceDict as V1alpha3DeviceDict,
@@ -2632,6 +2716,12 @@ from kubernetes.client.models.v1alpha3_device_constraint import (
 from kubernetes.client.models.v1alpha3_device_constraint import (
     V1alpha3DeviceConstraintDict as V1alpha3DeviceConstraintDict,
 )
+from kubernetes.client.models.v1alpha3_device_counter_consumption import (
+    V1alpha3DeviceCounterConsumption as V1alpha3DeviceCounterConsumption,
+)
+from kubernetes.client.models.v1alpha3_device_counter_consumption import (
+    V1alpha3DeviceCounterConsumptionDict as V1alpha3DeviceCounterConsumptionDict,
+)
 from kubernetes.client.models.v1alpha3_device_request import (
     V1alpha3DeviceRequest as V1alpha3DeviceRequest,
 )
@@ -2649,6 +2739,48 @@ from kubernetes.client.models.v1alpha3_device_selector import (
 )
 from kubernetes.client.models.v1alpha3_device_selector import (
     V1alpha3DeviceSelectorDict as V1alpha3DeviceSelectorDict,
+)
+from kubernetes.client.models.v1alpha3_device_sub_request import (
+    V1alpha3DeviceSubRequest as V1alpha3DeviceSubRequest,
+)
+from kubernetes.client.models.v1alpha3_device_sub_request import (
+    V1alpha3DeviceSubRequestDict as V1alpha3DeviceSubRequestDict,
+)
+from kubernetes.client.models.v1alpha3_device_taint import (
+    V1alpha3DeviceTaint as V1alpha3DeviceTaint,
+)
+from kubernetes.client.models.v1alpha3_device_taint import (
+    V1alpha3DeviceTaintDict as V1alpha3DeviceTaintDict,
+)
+from kubernetes.client.models.v1alpha3_device_taint_rule import (
+    V1alpha3DeviceTaintRule as V1alpha3DeviceTaintRule,
+)
+from kubernetes.client.models.v1alpha3_device_taint_rule import (
+    V1alpha3DeviceTaintRuleDict as V1alpha3DeviceTaintRuleDict,
+)
+from kubernetes.client.models.v1alpha3_device_taint_rule_list import (
+    V1alpha3DeviceTaintRuleList as V1alpha3DeviceTaintRuleList,
+)
+from kubernetes.client.models.v1alpha3_device_taint_rule_list import (
+    V1alpha3DeviceTaintRuleListDict as V1alpha3DeviceTaintRuleListDict,
+)
+from kubernetes.client.models.v1alpha3_device_taint_rule_spec import (
+    V1alpha3DeviceTaintRuleSpec as V1alpha3DeviceTaintRuleSpec,
+)
+from kubernetes.client.models.v1alpha3_device_taint_rule_spec import (
+    V1alpha3DeviceTaintRuleSpecDict as V1alpha3DeviceTaintRuleSpecDict,
+)
+from kubernetes.client.models.v1alpha3_device_taint_selector import (
+    V1alpha3DeviceTaintSelector as V1alpha3DeviceTaintSelector,
+)
+from kubernetes.client.models.v1alpha3_device_taint_selector import (
+    V1alpha3DeviceTaintSelectorDict as V1alpha3DeviceTaintSelectorDict,
+)
+from kubernetes.client.models.v1alpha3_device_toleration import (
+    V1alpha3DeviceToleration as V1alpha3DeviceToleration,
+)
+from kubernetes.client.models.v1alpha3_device_toleration import (
+    V1alpha3DeviceTolerationDict as V1alpha3DeviceTolerationDict,
 )
 from kubernetes.client.models.v1alpha3_network_device_data import (
     V1alpha3NetworkDeviceData as V1alpha3NetworkDeviceData,
@@ -2758,6 +2890,16 @@ from kubernetes.client.models.v1beta1_cel_device_selector import (
 from kubernetes.client.models.v1beta1_cel_device_selector import (
     V1beta1CELDeviceSelectorDict as V1beta1CELDeviceSelectorDict,
 )
+from kubernetes.client.models.v1beta1_counter import V1beta1Counter as V1beta1Counter
+from kubernetes.client.models.v1beta1_counter import (
+    V1beta1CounterDict as V1beta1CounterDict,
+)
+from kubernetes.client.models.v1beta1_counter_set import (
+    V1beta1CounterSet as V1beta1CounterSet,
+)
+from kubernetes.client.models.v1beta1_counter_set import (
+    V1beta1CounterSetDict as V1beta1CounterSetDict,
+)
 from kubernetes.client.models.v1beta1_device import V1beta1Device as V1beta1Device
 from kubernetes.client.models.v1beta1_device import (
     V1beta1DeviceDict as V1beta1DeviceDict,
@@ -2828,6 +2970,12 @@ from kubernetes.client.models.v1beta1_device_constraint import (
 from kubernetes.client.models.v1beta1_device_constraint import (
     V1beta1DeviceConstraintDict as V1beta1DeviceConstraintDict,
 )
+from kubernetes.client.models.v1beta1_device_counter_consumption import (
+    V1beta1DeviceCounterConsumption as V1beta1DeviceCounterConsumption,
+)
+from kubernetes.client.models.v1beta1_device_counter_consumption import (
+    V1beta1DeviceCounterConsumptionDict as V1beta1DeviceCounterConsumptionDict,
+)
 from kubernetes.client.models.v1beta1_device_request import (
     V1beta1DeviceRequest as V1beta1DeviceRequest,
 )
@@ -2845,6 +2993,24 @@ from kubernetes.client.models.v1beta1_device_selector import (
 )
 from kubernetes.client.models.v1beta1_device_selector import (
     V1beta1DeviceSelectorDict as V1beta1DeviceSelectorDict,
+)
+from kubernetes.client.models.v1beta1_device_sub_request import (
+    V1beta1DeviceSubRequest as V1beta1DeviceSubRequest,
+)
+from kubernetes.client.models.v1beta1_device_sub_request import (
+    V1beta1DeviceSubRequestDict as V1beta1DeviceSubRequestDict,
+)
+from kubernetes.client.models.v1beta1_device_taint import (
+    V1beta1DeviceTaint as V1beta1DeviceTaint,
+)
+from kubernetes.client.models.v1beta1_device_taint import (
+    V1beta1DeviceTaintDict as V1beta1DeviceTaintDict,
+)
+from kubernetes.client.models.v1beta1_device_toleration import (
+    V1beta1DeviceToleration as V1beta1DeviceToleration,
+)
+from kubernetes.client.models.v1beta1_device_toleration import (
+    V1beta1DeviceTolerationDict as V1beta1DeviceTolerationDict,
 )
 from kubernetes.client.models.v1beta1_network_device_data import (
     V1beta1NetworkDeviceData as V1beta1NetworkDeviceData,
@@ -2929,6 +3095,236 @@ from kubernetes.client.models.v1beta1_resource_slice_spec import (
 )
 from kubernetes.client.models.v1beta1_resource_slice_spec import (
     V1beta1ResourceSliceSpecDict as V1beta1ResourceSliceSpecDict,
+)
+from kubernetes.client.models.v1beta2_allocated_device_status import (
+    V1beta2AllocatedDeviceStatus as V1beta2AllocatedDeviceStatus,
+)
+from kubernetes.client.models.v1beta2_allocated_device_status import (
+    V1beta2AllocatedDeviceStatusDict as V1beta2AllocatedDeviceStatusDict,
+)
+from kubernetes.client.models.v1beta2_allocation_result import (
+    V1beta2AllocationResult as V1beta2AllocationResult,
+)
+from kubernetes.client.models.v1beta2_allocation_result import (
+    V1beta2AllocationResultDict as V1beta2AllocationResultDict,
+)
+from kubernetes.client.models.v1beta2_cel_device_selector import (
+    V1beta2CELDeviceSelector as V1beta2CELDeviceSelector,
+)
+from kubernetes.client.models.v1beta2_cel_device_selector import (
+    V1beta2CELDeviceSelectorDict as V1beta2CELDeviceSelectorDict,
+)
+from kubernetes.client.models.v1beta2_counter import V1beta2Counter as V1beta2Counter
+from kubernetes.client.models.v1beta2_counter import (
+    V1beta2CounterDict as V1beta2CounterDict,
+)
+from kubernetes.client.models.v1beta2_counter_set import (
+    V1beta2CounterSet as V1beta2CounterSet,
+)
+from kubernetes.client.models.v1beta2_counter_set import (
+    V1beta2CounterSetDict as V1beta2CounterSetDict,
+)
+from kubernetes.client.models.v1beta2_device import V1beta2Device as V1beta2Device
+from kubernetes.client.models.v1beta2_device import (
+    V1beta2DeviceDict as V1beta2DeviceDict,
+)
+from kubernetes.client.models.v1beta2_device_allocation_configuration import (
+    V1beta2DeviceAllocationConfiguration as V1beta2DeviceAllocationConfiguration,
+)
+from kubernetes.client.models.v1beta2_device_allocation_configuration import (
+    V1beta2DeviceAllocationConfigurationDict as V1beta2DeviceAllocationConfigurationDict,
+)
+from kubernetes.client.models.v1beta2_device_allocation_result import (
+    V1beta2DeviceAllocationResult as V1beta2DeviceAllocationResult,
+)
+from kubernetes.client.models.v1beta2_device_allocation_result import (
+    V1beta2DeviceAllocationResultDict as V1beta2DeviceAllocationResultDict,
+)
+from kubernetes.client.models.v1beta2_device_attribute import (
+    V1beta2DeviceAttribute as V1beta2DeviceAttribute,
+)
+from kubernetes.client.models.v1beta2_device_attribute import (
+    V1beta2DeviceAttributeDict as V1beta2DeviceAttributeDict,
+)
+from kubernetes.client.models.v1beta2_device_capacity import (
+    V1beta2DeviceCapacity as V1beta2DeviceCapacity,
+)
+from kubernetes.client.models.v1beta2_device_capacity import (
+    V1beta2DeviceCapacityDict as V1beta2DeviceCapacityDict,
+)
+from kubernetes.client.models.v1beta2_device_claim import (
+    V1beta2DeviceClaim as V1beta2DeviceClaim,
+)
+from kubernetes.client.models.v1beta2_device_claim import (
+    V1beta2DeviceClaimDict as V1beta2DeviceClaimDict,
+)
+from kubernetes.client.models.v1beta2_device_claim_configuration import (
+    V1beta2DeviceClaimConfiguration as V1beta2DeviceClaimConfiguration,
+)
+from kubernetes.client.models.v1beta2_device_claim_configuration import (
+    V1beta2DeviceClaimConfigurationDict as V1beta2DeviceClaimConfigurationDict,
+)
+from kubernetes.client.models.v1beta2_device_class import (
+    V1beta2DeviceClass as V1beta2DeviceClass,
+)
+from kubernetes.client.models.v1beta2_device_class import (
+    V1beta2DeviceClassDict as V1beta2DeviceClassDict,
+)
+from kubernetes.client.models.v1beta2_device_class_configuration import (
+    V1beta2DeviceClassConfiguration as V1beta2DeviceClassConfiguration,
+)
+from kubernetes.client.models.v1beta2_device_class_configuration import (
+    V1beta2DeviceClassConfigurationDict as V1beta2DeviceClassConfigurationDict,
+)
+from kubernetes.client.models.v1beta2_device_class_list import (
+    V1beta2DeviceClassList as V1beta2DeviceClassList,
+)
+from kubernetes.client.models.v1beta2_device_class_list import (
+    V1beta2DeviceClassListDict as V1beta2DeviceClassListDict,
+)
+from kubernetes.client.models.v1beta2_device_class_spec import (
+    V1beta2DeviceClassSpec as V1beta2DeviceClassSpec,
+)
+from kubernetes.client.models.v1beta2_device_class_spec import (
+    V1beta2DeviceClassSpecDict as V1beta2DeviceClassSpecDict,
+)
+from kubernetes.client.models.v1beta2_device_constraint import (
+    V1beta2DeviceConstraint as V1beta2DeviceConstraint,
+)
+from kubernetes.client.models.v1beta2_device_constraint import (
+    V1beta2DeviceConstraintDict as V1beta2DeviceConstraintDict,
+)
+from kubernetes.client.models.v1beta2_device_counter_consumption import (
+    V1beta2DeviceCounterConsumption as V1beta2DeviceCounterConsumption,
+)
+from kubernetes.client.models.v1beta2_device_counter_consumption import (
+    V1beta2DeviceCounterConsumptionDict as V1beta2DeviceCounterConsumptionDict,
+)
+from kubernetes.client.models.v1beta2_device_request import (
+    V1beta2DeviceRequest as V1beta2DeviceRequest,
+)
+from kubernetes.client.models.v1beta2_device_request import (
+    V1beta2DeviceRequestDict as V1beta2DeviceRequestDict,
+)
+from kubernetes.client.models.v1beta2_device_request_allocation_result import (
+    V1beta2DeviceRequestAllocationResult as V1beta2DeviceRequestAllocationResult,
+)
+from kubernetes.client.models.v1beta2_device_request_allocation_result import (
+    V1beta2DeviceRequestAllocationResultDict as V1beta2DeviceRequestAllocationResultDict,
+)
+from kubernetes.client.models.v1beta2_device_selector import (
+    V1beta2DeviceSelector as V1beta2DeviceSelector,
+)
+from kubernetes.client.models.v1beta2_device_selector import (
+    V1beta2DeviceSelectorDict as V1beta2DeviceSelectorDict,
+)
+from kubernetes.client.models.v1beta2_device_sub_request import (
+    V1beta2DeviceSubRequest as V1beta2DeviceSubRequest,
+)
+from kubernetes.client.models.v1beta2_device_sub_request import (
+    V1beta2DeviceSubRequestDict as V1beta2DeviceSubRequestDict,
+)
+from kubernetes.client.models.v1beta2_device_taint import (
+    V1beta2DeviceTaint as V1beta2DeviceTaint,
+)
+from kubernetes.client.models.v1beta2_device_taint import (
+    V1beta2DeviceTaintDict as V1beta2DeviceTaintDict,
+)
+from kubernetes.client.models.v1beta2_device_toleration import (
+    V1beta2DeviceToleration as V1beta2DeviceToleration,
+)
+from kubernetes.client.models.v1beta2_device_toleration import (
+    V1beta2DeviceTolerationDict as V1beta2DeviceTolerationDict,
+)
+from kubernetes.client.models.v1beta2_exact_device_request import (
+    V1beta2ExactDeviceRequest as V1beta2ExactDeviceRequest,
+)
+from kubernetes.client.models.v1beta2_exact_device_request import (
+    V1beta2ExactDeviceRequestDict as V1beta2ExactDeviceRequestDict,
+)
+from kubernetes.client.models.v1beta2_network_device_data import (
+    V1beta2NetworkDeviceData as V1beta2NetworkDeviceData,
+)
+from kubernetes.client.models.v1beta2_network_device_data import (
+    V1beta2NetworkDeviceDataDict as V1beta2NetworkDeviceDataDict,
+)
+from kubernetes.client.models.v1beta2_opaque_device_configuration import (
+    V1beta2OpaqueDeviceConfiguration as V1beta2OpaqueDeviceConfiguration,
+)
+from kubernetes.client.models.v1beta2_opaque_device_configuration import (
+    V1beta2OpaqueDeviceConfigurationDict as V1beta2OpaqueDeviceConfigurationDict,
+)
+from kubernetes.client.models.v1beta2_resource_claim import (
+    V1beta2ResourceClaim as V1beta2ResourceClaim,
+)
+from kubernetes.client.models.v1beta2_resource_claim import (
+    V1beta2ResourceClaimDict as V1beta2ResourceClaimDict,
+)
+from kubernetes.client.models.v1beta2_resource_claim_consumer_reference import (
+    V1beta2ResourceClaimConsumerReference as V1beta2ResourceClaimConsumerReference,
+)
+from kubernetes.client.models.v1beta2_resource_claim_consumer_reference import (
+    V1beta2ResourceClaimConsumerReferenceDict as V1beta2ResourceClaimConsumerReferenceDict,
+)
+from kubernetes.client.models.v1beta2_resource_claim_list import (
+    V1beta2ResourceClaimList as V1beta2ResourceClaimList,
+)
+from kubernetes.client.models.v1beta2_resource_claim_list import (
+    V1beta2ResourceClaimListDict as V1beta2ResourceClaimListDict,
+)
+from kubernetes.client.models.v1beta2_resource_claim_spec import (
+    V1beta2ResourceClaimSpec as V1beta2ResourceClaimSpec,
+)
+from kubernetes.client.models.v1beta2_resource_claim_spec import (
+    V1beta2ResourceClaimSpecDict as V1beta2ResourceClaimSpecDict,
+)
+from kubernetes.client.models.v1beta2_resource_claim_status import (
+    V1beta2ResourceClaimStatus as V1beta2ResourceClaimStatus,
+)
+from kubernetes.client.models.v1beta2_resource_claim_status import (
+    V1beta2ResourceClaimStatusDict as V1beta2ResourceClaimStatusDict,
+)
+from kubernetes.client.models.v1beta2_resource_claim_template import (
+    V1beta2ResourceClaimTemplate as V1beta2ResourceClaimTemplate,
+)
+from kubernetes.client.models.v1beta2_resource_claim_template import (
+    V1beta2ResourceClaimTemplateDict as V1beta2ResourceClaimTemplateDict,
+)
+from kubernetes.client.models.v1beta2_resource_claim_template_list import (
+    V1beta2ResourceClaimTemplateList as V1beta2ResourceClaimTemplateList,
+)
+from kubernetes.client.models.v1beta2_resource_claim_template_list import (
+    V1beta2ResourceClaimTemplateListDict as V1beta2ResourceClaimTemplateListDict,
+)
+from kubernetes.client.models.v1beta2_resource_claim_template_spec import (
+    V1beta2ResourceClaimTemplateSpec as V1beta2ResourceClaimTemplateSpec,
+)
+from kubernetes.client.models.v1beta2_resource_claim_template_spec import (
+    V1beta2ResourceClaimTemplateSpecDict as V1beta2ResourceClaimTemplateSpecDict,
+)
+from kubernetes.client.models.v1beta2_resource_pool import (
+    V1beta2ResourcePool as V1beta2ResourcePool,
+)
+from kubernetes.client.models.v1beta2_resource_pool import (
+    V1beta2ResourcePoolDict as V1beta2ResourcePoolDict,
+)
+from kubernetes.client.models.v1beta2_resource_slice import (
+    V1beta2ResourceSlice as V1beta2ResourceSlice,
+)
+from kubernetes.client.models.v1beta2_resource_slice import (
+    V1beta2ResourceSliceDict as V1beta2ResourceSliceDict,
+)
+from kubernetes.client.models.v1beta2_resource_slice_list import (
+    V1beta2ResourceSliceList as V1beta2ResourceSliceList,
+)
+from kubernetes.client.models.v1beta2_resource_slice_list import (
+    V1beta2ResourceSliceListDict as V1beta2ResourceSliceListDict,
+)
+from kubernetes.client.models.v1beta2_resource_slice_spec import (
+    V1beta2ResourceSliceSpec as V1beta2ResourceSliceSpec,
+)
+from kubernetes.client.models.v1beta2_resource_slice_spec import (
+    V1beta2ResourceSliceSpecDict as V1beta2ResourceSliceSpecDict,
 )
 from kubernetes.client.models.v1_priority_class import (
     V1PriorityClass as V1PriorityClass,

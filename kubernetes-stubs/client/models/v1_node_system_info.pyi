@@ -1,3 +1,4 @@
+import kubernetes.client
 import typing
 
 class V1NodeSystemInfo:
@@ -10,6 +11,7 @@ class V1NodeSystemInfo:
     machine_id: str
     operating_system: str
     os_image: str
+    swap: typing.Optional[kubernetes.client.V1NodeSwapStatus]
     system_uuid: str
 
     def __init__(
@@ -24,6 +26,7 @@ class V1NodeSystemInfo:
         machine_id: str,
         operating_system: str,
         os_image: str,
+        swap: typing.Optional[kubernetes.client.V1NodeSwapStatus] = ...,
         system_uuid: str,
     ) -> None: ...
     def to_dict(self) -> V1NodeSystemInfoDict: ...
@@ -38,4 +41,5 @@ class V1NodeSystemInfoDict(typing.TypedDict, total=False):
     machineID: str
     operatingSystem: str
     osImage: str
+    swap: kubernetes.client.V1NodeSwapStatusDict
     systemUUID: str

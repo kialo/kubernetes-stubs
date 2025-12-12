@@ -16,6 +16,7 @@ class V1ContainerStatus:
     restart_count: int
     started: typing.Optional[bool]
     state: typing.Optional[kubernetes.client.V1ContainerState]
+    stop_signal: typing.Optional[str]
     user: typing.Optional[kubernetes.client.V1ContainerUser]
     volume_mounts: typing.Optional[list[kubernetes.client.V1VolumeMountStatus]]
 
@@ -36,6 +37,7 @@ class V1ContainerStatus:
         restart_count: int,
         started: typing.Optional[bool] = ...,
         state: typing.Optional[kubernetes.client.V1ContainerState] = ...,
+        stop_signal: typing.Optional[str] = ...,
         user: typing.Optional[kubernetes.client.V1ContainerUser] = ...,
         volume_mounts: typing.Optional[
             list[kubernetes.client.V1VolumeMountStatus]
@@ -56,5 +58,6 @@ class V1ContainerStatusDict(typing.TypedDict, total=False):
     restartCount: int
     started: bool
     state: kubernetes.client.V1ContainerStateDict
+    stopSignal: str
     user: kubernetes.client.V1ContainerUserDict
     volumeMounts: list[kubernetes.client.V1VolumeMountStatusDict]

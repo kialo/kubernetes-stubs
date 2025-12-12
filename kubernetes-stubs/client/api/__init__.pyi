@@ -31,9 +31,6 @@ from kubernetes.client.api.authentication_api import (
 from kubernetes.client.api.authentication_v1_api import (
     AuthenticationV1Api as AuthenticationV1Api,
 )
-from kubernetes.client.api.authentication_v1beta1_api import (
-    AuthenticationV1beta1Api as AuthenticationV1beta1Api,
-)
 from kubernetes.client.api.authorization_api import AuthorizationApi as AuthorizationApi
 from kubernetes.client.api.authorization_v1_api import (
     AuthorizationV1Api as AuthorizationV1Api,
@@ -54,12 +51,18 @@ from kubernetes.client.api.certificates_v1_api import (
 from kubernetes.client.api.certificates_v1alpha1_api import (
     CertificatesV1alpha1Api as CertificatesV1alpha1Api,
 )
+from kubernetes.client.api.certificates_v1beta1_api import (
+    CertificatesV1beta1Api as CertificatesV1beta1Api,
+)
 from kubernetes.client.api.coordination_api import CoordinationApi as CoordinationApi
 from kubernetes.client.api.coordination_v1_api import (
     CoordinationV1Api as CoordinationV1Api,
 )
 from kubernetes.client.api.coordination_v1alpha2_api import (
     CoordinationV1alpha2Api as CoordinationV1alpha2Api,
+)
+from kubernetes.client.api.coordination_v1beta1_api import (
+    CoordinationV1beta1Api as CoordinationV1beta1Api,
 )
 from kubernetes.client.api.discovery_api import DiscoveryApi as DiscoveryApi
 from kubernetes.client.api.discovery_v1_api import DiscoveryV1Api as DiscoveryV1Api
@@ -98,6 +101,9 @@ from kubernetes.client.api.resource_v1alpha3_api import (
 )
 from kubernetes.client.api.resource_v1beta1_api import (
     ResourceV1beta1Api as ResourceV1beta1Api,
+)
+from kubernetes.client.api.resource_v1beta2_api import (
+    ResourceV1beta2Api as ResourceV1beta2Api,
 )
 from kubernetes.client.api.scheduling_api import SchedulingApi as SchedulingApi
 from kubernetes.client.api.scheduling_v1_api import SchedulingV1Api as SchedulingV1Api

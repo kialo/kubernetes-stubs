@@ -13,6 +13,7 @@ class V1PodStatus:
     init_container_statuses: typing.Optional[list[kubernetes.client.V1ContainerStatus]]
     message: typing.Optional[str]
     nominated_node_name: typing.Optional[str]
+    observed_generation: typing.Optional[int]
     phase: typing.Optional[str]
     pod_ip: typing.Optional[str]
     pod_i_ps: typing.Optional[list[kubernetes.client.V1PodIP]]
@@ -41,6 +42,7 @@ class V1PodStatus:
         ] = ...,
         message: typing.Optional[str] = ...,
         nominated_node_name: typing.Optional[str] = ...,
+        observed_generation: typing.Optional[int] = ...,
         phase: typing.Optional[str] = ...,
         pod_ip: typing.Optional[str] = ...,
         pod_i_ps: typing.Optional[list[kubernetes.client.V1PodIP]] = ...,
@@ -63,6 +65,7 @@ class V1PodStatusDict(typing.TypedDict, total=False):
     initContainerStatuses: list[kubernetes.client.V1ContainerStatusDict]
     message: str
     nominatedNodeName: str
+    observedGeneration: int
     phase: str
     podIP: str
     podIPs: list[kubernetes.client.V1PodIPDict]

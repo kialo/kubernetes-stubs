@@ -3,11 +3,15 @@ import typing
 class VersionInfo:
     build_date: str
     compiler: str
+    emulation_major: typing.Optional[str]
+    emulation_minor: typing.Optional[str]
     git_commit: str
     git_tree_state: str
     git_version: str
     go_version: str
     major: str
+    min_compatibility_major: typing.Optional[str]
+    min_compatibility_minor: typing.Optional[str]
     minor: str
     platform: str
 
@@ -16,11 +20,15 @@ class VersionInfo:
         *,
         build_date: str,
         compiler: str,
+        emulation_major: typing.Optional[str] = ...,
+        emulation_minor: typing.Optional[str] = ...,
         git_commit: str,
         git_tree_state: str,
         git_version: str,
         go_version: str,
         major: str,
+        min_compatibility_major: typing.Optional[str] = ...,
+        min_compatibility_minor: typing.Optional[str] = ...,
         minor: str,
         platform: str,
     ) -> None: ...
@@ -29,10 +37,14 @@ class VersionInfo:
 class VersionInfoDict(typing.TypedDict, total=False):
     buildDate: str
     compiler: str
+    emulationMajor: str
+    emulationMinor: str
     gitCommit: str
     gitTreeState: str
     gitVersion: str
     goVersion: str
     major: str
+    minCompatibilityMajor: str
+    minCompatibilityMinor: str
     minor: str
     platform: str

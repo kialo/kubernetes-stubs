@@ -5,6 +5,7 @@ class V1PodCondition:
     last_probe_time: typing.Optional[datetime.datetime]
     last_transition_time: typing.Optional[datetime.datetime]
     message: typing.Optional[str]
+    observed_generation: typing.Optional[int]
     reason: typing.Optional[str]
     status: str
     type: str
@@ -15,6 +16,7 @@ class V1PodCondition:
         last_probe_time: typing.Optional[datetime.datetime] = ...,
         last_transition_time: typing.Optional[datetime.datetime] = ...,
         message: typing.Optional[str] = ...,
+        observed_generation: typing.Optional[int] = ...,
         reason: typing.Optional[str] = ...,
         status: str,
         type: str,
@@ -25,6 +27,7 @@ class V1PodConditionDict(typing.TypedDict, total=False):
     lastProbeTime: datetime.datetime
     lastTransitionTime: datetime.datetime
     message: str
+    observedGeneration: int
     reason: str
     status: str
     type: str

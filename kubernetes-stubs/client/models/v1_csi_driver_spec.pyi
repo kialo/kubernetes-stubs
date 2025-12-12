@@ -4,6 +4,7 @@ import typing
 class V1CSIDriverSpec:
     attach_required: typing.Optional[bool]
     fs_group_policy: typing.Optional[str]
+    node_allocatable_update_period_seconds: typing.Optional[int]
     pod_info_on_mount: typing.Optional[bool]
     requires_republish: typing.Optional[bool]
     se_linux_mount: typing.Optional[bool]
@@ -16,6 +17,7 @@ class V1CSIDriverSpec:
         *,
         attach_required: typing.Optional[bool] = ...,
         fs_group_policy: typing.Optional[str] = ...,
+        node_allocatable_update_period_seconds: typing.Optional[int] = ...,
         pod_info_on_mount: typing.Optional[bool] = ...,
         requires_republish: typing.Optional[bool] = ...,
         se_linux_mount: typing.Optional[bool] = ...,
@@ -30,6 +32,7 @@ class V1CSIDriverSpec:
 class V1CSIDriverSpecDict(typing.TypedDict, total=False):
     attachRequired: bool
     fsGroupPolicy: str
+    nodeAllocatableUpdatePeriodSeconds: int
     podInfoOnMount: bool
     requiresRepublish: bool
     seLinuxMount: bool
