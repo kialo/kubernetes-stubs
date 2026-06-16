@@ -16,6 +16,7 @@ class V1PodSpec:
     host_pid: typing.Optional[bool]
     host_users: typing.Optional[bool]
     hostname: typing.Optional[str]
+    hostname_override: typing.Optional[str]
     image_pull_secrets: typing.Optional[list[kubernetes.client.V1LocalObjectReference]]
     init_containers: typing.Optional[list[kubernetes.client.V1Container]]
     node_name: typing.Optional[str]
@@ -64,6 +65,7 @@ class V1PodSpec:
         host_pid: typing.Optional[bool] = ...,
         host_users: typing.Optional[bool] = ...,
         hostname: typing.Optional[str] = ...,
+        hostname_override: typing.Optional[str] = ...,
         image_pull_secrets: typing.Optional[
             list[kubernetes.client.V1LocalObjectReference]
         ] = ...,
@@ -118,6 +120,7 @@ class V1PodSpecDict(typing.TypedDict, total=False):
     hostPID: bool
     hostUsers: bool
     hostname: str
+    hostnameOverride: str
     imagePullSecrets: list[kubernetes.client.V1LocalObjectReferenceDict]
     initContainers: list[kubernetes.client.V1ContainerDict]
     nodeName: str

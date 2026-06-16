@@ -3,7 +3,11 @@ import typing
 
 class V1beta1BasicDevice:
     all_nodes: typing.Optional[bool]
+    allow_multiple_allocations: typing.Optional[bool]
     attributes: typing.Optional[dict[str, kubernetes.client.V1beta1DeviceAttribute]]
+    binding_conditions: typing.Optional[list[str]]
+    binding_failure_conditions: typing.Optional[list[str]]
+    binds_to_node: typing.Optional[bool]
     capacity: typing.Optional[dict[str, kubernetes.client.V1beta1DeviceCapacity]]
     consumes_counters: typing.Optional[
         list[kubernetes.client.V1beta1DeviceCounterConsumption]
@@ -16,9 +20,13 @@ class V1beta1BasicDevice:
         self,
         *,
         all_nodes: typing.Optional[bool] = ...,
+        allow_multiple_allocations: typing.Optional[bool] = ...,
         attributes: typing.Optional[
             dict[str, kubernetes.client.V1beta1DeviceAttribute]
         ] = ...,
+        binding_conditions: typing.Optional[list[str]] = ...,
+        binding_failure_conditions: typing.Optional[list[str]] = ...,
+        binds_to_node: typing.Optional[bool] = ...,
         capacity: typing.Optional[
             dict[str, kubernetes.client.V1beta1DeviceCapacity]
         ] = ...,
@@ -33,7 +41,11 @@ class V1beta1BasicDevice:
 
 class V1beta1BasicDeviceDict(typing.TypedDict, total=False):
     allNodes: bool
+    allowMultipleAllocations: bool
     attributes: dict[str, kubernetes.client.V1beta1DeviceAttributeDict]
+    bindingConditions: list[str]
+    bindingFailureConditions: list[str]
+    bindsToNode: bool
     capacity: dict[str, kubernetes.client.V1beta1DeviceCapacityDict]
     consumesCounters: list[kubernetes.client.V1beta1DeviceCounterConsumptionDict]
     nodeName: str

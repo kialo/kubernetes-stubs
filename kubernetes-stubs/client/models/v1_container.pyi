@@ -16,6 +16,9 @@ class V1Container:
     resize_policy: typing.Optional[list[kubernetes.client.V1ContainerResizePolicy]]
     resources: typing.Optional[kubernetes.client.V1ResourceRequirements]
     restart_policy: typing.Optional[str]
+    restart_policy_rules: typing.Optional[
+        list[kubernetes.client.V1ContainerRestartRule]
+    ]
     security_context: typing.Optional[kubernetes.client.V1SecurityContext]
     startup_probe: typing.Optional[kubernetes.client.V1Probe]
     stdin: typing.Optional[bool]
@@ -46,6 +49,9 @@ class V1Container:
         ] = ...,
         resources: typing.Optional[kubernetes.client.V1ResourceRequirements] = ...,
         restart_policy: typing.Optional[str] = ...,
+        restart_policy_rules: typing.Optional[
+            list[kubernetes.client.V1ContainerRestartRule]
+        ] = ...,
         security_context: typing.Optional[kubernetes.client.V1SecurityContext] = ...,
         startup_probe: typing.Optional[kubernetes.client.V1Probe] = ...,
         stdin: typing.Optional[bool] = ...,
@@ -74,6 +80,7 @@ class V1ContainerDict(typing.TypedDict, total=False):
     resizePolicy: list[kubernetes.client.V1ContainerResizePolicyDict]
     resources: kubernetes.client.V1ResourceRequirementsDict
     restartPolicy: str
+    restartPolicyRules: list[kubernetes.client.V1ContainerRestartRuleDict]
     securityContext: kubernetes.client.V1SecurityContextDict
     startupProbe: kubernetes.client.V1ProbeDict
     stdin: bool

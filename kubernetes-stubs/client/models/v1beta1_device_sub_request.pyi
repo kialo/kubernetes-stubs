@@ -3,6 +3,7 @@ import typing
 
 class V1beta1DeviceSubRequest:
     allocation_mode: typing.Optional[str]
+    capacity: typing.Optional[kubernetes.client.V1beta1CapacityRequirements]
     count: typing.Optional[int]
     device_class_name: str
     name: str
@@ -13,6 +14,7 @@ class V1beta1DeviceSubRequest:
         self,
         *,
         allocation_mode: typing.Optional[str] = ...,
+        capacity: typing.Optional[kubernetes.client.V1beta1CapacityRequirements] = ...,
         count: typing.Optional[int] = ...,
         device_class_name: str,
         name: str,
@@ -25,6 +27,7 @@ class V1beta1DeviceSubRequest:
 
 class V1beta1DeviceSubRequestDict(typing.TypedDict, total=False):
     allocationMode: str
+    capacity: kubernetes.client.V1beta1CapacityRequirementsDict
     count: int
     deviceClassName: str
     name: str

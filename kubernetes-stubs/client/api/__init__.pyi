@@ -96,6 +96,7 @@ from kubernetes.client.api.rbacAuthorization_v1_api import (
     RbacAuthorizationV1Api as RbacAuthorizationV1Api,
 )
 from kubernetes.client.api.resource_api import ResourceApi as ResourceApi
+from kubernetes.client.api.resource_v1_api import ResourceV1Api as ResourceV1Api
 from kubernetes.client.api.resource_v1alpha3_api import (
     ResourceV1alpha3Api as ResourceV1alpha3Api,
 )

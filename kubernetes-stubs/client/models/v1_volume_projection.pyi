@@ -7,6 +7,7 @@ class V1VolumeProjection:
     ]
     config_map: typing.Optional[kubernetes.client.V1ConfigMapProjection]
     downward_api: typing.Optional[kubernetes.client.V1DownwardAPIProjection]
+    pod_certificate: typing.Optional[kubernetes.client.V1PodCertificateProjection]
     secret: typing.Optional[kubernetes.client.V1SecretProjection]
     service_account_token: typing.Optional[
         kubernetes.client.V1ServiceAccountTokenProjection
@@ -20,6 +21,9 @@ class V1VolumeProjection:
         ] = ...,
         config_map: typing.Optional[kubernetes.client.V1ConfigMapProjection] = ...,
         downward_api: typing.Optional[kubernetes.client.V1DownwardAPIProjection] = ...,
+        pod_certificate: typing.Optional[
+            kubernetes.client.V1PodCertificateProjection
+        ] = ...,
         secret: typing.Optional[kubernetes.client.V1SecretProjection] = ...,
         service_account_token: typing.Optional[
             kubernetes.client.V1ServiceAccountTokenProjection
@@ -31,5 +35,6 @@ class V1VolumeProjectionDict(typing.TypedDict, total=False):
     clusterTrustBundle: kubernetes.client.V1ClusterTrustBundleProjectionDict
     configMap: kubernetes.client.V1ConfigMapProjectionDict
     downwardAPI: kubernetes.client.V1DownwardAPIProjectionDict
+    podCertificate: kubernetes.client.V1PodCertificateProjectionDict
     secret: kubernetes.client.V1SecretProjectionDict
     serviceAccountToken: kubernetes.client.V1ServiceAccountTokenProjectionDict

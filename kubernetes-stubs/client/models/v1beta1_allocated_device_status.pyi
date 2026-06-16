@@ -8,6 +8,7 @@ class V1beta1AllocatedDeviceStatus:
     driver: str
     network_data: typing.Optional[kubernetes.client.V1beta1NetworkDeviceData]
     pool: str
+    share_id: typing.Optional[str]
 
     def __init__(
         self,
@@ -18,6 +19,7 @@ class V1beta1AllocatedDeviceStatus:
         driver: str,
         network_data: typing.Optional[kubernetes.client.V1beta1NetworkDeviceData] = ...,
         pool: str,
+        share_id: typing.Optional[str] = ...,
     ) -> None: ...
     def to_dict(self) -> V1beta1AllocatedDeviceStatusDict: ...
 
@@ -28,3 +30,4 @@ class V1beta1AllocatedDeviceStatusDict(typing.TypedDict, total=False):
     driver: str
     networkData: kubernetes.client.V1beta1NetworkDeviceDataDict
     pool: str
+    shareID: str

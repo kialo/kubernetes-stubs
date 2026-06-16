@@ -8,6 +8,9 @@ class V1PodStatus:
     ephemeral_container_statuses: typing.Optional[
         list[kubernetes.client.V1ContainerStatus]
     ]
+    extended_resource_claim_status: typing.Optional[
+        kubernetes.client.V1PodExtendedResourceClaimStatus
+    ]
     host_ip: typing.Optional[str]
     host_i_ps: typing.Optional[list[kubernetes.client.V1HostIP]]
     init_container_statuses: typing.Optional[list[kubernetes.client.V1ContainerStatus]]
@@ -35,6 +38,9 @@ class V1PodStatus:
         ephemeral_container_statuses: typing.Optional[
             list[kubernetes.client.V1ContainerStatus]
         ] = ...,
+        extended_resource_claim_status: typing.Optional[
+            kubernetes.client.V1PodExtendedResourceClaimStatus
+        ] = ...,
         host_ip: typing.Optional[str] = ...,
         host_i_ps: typing.Optional[list[kubernetes.client.V1HostIP]] = ...,
         init_container_statuses: typing.Optional[
@@ -60,6 +66,7 @@ class V1PodStatusDict(typing.TypedDict, total=False):
     conditions: list[kubernetes.client.V1PodConditionDict]
     containerStatuses: list[kubernetes.client.V1ContainerStatusDict]
     ephemeralContainerStatuses: list[kubernetes.client.V1ContainerStatusDict]
+    extendedResourceClaimStatus: kubernetes.client.V1PodExtendedResourceClaimStatusDict
     hostIP: str
     hostIPs: list[kubernetes.client.V1HostIPDict]
     initContainerStatuses: list[kubernetes.client.V1ContainerStatusDict]

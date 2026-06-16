@@ -4,6 +4,7 @@ import typing
 class V1EnvVarSource:
     config_map_key_ref: typing.Optional[kubernetes.client.V1ConfigMapKeySelector]
     field_ref: typing.Optional[kubernetes.client.V1ObjectFieldSelector]
+    file_key_ref: typing.Optional[kubernetes.client.V1FileKeySelector]
     resource_field_ref: typing.Optional[kubernetes.client.V1ResourceFieldSelector]
     secret_key_ref: typing.Optional[kubernetes.client.V1SecretKeySelector]
 
@@ -14,6 +15,7 @@ class V1EnvVarSource:
             kubernetes.client.V1ConfigMapKeySelector
         ] = ...,
         field_ref: typing.Optional[kubernetes.client.V1ObjectFieldSelector] = ...,
+        file_key_ref: typing.Optional[kubernetes.client.V1FileKeySelector] = ...,
         resource_field_ref: typing.Optional[
             kubernetes.client.V1ResourceFieldSelector
         ] = ...,
@@ -24,5 +26,6 @@ class V1EnvVarSource:
 class V1EnvVarSourceDict(typing.TypedDict, total=False):
     configMapKeyRef: kubernetes.client.V1ConfigMapKeySelectorDict
     fieldRef: kubernetes.client.V1ObjectFieldSelectorDict
+    fileKeyRef: kubernetes.client.V1FileKeySelectorDict
     resourceFieldRef: kubernetes.client.V1ResourceFieldSelectorDict
     secretKeyRef: kubernetes.client.V1SecretKeySelectorDict

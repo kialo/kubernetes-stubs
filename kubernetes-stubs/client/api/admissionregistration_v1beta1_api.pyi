@@ -6,7 +6,7 @@ class AdmissionregistrationV1beta1Api:
         self, api_client: typing.Optional[kubernetes.client.ApiClient] = ...
     ) -> None: ...
     def get_api_resources(self) -> kubernetes.client.V1APIResourceList: ...
-    def list_validating_admission_policy(
+    def list_mutating_admission_policy(
         self,
         *,
         pretty: typing.Optional[str] = ...,
@@ -20,17 +20,17 @@ class AdmissionregistrationV1beta1Api:
         send_initial_events: typing.Optional[bool] = ...,
         timeout_seconds: typing.Optional[int] = ...,
         watch: typing.Optional[bool] = ...,
-    ) -> kubernetes.client.V1beta1ValidatingAdmissionPolicyList: ...
-    def create_validating_admission_policy(
+    ) -> kubernetes.client.V1beta1MutatingAdmissionPolicyList: ...
+    def create_mutating_admission_policy(
         self,
-        body: kubernetes.client.V1beta1ValidatingAdmissionPolicy,
+        body: kubernetes.client.V1beta1MutatingAdmissionPolicy,
         *,
         pretty: typing.Optional[str] = ...,
         dry_run: typing.Optional[str] = ...,
         field_manager: typing.Optional[str] = ...,
         field_validation: typing.Optional[str] = ...,
-    ) -> kubernetes.client.V1beta1ValidatingAdmissionPolicy: ...
-    def delete_collection_validating_admission_policy(
+    ) -> kubernetes.client.V1beta1MutatingAdmissionPolicy: ...
+    def delete_collection_mutating_admission_policy(
         self,
         *,
         pretty: typing.Optional[str] = ...,
@@ -51,20 +51,20 @@ class AdmissionregistrationV1beta1Api:
         send_initial_events: typing.Optional[bool] = ...,
         timeout_seconds: typing.Optional[int] = ...,
     ) -> kubernetes.client.V1Status: ...
-    def read_validating_admission_policy(
+    def read_mutating_admission_policy(
         self, name: str, *, pretty: typing.Optional[str] = ...
-    ) -> kubernetes.client.V1beta1ValidatingAdmissionPolicy: ...
-    def replace_validating_admission_policy(
+    ) -> kubernetes.client.V1beta1MutatingAdmissionPolicy: ...
+    def replace_mutating_admission_policy(
         self,
         name: str,
-        body: kubernetes.client.V1beta1ValidatingAdmissionPolicy,
+        body: kubernetes.client.V1beta1MutatingAdmissionPolicy,
         *,
         pretty: typing.Optional[str] = ...,
         dry_run: typing.Optional[str] = ...,
         field_manager: typing.Optional[str] = ...,
         field_validation: typing.Optional[str] = ...,
-    ) -> kubernetes.client.V1beta1ValidatingAdmissionPolicy: ...
-    def delete_validating_admission_policy(
+    ) -> kubernetes.client.V1beta1MutatingAdmissionPolicy: ...
+    def delete_mutating_admission_policy(
         self,
         name: str,
         *,
@@ -78,7 +78,7 @@ class AdmissionregistrationV1beta1Api:
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
     ) -> kubernetes.client.V1Status: ...
-    def patch_validating_admission_policy(
+    def patch_mutating_admission_policy(
         self,
         name: str,
         body: typing.Any,
@@ -88,32 +88,8 @@ class AdmissionregistrationV1beta1Api:
         field_manager: typing.Optional[str] = ...,
         field_validation: typing.Optional[str] = ...,
         force: typing.Optional[bool] = ...,
-    ) -> kubernetes.client.V1beta1ValidatingAdmissionPolicy: ...
-    def read_validating_admission_policy_status(
-        self, name: str, *, pretty: typing.Optional[str] = ...
-    ) -> kubernetes.client.V1beta1ValidatingAdmissionPolicy: ...
-    def replace_validating_admission_policy_status(
-        self,
-        name: str,
-        body: kubernetes.client.V1beta1ValidatingAdmissionPolicy,
-        *,
-        pretty: typing.Optional[str] = ...,
-        dry_run: typing.Optional[str] = ...,
-        field_manager: typing.Optional[str] = ...,
-        field_validation: typing.Optional[str] = ...,
-    ) -> kubernetes.client.V1beta1ValidatingAdmissionPolicy: ...
-    def patch_validating_admission_policy_status(
-        self,
-        name: str,
-        body: typing.Any,
-        *,
-        pretty: typing.Optional[str] = ...,
-        dry_run: typing.Optional[str] = ...,
-        field_manager: typing.Optional[str] = ...,
-        field_validation: typing.Optional[str] = ...,
-        force: typing.Optional[bool] = ...,
-    ) -> kubernetes.client.V1beta1ValidatingAdmissionPolicy: ...
-    def list_validating_admission_policy_binding(
+    ) -> kubernetes.client.V1beta1MutatingAdmissionPolicy: ...
+    def list_mutating_admission_policy_binding(
         self,
         *,
         pretty: typing.Optional[str] = ...,
@@ -127,17 +103,17 @@ class AdmissionregistrationV1beta1Api:
         send_initial_events: typing.Optional[bool] = ...,
         timeout_seconds: typing.Optional[int] = ...,
         watch: typing.Optional[bool] = ...,
-    ) -> kubernetes.client.V1beta1ValidatingAdmissionPolicyBindingList: ...
-    def create_validating_admission_policy_binding(
+    ) -> kubernetes.client.V1beta1MutatingAdmissionPolicyBindingList: ...
+    def create_mutating_admission_policy_binding(
         self,
-        body: kubernetes.client.V1beta1ValidatingAdmissionPolicyBinding,
+        body: kubernetes.client.V1beta1MutatingAdmissionPolicyBinding,
         *,
         pretty: typing.Optional[str] = ...,
         dry_run: typing.Optional[str] = ...,
         field_manager: typing.Optional[str] = ...,
         field_validation: typing.Optional[str] = ...,
-    ) -> kubernetes.client.V1beta1ValidatingAdmissionPolicyBinding: ...
-    def delete_collection_validating_admission_policy_binding(
+    ) -> kubernetes.client.V1beta1MutatingAdmissionPolicyBinding: ...
+    def delete_collection_mutating_admission_policy_binding(
         self,
         *,
         pretty: typing.Optional[str] = ...,
@@ -158,20 +134,20 @@ class AdmissionregistrationV1beta1Api:
         send_initial_events: typing.Optional[bool] = ...,
         timeout_seconds: typing.Optional[int] = ...,
     ) -> kubernetes.client.V1Status: ...
-    def read_validating_admission_policy_binding(
+    def read_mutating_admission_policy_binding(
         self, name: str, *, pretty: typing.Optional[str] = ...
-    ) -> kubernetes.client.V1beta1ValidatingAdmissionPolicyBinding: ...
-    def replace_validating_admission_policy_binding(
+    ) -> kubernetes.client.V1beta1MutatingAdmissionPolicyBinding: ...
+    def replace_mutating_admission_policy_binding(
         self,
         name: str,
-        body: kubernetes.client.V1beta1ValidatingAdmissionPolicyBinding,
+        body: kubernetes.client.V1beta1MutatingAdmissionPolicyBinding,
         *,
         pretty: typing.Optional[str] = ...,
         dry_run: typing.Optional[str] = ...,
         field_manager: typing.Optional[str] = ...,
         field_validation: typing.Optional[str] = ...,
-    ) -> kubernetes.client.V1beta1ValidatingAdmissionPolicyBinding: ...
-    def delete_validating_admission_policy_binding(
+    ) -> kubernetes.client.V1beta1MutatingAdmissionPolicyBinding: ...
+    def delete_mutating_admission_policy_binding(
         self,
         name: str,
         *,
@@ -185,7 +161,7 @@ class AdmissionregistrationV1beta1Api:
         orphan_dependents: typing.Optional[bool] = ...,
         propagation_policy: typing.Optional[str] = ...,
     ) -> kubernetes.client.V1Status: ...
-    def patch_validating_admission_policy_binding(
+    def patch_mutating_admission_policy_binding(
         self,
         name: str,
         body: typing.Any,
@@ -195,4 +171,4 @@ class AdmissionregistrationV1beta1Api:
         field_manager: typing.Optional[str] = ...,
         field_validation: typing.Optional[str] = ...,
         force: typing.Optional[bool] = ...,
-    ) -> kubernetes.client.V1beta1ValidatingAdmissionPolicyBinding: ...
+    ) -> kubernetes.client.V1beta1MutatingAdmissionPolicyBinding: ...
